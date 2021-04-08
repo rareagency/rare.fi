@@ -1,18 +1,8 @@
 import React from "react";
-import Link from "next/link";
-import Layout from "../components/Layout";
+import Layout from "../layouts/index/Layout";
 
 const IndexPage = () => {
-  return (
-    <Layout title="Home | Rare.fi">
-      <h1>Rare.fi</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
-    </Layout>
-  );
+  return <Layout></Layout>;
 };
 
 export default IndexPage;

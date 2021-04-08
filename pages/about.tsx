@@ -1,19 +1,8 @@
 import React from "react";
-import Link from "next/link";
-import Layout from "../components/Layout";
+import Layout from "../layouts/index/Layout";
 
 const AboutPage = () => {
-  return (
-    <Layout title="About | Rare.fi">
-      <h1>About</h1>
-      <p>This is the about page</p>
-      <p>
-        <Link href="/">
-          <a>Go home</a>
-        </Link>
-      </p>
-    </Layout>
-  );
+  return <Layout></Layout>;
 };
 
 export default AboutPage;
