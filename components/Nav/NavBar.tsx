@@ -10,7 +10,7 @@ const NavBar = () => {
       </div>
       <div className="flex space-x-8 text-xl hidden lg:inline-flex">
         <NavItem url="/about" text="Why us?" />
-        <NavItem url="/about" text="Career" />
+        <NavItem url="/about" text="Careers" />
         <NavItem url="/about" text="Stories" />
         <NavItem url="/about" text="Training" />
         <NavItem url="/about" text="Let's chat" />
