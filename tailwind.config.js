@@ -15,6 +15,11 @@ module.exports = {
         black: "#000F1F",
         white: "#F9F9F9",
       },
+      height: {
+        160: "40rem",
+        152: "38rem",
+        144: "36rem"
+      },
     },
   },
   variants: {
