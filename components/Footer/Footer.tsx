@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="text-xl flex flex-col-reverse">
               <div>3092335-9</div>
-              <div>Rare agency OY</div>
+              <div>Rare Agency Oy</div>
             </div>
             <div className="flex flex-col-reverse">
               <div className="text-4xl pt-64">
