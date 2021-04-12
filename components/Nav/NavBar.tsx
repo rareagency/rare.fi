@@ -1,21 +1,23 @@
 import Link from "next/link";
 import React from "react";
+import Logo from "../Logo";
 import NavItem from "./NavItem";
+import { links } from "../../utils/pagelinks";
 
 const NavBar = () => {
   return (
     <div className="relative flex items-center justify-between h-16 text-white ">
-      <div className="text-3xl pl-16">
-        <Link href="/">RARE</Link>
+      <div className="text-3xl pl-16 lg:pl-4">
+        <Link href="/">
+          <Logo />
+        </Link>
       </div>
-      <div className="flex space-x-8 text-xl hidden lg:inline-flex">
-        <NavItem url="/about" text="Why us?" />
-        <NavItem url="/about" text="Careers" />
-        <NavItem url="/about" text="Stories" />
-        <NavItem url="/about" text="Training" />
-        <NavItem url="/about" text="Let's chat" />
+      <div className="flex space-x-8 text-xl inline-flex xl:hidden">
+        {links.map((link) => {
+          return <NavItem url={link.url} text={link.text} />;
+        })}
       </div>
-      <div className="inline-flex lg:hidden">
+      <div className="hidden xl:inline-flex">
         {/*TODO*/}
         MOBILE
       </div>
