@@ -7,6 +7,13 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      "2xl": { max: "1535px" },
+      xl: { max: "1279px" },
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+      sm: { max: "639px" },
+    },
     extend: {
       colors: {
         blue: {
@@ -18,7 +25,7 @@ module.exports = {
       height: {
         160: "40rem",
         152: "38rem",
-        144: "36rem"
+        144: "36rem",
       },
     },
   },
