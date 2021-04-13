@@ -1,7 +1,7 @@
 import React from "react";
 import cntl from "cntl";
 import Link from "next/link";
-import Circle from "./Cirle";
+import Circle from "./Circle";
 import Button from "./Button";
 
 const ContactUs = () => {
@@ -36,7 +36,7 @@ const ContactUs = () => {
         <h1 className="text-2xl text-white pt-16 w-112 text-center md:text-xl">
           Let's explore yours
         </h1>
-        <Button>
+        <Button kind="secondary">
           <Link href="/about">Book out first no-obligation chat</Link>
         </Button>
       </div>

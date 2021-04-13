@@ -1,25 +1,24 @@
 import React, { ReactNode } from "react";
 import cntl from "cntl";
 
-type buttonProps = {
+type ButtonProps = {
   children?: ReactNode;
-  isPrimary?: boolean;
+  kind?: "primary" | "secondary";
 };
 
-const Button = ({ children, isPrimary }: buttonProps) => {
-  const buttonClass = cntl`
-    ${
-      isPrimary
-        ? cntl`
-        bg-blue-light
-        text-white
-      `
-        : cntl`
-        bg-white
-        text-blue-light
-      `
-    }
-  
+const buttonClass = ({ kind = "primary" }: ButtonProps) => cntl`
+  ${
+    kind === "primary"
+      ? cntl`
+      bg-blue-light
+      text-white
+    `
+      : cntl`
+      bg-white
+      text-blue-light
+    `
+  }
+
   w-auto
   font-medium
   border-solid
@@ -31,9 +30,10 @@ const Button = ({ children, isPrimary }: buttonProps) => {
   pt-2
   pb-2
   m-16
-  `;
+`;
 
-  return <button className={buttonClass}>{children}</button>;
+const Button = ({ children, kind }: ButtonProps) => {
+  return <button className={buttonClass({ kind })}>{children}</button>;
 };
 
 export default Button;
