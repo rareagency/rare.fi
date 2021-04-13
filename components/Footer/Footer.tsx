@@ -31,7 +31,13 @@ const Footer = () => {
             <div className="flex flex-col-reverse sm:hidden">
               <div className="text-4xl pt-64">
                 {links.map((link) => {
-                  return <FooterItem url={link.url} text={link.text} />;
+                  return (
+                    <FooterItem
+                      url={link.url}
+                      text={link.text}
+                      key={link.text}
+                    />
+                  );
                 })}
               </div>
             </div>

@@ -1,10 +1,12 @@
 import React from "react";
+
 import Layout from "../layouts/index/Layout";
+import ContactUs from "../components/ContactUsSection";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <div className="h-52 bg-white text-white">Temp filler</div>
+      <ContactUs />
     </Layout>
   );
 };

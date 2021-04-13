@@ -18,14 +18,18 @@ module.exports = {
       colors: {
         blue: {
           dark: "#0C1E4F",
+          light: "#1941AA",
         },
         black: "#000F1F",
         white: "#F9F9F9",
       },
       height: {
-        160: "40rem",
+        112: "28rem",
         152: "38rem",
         144: "36rem",
+        160: "40rem",
+        240: "60rem",
+        420: "105rem",
       },
     },
   },
