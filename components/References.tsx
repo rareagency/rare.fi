@@ -2,11 +2,11 @@ import React from "react";
 
 const References = () => {
   return (
-    <div className="w-full h-auto grid justify-items-center pt-48 pb-48">
-      <div className="text-2xl pb-8">
+    <div className="w-full h-auto grid justify-items-center pt-48 pb-48 p-8">
+      <div className="text-2xl pb-8 md:text-lg">
         Proudly delivered digital products with
       </div>
-      <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4">
+      <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4 md:grid-cols-2">
         <a href="https://www.tieto.com/fi/" target="blank">
           <img src="/static/references/tieto.svg" alt="Tieto Oyj" />
         </a>
