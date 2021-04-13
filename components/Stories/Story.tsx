@@ -38,10 +38,12 @@ const Story = ({
     <div
       className={align({ orientation }) + " flex justify-center items-start"}
     >
-      <img src={image} alt={image_alt} className="w-112"></img>
+      <img src={image} alt={image_alt} className="w-112 pl-2 md:w-48"></img>
       <div className="pl-8 pr-8">
-        <div className="text-md font-mono">{title}</div>
-        <div className="w-48 text-lg font-bold">{header}</div>
+        <div className="text-md font-mono md:text-sm">{title}</div>
+        <div className="w-48 text-lg font-bold md:w-32 md:text-sm">
+          {header}
+        </div>
         <div className="pt-6">
           <CircleButton link={link} />
         </div>
