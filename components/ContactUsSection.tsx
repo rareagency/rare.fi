@@ -36,9 +36,11 @@ const ContactUs = () => {
         <h1 className="text-2xl text-white pt-16 text-center md:text-xl">
           Let's explore yours
         </h1>
-        <Button kind="secondary">
-          <Link href="/about">Book our first no-obligation chat</Link>
-        </Button>
+        <div className="m-16">
+          <Button kind="secondary">
+            <Link href="/about">Book our first no-obligation chat</Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

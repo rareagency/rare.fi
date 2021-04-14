@@ -29,7 +29,6 @@ const buttonClass = ({ kind = "primary" }: ButtonProps) => cntl`
   pr-8
   pt-2
   pb-2
-  m-16
 `;
 
 const Button = ({ children, kind }: ButtonProps) => {
