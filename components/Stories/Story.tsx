@@ -26,6 +26,10 @@ const align = ({ orientation = "right" }: StoryProps) => cntl`
 
 `;
 
+const buttonAlign = ({ orientation }: StoryProps) => {
+  return orientation === "right" ? "justify-start" : "justify-end";
+};
+
 const Story = ({
   title,
   header,
@@ -36,15 +40,17 @@ const Story = ({
 }: StoryProps) => {
   return (
     <div
-      className={align({ orientation }) + " flex justify-center items-start"}
+      className={
+        align({ orientation }) + " flex justify-center content-end pt-24"
+      }
     >
       <img src={image} alt={image_alt} className="w-112 pl-2 md:w-48"></img>
-      <div className="pl-8 pr-8">
+      <div className="pl-4 pr-4">
         <div className="text-md font-mono md:text-sm">{title}</div>
         <div className="w-48 text-lg font-bold md:w-32 md:text-sm">
           {header}
         </div>
-        <div className="pt-6">
+        <div className={buttonAlign({ orientation }) + " grid pt-6"}>
           <CircleButton link={link} />
         </div>
       </div>
