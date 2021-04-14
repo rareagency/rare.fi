@@ -16,8 +16,8 @@ const container = cntl`
   place-items-end
   pb-20
   pt-16
-  text-center
-  
+  md:text-center
+
   md:grid-cols-1
 `;
 
