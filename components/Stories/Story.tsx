@@ -6,7 +6,7 @@ type StoryProps = {
   title?: string;
   header?: string;
   image?: string;
-  image_alt?: string;
+  imageAlt?: string;
   link?: string;
   orientation?: "left" | "right";
 };
@@ -34,7 +34,7 @@ const Story = ({
   title,
   header,
   image,
-  image_alt,
+  imageAlt,
   link,
   orientation,
 }: StoryProps) => {
@@ -44,7 +44,7 @@ const Story = ({
         align({ orientation }) + " flex justify-center content-end pt-24"
       }
     >
-      <img src={image} alt={image_alt} className="w-112 pl-2 md:w-48"></img>
+      <img src={image} alt={imageAlt} className="w-112 pl-2 md:w-48"></img>
       <div className="pl-4 pr-4">
         <div className="text-md font-mono md:text-sm">{title}</div>
         <div className="w-48 text-lg font-bold md:w-32 md:text-sm">

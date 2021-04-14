@@ -8,14 +8,14 @@ const Stories = () => {
     <div className="grid justify-center justify-items-center grid-cols-1">
       <Story
         image="/static/stock/stock1.svg"
-        image_alt="Stock photo"
+        imageAlt="Stock photo"
         title="Case study / Tieto"
         header="Applying the right tech from the start"
         orientation="right"
       />
       <Story
         image="/static/stock/stock2.svg"
-        image_alt="Stock photo"
+        imageAlt="Stock photo"
         title="Career story"
         header="Pyry's journey with Rare"
         orientation="left"
