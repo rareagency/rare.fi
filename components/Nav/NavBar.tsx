@@ -12,12 +12,12 @@ const NavBar = () => {
           <Logo />
         </Link>
       </div>
-      <div className="flex space-x-8 text-xl inline-flex xl:hidden">
+      <div className="flex space-x-8 text-xl inline-flex lg:hidden">
         {links.map((link) => {
           return <NavItem url={link.url} text={link.text} key={link.text} />;
         })}
       </div>
-      <div className="hidden xl:inline-flex">
+      <div className="hidden lg:inline-flex">
         {/*TODO*/}
         MOBILE
       </div>
