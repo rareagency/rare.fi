@@ -20,10 +20,11 @@ const buttonClass = ({ kind = "primary" }: ButtonProps) => cntl`
   }
 
   w-auto
-  font-medium
+  font-semibold
+  text-xl
   border-solid
   border-blue-light
-  border-2
+  border-[3px]
   rounded-full
   pl-8
   pr-8
