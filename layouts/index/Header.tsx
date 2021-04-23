@@ -5,7 +5,7 @@ const Header = () => {
   // Fonts are temp
   return (
     <header className="bg-black">
-      <div className=" mx-auto px-2 pt-4 h-screen pl-24 pr-24 lg:pl-4 lg:pr-4">
+      <div className="mx-auto px-2 pt-4 min-h-screen pl-24 pr-24 lg:pl-4 lg:pr-4">
         <NavBar />
         <div className="text-white p-16 text-8xl pl-16 pt-32 lg:pl-4 sm:text-5xl">
           <div>Everyday</div>
