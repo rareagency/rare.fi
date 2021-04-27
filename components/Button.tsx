@@ -1,12 +1,12 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import cntl from "cntl";
 
 type ButtonProps = {
-  children?: ReactNode;
   kind?: "primary" | "secondary";
+  className?: string;
 };
 
-const buttonClass = ({ kind = "primary" }: ButtonProps) => cntl`
+const buttonClass = ({ kind = "primary", className }: ButtonProps) => cntl`
   ${
     kind === "primary"
       ? cntl`
@@ -30,10 +30,11 @@ const buttonClass = ({ kind = "primary" }: ButtonProps) => cntl`
   pr-8
   pt-2
   pb-2
+  ${className}
 `;
 
-const Button = ({ children, kind }: ButtonProps) => {
-  return <button className={buttonClass({ kind })}>{children}</button>;
-};
+const Button: React.FC<ButtonProps> = ({ children, kind, className }) => (
+  <button className={buttonClass({ kind, className })}>{children}</button>
+);
 
 export default Button;

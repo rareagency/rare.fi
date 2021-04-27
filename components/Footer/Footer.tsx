@@ -5,20 +5,16 @@ import FooterItem from "../Footer/FooterItem";
 import { links } from "../../utils/pagelinks";
 
 const container = cntl`
+  layout-grid
+  col-all
   bg-black
   text-white
-  mx-auto
   h-auto
-  grid
-  grid-rows-3
-  grid-cols-3
   justify-items-center
   place-items-end
   pb-20
   pt-16
   md:text-center
-
-  md:grid-cols-1
 `;
 
 const Footer = () => {
@@ -26,29 +22,26 @@ const Footer = () => {
     <footer className={container}>
       <address className="row-span-3 space-y-6">
         <Logo />
-        <div className="pt-16">
-          <div className="font-bold pb-2">Tampere</div>
-          <div>Polttimonkatu 4</div>
-          <div>33210 Tampere</div>
-          <div>Finland</div>
-        </div>
-        <div className="">
-          <div>+358 50 470 0715</div>
-          <div>riku@rare.fi</div>
-        </div>
+
+        <ol className="pt-16">
+          <li className="font-bold pb-2">Tampere</li>
+          <li>Polttimonkatu 4</li>
+          <li>33210 Tampere</li>
+          <li>Finland</li>
+        </ol>
+        <ul>
+          <li>+358 50 470 0715</li>
+          <li>riku@rare.fi</li>
+        </ul>
       </address>
-      <div className="row-span-3 pt-8">
-        <div>Rare Agency Oy</div>
-        <div>3092335-9</div>
-      </div>
+      <ol className="row-span-3 pt-8">
+        <li>Rare Agency Oy</li>
+        <li>3092335-9</li>
+      </ol>
       <div className="row-span-3 md:hidden">
-        <div className="text-4xl">
-          {links.map((link) => {
-            return (
-              <FooterItem url={link.url} text={link.text} key={link.text} />
-            );
-          })}
-        </div>
+        {links.map((link) => (
+          <FooterItem url={link.url} text={link.text} key={link.text} />
+        ))}
       </div>
     </footer>
   );

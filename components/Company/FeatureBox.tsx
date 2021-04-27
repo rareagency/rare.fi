@@ -19,15 +19,15 @@ type InfoBox = {
 
 const FeatureBox = () => {
   return (
-    <div className="flex justify-between pt-32">
-      <div className="flex-row justify-between w-32 text-2xl">
+    <section className="flex justify-between pt-32">
+      <h3 className="flex-row justify-between w-32 text-2xl">
         Exceptional tech side
-      </div>
+      </h3>
       <div className="flex-col w-[70%] md:w-[90%]">
-        <div className="text-2xl">
+        <h3 className="text-2xl">
           We fight mediocrity in development practices and insert ourselves to
           the product teams to tackle projects with confidence, together.
-        </div>
+        </h3>
         <div className="grid grid-cols-3 grid-rows-auto justify-items-start gap-32 pt-8">
           <div>1</div>
           <div>2</div>
@@ -36,13 +36,11 @@ const FeatureBox = () => {
           <div>5</div>
           <div>6</div>
         </div>
-        <div className="pt-16">
-          <Button kind="secondary">
-            <Link href="#">Learn how we apply it</Link>
-          </Button>
-        </div>
+        <Button className="mt-16" kind="secondary">
+          <Link href="#">Learn how we apply it</Link>
+        </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

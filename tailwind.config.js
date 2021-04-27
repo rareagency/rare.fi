@@ -36,6 +36,9 @@ module.exports = {
         160: "40rem",
         240: "60rem",
       },
+      gridColumn: {
+        all: "span 8",
+      },
     },
   },
   variants: {

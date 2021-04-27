@@ -13,7 +13,7 @@ const CircleButton = ({ link }: CircleButtonProps) => {
         src="/static/button.svg"
         alt="Circle button"
         className="cursor-pointer w-12"
-      ></img>
+      />
     </Link>
   );
 };

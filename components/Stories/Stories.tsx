@@ -5,7 +5,7 @@ import Story from "./Story";
 
 const Stories = () => {
   return (
-    <div className="grid justify-center justify-items-center grid-cols-1">
+    <section className="layout-grid col-all">
       <Story
         image="/static/stock/stock1.svg"
         imageAlt="Stock photo"
@@ -25,7 +25,7 @@ const Stories = () => {
           <Link href="#">See all stories</Link>
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

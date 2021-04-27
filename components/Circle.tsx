@@ -13,7 +13,7 @@ const circle = cntl`
   m-8
   bg-center
   bg-no-repeat
-  `;
+`;
 
 const Circle = ({ image }: CircleProps) => {
   return (
