@@ -11,6 +11,6 @@
   .button-underline {
     border-bottom-width: 3px;
     border-style: solid;
-    @apply border-blue-mid;
+    @apply border-blue-dark;
   }
 }
