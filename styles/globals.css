@@ -8,4 +8,9 @@
     grid-template-columns: repeat(8, minmax(0, 1fr));
     gap: 1rem;
   }
+  .button-underline {
+    border-bottom-width: 3px;
+    border-style: solid;
+    @apply border-blue-mid;
+  }
 }
