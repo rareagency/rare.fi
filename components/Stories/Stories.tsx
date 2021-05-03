@@ -20,7 +20,7 @@ const Stories = () => {
         header="Pyry's journey with Rare"
         orientation="left"
       />
-      <div className="pt-16">
+      <div className="pt-16 col-start-4 col-span-2">
         <Button kind="secondary">
           <Link href="#">See all stories</Link>
         </Button>
