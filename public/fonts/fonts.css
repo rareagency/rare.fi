@@ -1,0 +1,84 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4044841, 2021-04-23T03:48:20-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: TTAutonomous-ExtraLight by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-autonomous/extralight/
+ * Copyright: Copyright (c) 2020–2021 by TypeType. Designers Yulia Gonina, Antonina Zhulkova, Anna Tikhonova, Eugene Tantsurin. Technical designers Ivan Gladkikh, Yuri Nako, Victor Rubenko, Kirill Maslov. All rights reserved.
+ * 
+ * Webfont: TTAutonomous-ExtraBold by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-autonomous/extrabold/
+ * Copyright: Copyright (c) 2020–2021 by TypeType. Designers Yulia Gonina, Antonina Zhulkova, Anna Tikhonova, Eugene Tantsurin. Technical designers Ivan Gladkikh, Yuri Nako, Victor Rubenko, Kirill Maslov. All rights reserved.
+ * 
+ * Webfont: TTAutonomousMono-Regular by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-autonomous/mono-regular/
+ * Copyright: Copyright (c) 2020–2021 by TypeType. Designers Yulia Gonina, Antonina Zhulkova, Anna Tikhonova, Eugene Tantsurin. Technical designers Ivan Gladkikh, Yuri Nako, Victor Rubenko, Kirill Maslov. All rights reserved.
+ * 
+ * Webfont: TTAutonomousMono-Medium by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-autonomous/mono-medium/
+ * Copyright: Copyright (c) 2020–2021 by TypeType. Designers Yulia Gonina, Antonina Zhulkova, Anna Tikhonova, Eugene Tantsurin. Technical designers Ivan Gladkikh, Yuri Nako, Victor Rubenko, Kirill Maslov. All rights reserved.
+ * 
+ * Webfont: TTAutonomousMono-Bold by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-autonomous/mono-bold/
+ * Copyright: Copyright (c) 2020–2021 by TypeType. Designers Yulia Gonina, Antonina Zhulkova, Anna Tikhonova, Eugene Tantsurin. Technical designers Ivan Gladkikh, Yuri Nako, Victor Rubenko, Kirill Maslov. All rights reserved.
+ * 
+ * Webfont: Altone-Regular by Eko Bimantara
+ * URL: https://www.myfonts.com/fonts/eko-bimantara/altone/regular/
+ * Copyright: Copyright (c) 2021 by Eko Bimantara. All rights reserved.
+ * 
+ * Webfont: Altone-Medium by Eko Bimantara
+ * URL: https://www.myfonts.com/fonts/eko-bimantara/altone/medium/
+ * Copyright: Copyright (c) 2021 by Eko Bimantara. All rights reserved.
+ * 
+ * Webfont: Altone-Bold by Eko Bimantara
+ * URL: https://www.myfonts.com/fonts/eko-bimantara/altone/bold/
+ * Copyright: Copyright (c) 2021 by Eko Bimantara. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3db829");
+  
+@font-face {
+  font-family: "TTAutonomous-ExtraBold";
+  src: url('webFonts/TTAutonomousExtraBold/font.woff2') format('woff2'), url('webFonts/TTAutonomousExtraBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "TTAutonomousMono-Medium";
+  src: url('webFonts/TTAutonomousMonoMedium/font.woff2') format('woff2'), url('webFonts/TTAutonomousMonoMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: "TTAutonomousMono-Bold";
+  src: url('webFonts/TTAutonomousMonoBold/font.woff2') format('woff2'), url('webFonts/TTAutonomousMonoBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "TTAutonomous-ExtraLight";
+  src: url('webFonts/TTAutonomousExtraLight/font.woff2') format('woff2'), url('webFonts/TTAutonomousExtraLight/font.woff') format('woff');
+}
+@font-face {
+  font-family: "TTAutonomousMono-Regular";
+  src: url('webFonts/TTAutonomousMonoRegular/font.woff2') format('woff2'), url('webFonts/TTAutonomousMonoRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Altone-Regular";
+  src: url('webFonts/AltoneRegular/font.woff2') format('woff2'), url('webFonts/AltoneRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Altone-Bold";
+  src: url('webFonts/AltoneBold/font.woff2') format('woff2'), url('webFonts/AltoneBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "Altone-Medium";
+  src: url('webFonts/AltoneMedium/font.woff2') format('woff2'), url('webFonts/AltoneMedium/font.woff') format('woff');
+}
+
