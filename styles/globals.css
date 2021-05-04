@@ -15,6 +15,6 @@
   }
 
   .header {
-    @apply font-TTAutonomousMonoBold text-7xl tracking-wider leading-tight;
+    @apply font-TTAutonomous font-extrabold text-7xl tracking-wider leading-tight;
   }
 }

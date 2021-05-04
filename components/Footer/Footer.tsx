@@ -18,21 +18,21 @@ const Footer = () => {
   return (
     <footer className={container}>
       <section className="col-start-2 col-span-5 md:col-start-1">
-        <div className="text-2xl pb-2 font-AltoneMedium">Software made</div>
-        <div className="text-6xl font-TTAutonomousMonoRegular">
-          collaborative
+        <div className="text-2xl pb-2 font-Altone font-medium">
+          Software made
         </div>
+        <div className="text-6xl font-TTAutonomousMono">collaborative</div>
       </section>
 
       <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-3">
         {links.map((link) => (
-          <li className="p-2 text-right font-AltoneBold md:text-left">
+          <li className="p-2 text-right font-Altone font-bold md:text-left">
             <FooterItem url={link.url} text={link.text} key={link.text} />
           </li>
         ))}
       </ol>
 
-      <address className="space-y-6 col-start-2 row-start-2 pb-24 pt-24 uppercase md:row-start-3 md:col-start-1 md:col-span-2 font-TTAutonomousMonoBold">
+      <address className="space-y-6 col-start-2 row-start-2 pb-24 pt-24 uppercase md:row-start-3 md:col-start-1 md:col-span-2 font-TTAutonomousMono font-bold">
         <ol className="pt-16">
           <li className="pb-6">Tampere</li>
           <li>Polttimonkatu 4</li>

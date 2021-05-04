@@ -9,7 +9,7 @@ type NavProps = {
 const NavItem = ({ url, text }: NavProps) => {
   return (
     <Link href={url}>
-      <a className="text-white lg:px-4 py-1 uppercase font-AltoneMedium">
+      <a className="text-white lg:px-4 py-1 uppercase font-Altone font-medium">
         {text}
       </a>
     </Link>
