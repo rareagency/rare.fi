@@ -3,19 +3,19 @@ import Link from "next/link";
 import Button from "../Button";
 
 // TODO, use theese in stead of hardcoded values
-type FeatureBoxProps = {
-  title: string;
-  header: string;
-  buttonText: string;
-  buttonLink: string;
-  boxes: InfoBox[];
-};
+// type FeatureBoxProps = {
+//   title: string;
+//   header: string;
+//   buttonText: string;
+//   buttonLink: string;
+//   boxes: InfoBox[];
+// };
 
-type InfoBox = {
-  imageUrl: string;
-  imageAlt: string;
-  text: string;
-};
+// type InfoBox = {
+//   imageUrl: string;
+//   imageAlt: string;
+//   text: string;
+// };
 
 const FeatureBox = () => {
   return (
