@@ -1,5 +1,4 @@
 import React from "react";
-import cntl from "cntl";
 import CircleButton from "../CircleButton";
 
 type StoryProps = {
