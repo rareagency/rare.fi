@@ -19,6 +19,12 @@ const buttonAlign = ({ orientation }: StoryProps) => {
     : "justify-end md:justify-start";
 };
 
+const align = ({ orientation }: StoryProps) => {
+  return orientation === "right"
+    ? "flex-row-reverse text-left"
+    : "flex-row text-right";
+};
+
 const Story = ({
   title,
   header,
@@ -27,11 +33,13 @@ const Story = ({
   link,
   orientation,
 }: StoryProps) => (
-  <div className="pt-24 layout-grid col-all">
+  <div
+    className={"pt-24 flex col-all justify-center " + align({ orientation })}
+  >
     <img
       src={image}
       alt={imageAlt}
-      className={"w-112 pl-2 md:w-48 col-start-4 col-span-3 row-start-1"}
+      className={"w-112 md:w-48 col-start-4 col-span-3 row-start-1"}
     ></img>
     <div className="pl-8 pr-8 col-start-3 row-start-1">
       <div className="text-md font-mono md:text-sm">{title}</div>
