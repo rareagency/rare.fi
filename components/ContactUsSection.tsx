@@ -6,8 +6,7 @@ import Button from "./Button";
 
 const textBoxClass = cntl`
   text-white
-  w-52
-  text-xl
+  w-64
   md:text-lg
   md:text-center
 `;
@@ -31,12 +30,12 @@ const ContactUs = () => {
       </div>
 
       <div className="grid justify-center justify-items-center grid-cols-1">
-        <h1 className="text-4xl text-white pt-16 w-112 text-center md:text-2xl md:w-64">
+        <h4 className="text-white pt-16 w-112 text-center md:w-64">
           We adapt to our client&apos;s environment & needs
-        </h1>
-        <h1 className="text-2xl text-white pt-16 text-center md:text-xl">
+        </h4>
+        <h4 className="text-white pt-16 text-center ">
           Let&apos;s explore yours
-        </h1>
+        </h4>
 
         <Button className="m-16" kind="secondary">
           <Link href="/about">Book our first no-obligation chat</Link>

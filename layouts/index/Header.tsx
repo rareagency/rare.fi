@@ -8,11 +8,9 @@ const Header = () => {
         <NavBar />
 
         <div className="text-white pt-32 pb-64">
-          <h1 className="header uppercase">Everyday</h1>
-          <h1 className="header uppercase">contribution to envision</h1>
-          <div className="font-Altone font-normal text-7xl tracking-wider">
-            a better digital world of tomorrow
-          </div>
+          <h1>Everyday</h1>
+          <h1>contribution to envision</h1>
+          <h2>a better digital world of tomorrow</h2>
         </div>
       </div>
     </header>

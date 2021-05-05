@@ -9,7 +9,9 @@ type FooterProps = {
 const FooterItem = ({ url, text }: FooterProps) => {
   return (
     <Link href={url}>
-      <a className="text-white text-right py-2 uppercase">{text}</a>
+      <h5>
+        <a className="text-white text-right py-2 uppercase">{text}</a>
+      </h5>
     </Link>
   );
 };

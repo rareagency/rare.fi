@@ -3,9 +3,7 @@ import React from "react";
 const References = () => {
   return (
     <section className="col-all grid justify-items-center pt-48 pb-48 p-8">
-      <h3 className="text-2xl pb-8 md:text-lg">
-        Proudly delivered digital products with
-      </h3>
+      <h3 className="pb-8 title2">Proudly delivered digital products with</h3>
       <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4 md:grid-cols-2">
         <a href="https://www.tieto.com/fi/" target="_blank" rel="noreferrer">
           <img src="/static/references/tieto.svg" alt="Tieto Oyj" />
