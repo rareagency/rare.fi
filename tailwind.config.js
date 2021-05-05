@@ -15,9 +15,9 @@ module.exports = {
       sm: { max: "639px" },
     },
     fontFamily: {
-      TTAutonomous: ["TTAutonomous"],
-      TTAutonomousMono: ["TTAutonomousMono"],
-      Altone: ["Altone"],
+      header: ["TTAutonomous"],
+      headerMono: ["TTAutonomousMono"],
+      default: ["Altone"],
     },
     extend: {
       colors: {

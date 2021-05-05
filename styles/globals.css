@@ -19,14 +19,14 @@
     line-height: 81px;
     letter-spacing: 0.085em;
     text-transform: uppercase;
-    @apply font-TTAutonomousMono  font-bold;
+    @apply font-headerMono  font-bold;
   }
 
   .title2 {
     font-size: 22px;
     line-height: 36px;
     letter-spacing: 0.085em;
-    @apply font-Altone font-bold;
+    @apply font-default font-bold;
   }
 }
 
@@ -35,44 +35,44 @@
     font-size: 80px;
     letter-spacing: 0.085em;
     line-height: 129px;
-    @apply font-TTAutonomous font-extrabold uppercase;
+    @apply font-header font-extrabold uppercase;
   }
 
   h2 {
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 103px;
-    @apply font-TTAutonomousMono font-normal;
+    @apply font-headerMono font-normal;
   }
 
   h4 {
     font-size: 34px;
     line-height: 50px;
-    @apply font-Altone font-medium;
+    @apply font-default font-medium;
   }
 
   h5 {
     font-size: 22px;
     letter-spacing: 0.085em;
     line-height: 36px;
-    @apply font-Altone font-bold uppercase;
+    @apply font-default font-bold uppercase;
   }
 
   h6 {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.085em;
-    @apply font-TTAutonomousMono font-medium;
+    @apply font-headerMono font-medium;
   }
 
   body {
     letter-spacing: 0.085em;
-    @apply font-Altone font-normal text-2xl text-blue-dark;
+    @apply font-default font-normal text-2xl text-blue-dark;
   }
 
   span {
     letter-spacing: 0.06em;
     line-height: 25px;
-    @apply font-TTAutonomousMono font-normal text-lg;
+    @apply font-headerMono font-normal text-lg;
   }
 }

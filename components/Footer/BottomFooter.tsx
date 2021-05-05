@@ -14,7 +14,7 @@ const container = cntl`
 `;
 
 const stories = cntl`
-  font-TTAutonomousMono
+  font-headerMono
   uppercase
   col-start-4
   col-span-2
@@ -32,7 +32,7 @@ const BottomFooter = () => {
         <Logo color="blue" />
       </div>
       <span className={stories}>Follow our stories on:</span>
-      <div className="col-span-2 text-right space-x-6 font-Altone font-medium md:row-start-3 md:col-start-1">
+      <div className="col-span-2 text-right space-x-6 font-default font-medium md:row-start-3 md:col-start-1">
         <TextLink url="https://github.com/rareagency" text="Github" />
         <TextLink
           url="https://www.linkedin.com/company/rareagency/"

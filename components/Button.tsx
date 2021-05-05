@@ -20,7 +20,7 @@ const buttonClass = ({ kind = "primary", className }: ButtonProps) => cntl`
   }
 
   w-auto
-  font-Altone
+  font-default
   font-bold
   text-lg
   border-solid
