@@ -1,5 +1,4 @@
 import React from "react";
-import cntl from "cntl";
 import CircleButton from "../CircleButton";
 
 type StoryProps = {
@@ -11,23 +10,18 @@ type StoryProps = {
   orientation?: "left" | "right";
 };
 
-const align = ({ orientation = "right" }: StoryProps) => cntl`
-  ${
-    orientation === "right"
-      ? cntl`
-      text-left
-      flex-row
-    `
-      : cntl`
-      text-right
-      flex-row-reverse
-    `
-  }
-
-`;
+// TODO fix left / right orientation
 
 const buttonAlign = ({ orientation }: StoryProps) => {
-  return orientation === "right" ? "justify-start" : "justify-end";
+  return orientation === "right"
+    ? "justify-end md:justify-start"
+    : "justify-start";
+};
+
+const align = ({ orientation }: StoryProps) => {
+  return orientation === "right"
+    ? "flex-row-reverse text-left"
+    : "flex-row text-right";
 };
 
 const Story = ({
@@ -37,25 +31,23 @@ const Story = ({
   imageAlt,
   link,
   orientation,
-}: StoryProps) => {
-  return (
-    <div
-      className={
-        align({ orientation }) + " flex justify-center content-end pt-24"
-      }
-    >
-      <img src={image} alt={imageAlt} className="w-112 pl-2 md:w-48"></img>
-      <div className="pl-4 pr-4">
-        <div className="text-md font-mono md:text-sm">{title}</div>
-        <div className="w-48 text-lg font-bold md:w-32 md:text-sm">
-          {header}
-        </div>
-        <div className={buttonAlign({ orientation }) + " grid pt-6"}>
-          <CircleButton link={link} />
-        </div>
+}: StoryProps) => (
+  <div
+    className={"pt-24 flex col-all justify-center " + align({ orientation })}
+  >
+    <img
+      src={image}
+      alt={imageAlt}
+      className={"w-112 md:w-48 col-start-4 col-span-3 row-start-1"}
+    ></img>
+    <div className="pl-8 pr-8 col-start-3 row-start-1">
+      <span className="text-md font-mono md:text-sm">{title}</span>
+      <h4 className="w-96 md:w-32 md:text-sm">{header}</h4>
+      <div className={buttonAlign({ orientation }) + " grid pt-6"}>
+        <CircleButton link={link} />
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Story;

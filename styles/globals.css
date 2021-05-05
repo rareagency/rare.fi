@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .layout-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .button-underline {
+    border-bottom-width: 3px;
+    border-style: solid;
+    @apply border-blue-light;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 81px;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    @apply font-headerMono  font-bold;
+  }
+
+  .title2 {
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: 0.085em;
+    @apply font-default font-bold;
+  }
+}
+
+@layer base {
+  h1 {
+    font-size: 80px;
+    letter-spacing: 0.085em;
+    line-height: 129px;
+    @apply font-header font-extrabold uppercase;
+  }
+
+  h2 {
+    font-size: 64px;
+    letter-spacing: 0.085em;
+    line-height: 103px;
+    @apply font-headerMono font-normal;
+  }
+
+  h4 {
+    font-size: 34px;
+    line-height: 50px;
+    @apply font-default font-medium;
+  }
+
+  h5 {
+    font-size: 22px;
+    letter-spacing: 0.085em;
+    line-height: 36px;
+    @apply font-default font-bold uppercase;
+  }
+
+  h6 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.085em;
+    @apply font-headerMono font-medium;
+  }
+
+  body {
+    letter-spacing: 0.085em;
+    @apply font-default font-normal text-2xl text-blue-dark;
+  }
+
+  span {
+    letter-spacing: 0.06em;
+    line-height: 25px;
+    @apply font-headerMono font-normal text-lg;
+  }
+}

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Header from "./Header";
 import Base from "../Base";
 import Footer from "../../components/Footer/Footer";
+import BottomFooter from "../../components/Footer/BottomFooter";
 
 type Props = {
   children?: ReactNode;
@@ -10,12 +11,12 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div>
-      <Base />
+    <Base>
       <Header />
       {children}
       <Footer />
-    </div>
+      <BottomFooter />
+    </Base>
   );
 };
 

@@ -14,11 +14,17 @@ module.exports = {
       md: { max: "767px" },
       sm: { max: "639px" },
     },
+    fontFamily: {
+      header: ["TTAutonomous"],
+      headerMono: ["TTAutonomousMono"],
+      default: ["Altone"],
+    },
     extend: {
       colors: {
         blue: {
           dark: "#0C1E4F",
           light: "#1941AA",
+          mid: "#34517E",
         },
         black: "#000F1F",
         white: "#F9F9F9",
@@ -34,6 +40,10 @@ module.exports = {
       width: {
         112: "28rem",
         160: "40rem",
+        240: "60rem",
+      },
+      gridColumn: {
+        all: "span 8",
       },
     },
   },
