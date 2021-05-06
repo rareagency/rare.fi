@@ -23,9 +23,9 @@ const Footer = () => {
       </section>
 
       <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-3">
-        {links.map((link) => (
-          <li className="p-2 text-right md:text-left">
-            <FooterItem url={link.url} text={link.text} key={link.text} />
+        {links.map((link, index) => (
+          <li className="p-2 text-right md:text-left" key={index}>
+            <FooterItem url={link.url} text={link.text} key={index} />
           </li>
         ))}
       </ol>

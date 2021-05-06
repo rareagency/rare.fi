@@ -11,7 +11,7 @@ const classes =
 
 const FooterItem = ({ url, text }: FooterProps) => {
   return (
-    <Link href={url}>
+    <Link href={url} passHref>
       <a className={classes}>{text}</a>
     </Link>
   );
