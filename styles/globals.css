@@ -18,7 +18,7 @@
     line-height: 81px;
     letter-spacing: 0.085em;
     text-transform: uppercase;
-    @apply font-headerMono  font-bold;
+    @apply font-headerMono font-bold;
   }
 
   .title2 {
@@ -33,6 +33,9 @@
     line-height: 64px;
     letter-spacing: 0.085em;
     @apply font-default font-normal;
+  }
+  .word-spacing-xl {
+    word-spacing: 5rem;
   }
 }
 
