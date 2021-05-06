@@ -2,7 +2,7 @@ import React from "react";
 import cntl from "cntl";
 
 type CircleProps = {
-  image?: string;
+  image: string;
 };
 const circle = cntl`
   bg-gray-400
@@ -16,11 +16,9 @@ const circle = cntl`
 `;
 
 const Circle = ({ image }: CircleProps) => {
-  let style = ` background-image: url(${image})`;
-  if (!image) {
-    style = "";
-  }
-  return <div className={circle + style}></div>;
+  return (
+    <div className={circle} style={{ backgroundImage: `url(${image})` }}></div>
+  );
 };
 
 export default Circle;
