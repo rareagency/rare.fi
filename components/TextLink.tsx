@@ -18,6 +18,7 @@ const TextLink = ({ url, text }: TextLinkProps) => {
       target="_blank"
       style={classes}
       className={`button-underline text-blue-light hover:text-blue-dark hover:border-blue-dark;`}
+      rel="noreferrer"
     >
       {text}
     </a>

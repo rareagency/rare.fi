@@ -6,18 +6,11 @@ type LogoProps = {
 };
 
 const Logo = ({ color, className }: LogoProps) => {
+  let image = "/static/logo.svg";
   if (color === "blue") {
-    return (
-      <img
-        className={className}
-        src="/static/logo_blue.svg"
-        alt="Rare Agency -logo"
-      />
-    );
+    image = "/static/logo_blue.svg";
   }
-  return (
-    <img className={className} src="/static/logo.svg" alt="Rare Agency -logo" />
-  );
+  return <img className={className} src={image} alt="Rare Agency -logo" />;
 };
 
 export default Logo;
