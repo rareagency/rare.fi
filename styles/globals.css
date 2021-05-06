@@ -6,7 +6,6 @@
   .layout-grid {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: 1rem;
   }
   .button-underline {
     border-bottom-width: 3px;
@@ -27,6 +26,13 @@
     line-height: 36px;
     letter-spacing: 0.085em;
     @apply font-default font-bold;
+  }
+
+  .ingress {
+    font-size: 32px;
+    line-height: 64px;
+    letter-spacing: 0.085em;
+    @apply font-default font-normal;
   }
 }
 
@@ -74,5 +80,14 @@
     letter-spacing: 0.06em;
     line-height: 25px;
     @apply font-headerMono font-normal text-lg;
+  }
+
+  nav {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.085em;
+
+    @apply font-default font-bold;
   }
 }

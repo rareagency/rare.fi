@@ -25,8 +25,8 @@ const ContactUs = () => {
           Inject a missing capability & skill to your team
         </span>
         <Circle image="/static/logo.svg" />
-        <Circle />
-        <Circle />
+        <Circle image="/static/logo.svg" />
+        <Circle image="/static/logo.svg" />
       </div>
 
       <div className="grid justify-center justify-items-center grid-cols-1">
