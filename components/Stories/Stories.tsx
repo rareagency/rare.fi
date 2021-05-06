@@ -11,16 +11,16 @@ const Stories = () => {
         imageAlt="Stock photo"
         title="Case study / Tieto"
         header="Applying the right tech from the start"
-        orientation="right"
+        orientation="left"
       />
       <Story
         image="/static/stock/stock2.svg"
         imageAlt="Stock photo"
         title="Career story"
         header="Pyry's journey with Rare"
-        orientation="left"
+        orientation="right"
       />
-      <div className="pt-16 col-start-4 col-span-2">
+      <div className="pt-16 flex col-all justify-center">
         <Button kind="secondary">
           <Link href="#">See all stories</Link>
         </Button>

@@ -20,8 +20,8 @@ const buttonAlign = ({ orientation }: StoryProps) => {
 
 const align = ({ orientation }: StoryProps) => {
   return orientation === "right"
-    ? "flex-row-reverse text-left"
-    : "flex-row text-right";
+    ? "flex-row-reverse text-right"
+    : "flex-row text-left";
 };
 
 const Story = ({
@@ -40,8 +40,8 @@ const Story = ({
       alt={imageAlt}
       className={"w-112 md:w-48 col-start-4 col-span-3 row-start-1"}
     ></img>
-    <div className="pl-8 pr-8 col-start-3 row-start-1">
-      <span className="text-md font-mono md:text-sm">{title}</span>
+    <div className="pl-16 pr-16 col-start-3 row-start-1">
+      <span className="text-md font-mono uppercase md:text-sm">{title}</span>
       <h4 className="w-96 md:w-32 md:text-sm">{header}</h4>
       <div className={buttonAlign({ orientation }) + " grid pt-6"}>
         <CircleButton link={link} />

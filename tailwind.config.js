@@ -28,6 +28,7 @@ module.exports = {
         },
         black: "#000F1F",
         white: "#F9F9F9",
+        light: "#D5D9E3",
       },
       height: {
         112: "28rem",

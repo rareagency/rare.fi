@@ -31,6 +31,7 @@ const buttonClass = ({ kind = "primary", className }: ButtonProps) => cntl`
   pr-8
   pt-2
   pb-2
+  uppercase
   ${className}
 `;
 
