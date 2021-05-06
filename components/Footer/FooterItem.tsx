@@ -6,12 +6,13 @@ type FooterProps = {
   text: string;
 };
 
+const classes =
+  "text-white text-right py-2 uppercase title2 text hover:text-light";
+
 const FooterItem = ({ url, text }: FooterProps) => {
   return (
     <Link href={url}>
-      <h5>
-        <a className="text-white text-right py-2 uppercase">{text}</a>
-      </h5>
+      <a className={classes}>{text}</a>
     </Link>
   );
 };

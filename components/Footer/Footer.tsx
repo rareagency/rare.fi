@@ -30,7 +30,7 @@ const Footer = () => {
         ))}
       </ol>
 
-      <h6 className="space-y-6 col-start-2 row-start-2 col-span-3 pb-24 pt-24 md:row-start-3 md:col-start-1 md:col-span-2">
+      <h6 className="space-y-6 col-start-2 row-start-2 col-span-3 pb-24 pt-24 md:row-start-3 md:col-start-1 md:col-span-4">
         <ol className="pt-16">
           <li className="pb-6">
             <h5>Tampere</h5>
@@ -49,14 +49,16 @@ const Footer = () => {
         </ul>
       </h6>
       <div className="layout-grid row-start-3 col-all uppercase text-sm md:text-left md:row-start-4">
-        <div className="col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-3">
+        <div className="col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-4">
           (c) copyright rare agency
         </div>
-        <div className="col-span-2 text-center md:row-start-2 md:col-span-3 md:text-left">
+        <div className="col-span-2 text-center md:row-start-2 md:col-span-4 md:text-left">
           🇫🇮 Made in Finland
         </div>
-        <div className="col-span-2 text-right  md:row-start-3 md:col-span-3 md:text-left">
-          <a className="button-underline">Cookie & Privacy policy</a>
+        <div className="col-span-2 text-right  md:row-start-3 md:col-span-4 md:text-left">
+          <a href="#" className="button-underline">
+            Cookie & Privacy policy
+          </a>
         </div>
       </div>
     </footer>

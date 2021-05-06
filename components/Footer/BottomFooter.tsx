@@ -8,8 +8,8 @@ const container = cntl`
   col-all
   bg-white
   h-auto
-  pt-2
-  pb-4
+  pt-8
+  pb-6
   md:pl-8
 `;
 
@@ -32,7 +32,7 @@ const BottomFooter = () => {
         <Logo color="blue" />
       </div>
       <span className={stories}>Follow our stories on:</span>
-      <div className="col-span-2 text-right space-x-6 font-default font-medium md:row-start-3 md:col-start-1">
+      <div className="col-span-2 text-right space-x-6 md:row-start-3 md:col-start-1">
         <TextLink url="https://github.com/rareagency" text="Github" />
         <TextLink
           url="https://www.linkedin.com/company/rareagency/"
