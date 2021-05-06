@@ -16,14 +16,11 @@ const circle = cntl`
 `;
 
 const Circle = ({ image }: CircleProps) => {
-  return (
-    <div
-      className={circle}
-      style={{
-        backgroundImage: `url(${image})`,
-      }}
-    ></div>
-  );
+  let style = ` background-image: url(${image})`;
+  if (!image) {
+    style = "";
+  }
+  return <div className={circle + style}></div>;
 };
 
 export default Circle;
