@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
   string,
@@ -6,13 +6,28 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
   string
 ]) {
   const ref = useRef<HTMLElement>(null);
-  const [number, setNumber] = useState(0);
+  const firstRowRef = useRef<HTMLElement>(null);
+  const secondRowRef = useRef<HTMLElement>(null);
+  const thirdRowRef = useRef<HTMLElement>(null);
 
   const handleScroll = () => {
+    if (!firstRowRef.current || !secondRowRef.current || !thirdRowRef.current) {
+      return;
+    }
+
     const offsetFromScrollerElement =
       window.scrollY + window.innerHeight - (ref.current?.offsetTop ?? 0);
     const speed = 0.6;
-    setNumber(Math.max(0, offsetFromScrollerElement) * speed);
+
+    const scrollXPos = Math.max(0, offsetFromScrollerElement) * speed;
+
+    firstRowRef.current.style.transform = `translateX(${-750 + scrollXPos}px)`;
+    secondRowRef.current.style.transform = `translateX(${
+      (-800 + scrollXPos) * 0.8
+    }px)`;
+    thirdRowRef.current.style.transform = `translateX(${
+      -550 + scrollXPos * 0.6
+    }px)`;
   };
 
   useEffect(() => {
@@ -24,24 +39,16 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
     container: { ref },
     firstRow: {
       children: firstRow,
-      style: {
-        transform: `translateX(${-750 + number}px)`,
-        transition: "transform 50ms",
-      },
+      ref: firstRowRef,
     },
     secondRow: {
       children: secondRow,
-      style: {
-        transform: `translateX(${(-800 + number) * 0.8}px)`,
-        transition: "transform 50ms",
-      },
+      ref: secondRowRef,
     },
     thirdRow: {
       children: thirdRow,
-      style: {
-        transform: `translateX(${-550 + number * 0.6}px)`,
-        transition: "transform 50ms",
-      },
+      ref: thirdRowRef,
     },
+    ref,
   };
 }
