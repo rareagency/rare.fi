@@ -15,9 +15,9 @@ const IndexPage = () => {
       <Stories />
       <HorizontalScroller
         textRows={[
-          "AWS Azure Shopify Vue",
-          "Javascript Node.js Docker",
-          "PostgreSQL Angular React",
+          "AWS Azure Shopify Heroku Terraform",
+          "TypeScript Angular Vue Docker Next.js",
+          "PostgreSQL Node.js React Python",
         ]}
       />
       <Company />

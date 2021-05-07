@@ -25,21 +25,21 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
     firstRow: {
       children: firstRow,
       style: {
-        transform: `translateX(${-400 + number}px)`,
+        transform: `translateX(${-750 + number}px)`,
         transition: "transform 50ms",
       },
     },
     secondRow: {
       children: secondRow,
       style: {
-        transform: `translateX(${(-500 + number) * 0.8}px)`,
+        transform: `translateX(${(-800 + number) * 0.8}px)`,
         transition: "transform 50ms",
       },
     },
     thirdRow: {
       children: thirdRow,
       style: {
-        transform: `translateX(${-400 + number * 0.6}px)`,
+        transform: `translateX(${-550 + number * 0.6}px)`,
         transition: "transform 50ms",
       },
     },
