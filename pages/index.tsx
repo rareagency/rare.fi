@@ -15,8 +15,8 @@ const IndexPage = () => {
       <Stories />
       <HorizontalScroller
         textRows={[
-          "AWS Azure Shopify Heroku Terraform Scala",
           "TypeScript Next.js Vue Docker Flutter",
+          "AWS Azure Shopify Heroku Terraform Scala",
           "Node.js PostgreSQL React Spark Python",
         ]}
       />
