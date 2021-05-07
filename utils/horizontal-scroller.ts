@@ -19,7 +19,11 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
       window.scrollY + window.innerHeight - (ref.current?.offsetTop ?? 0);
     const speed = 0.6;
 
-    const scrollXPos = Math.max(0, offsetFromScrollerElement) * speed;
+    const scrollXPos = offsetFromScrollerElement * speed;
+
+    if (scrollXPos < 0 || scrollXPos > 800) {
+      return;
+    }
 
     firstRowRef.current.style.transform = `translateX(${-750 + scrollXPos}px)`;
     secondRowRef.current.style.transform = `translateX(${
