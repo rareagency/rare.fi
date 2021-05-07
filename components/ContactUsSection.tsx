@@ -13,7 +13,7 @@ const textBoxClass = cntl`
 
 const ContactUs = () => {
   return (
-    <section className="col-all bg-blue-light h-auto w-full">
+    <section id="contact-us" className="col-all bg-blue-light h-auto w-full">
       <div className="pt-16 grid justify-center justify-items-center grid-cols-3 gap-1 md:grid-cols-1 md:gap-y-4">
         <span className={textBoxClass + " text-left"}>
           Join for a journey from conception to implemention

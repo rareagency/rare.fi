@@ -16,7 +16,7 @@ const container = cntl`
 
 const Footer = () => {
   return (
-    <footer className={container}>
+    <footer id="page-footer" className={container}>
       <section className="col-start-2 col-span-5 md:col-start-1">
         <h4 className="pb-2">Software made</h4>
         <h2>collaborative</h2>

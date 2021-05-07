@@ -5,7 +5,7 @@ import Story from "./Story";
 
 const Stories = () => {
   return (
-    <section className="layout-grid col-all">
+    <section id="stories" className="layout-grid col-all">
       <Story
         image="/static/stock/stock1.svg"
         imageAlt="Stock photo"

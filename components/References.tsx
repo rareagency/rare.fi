@@ -5,7 +5,10 @@ const References = () => {
     "opacity-90 hover:opacity-100 transform transition-opacity hover:scale-105";
 
   return (
-    <section className="col-all grid justify-items-center pt-48 pb-48 p-8">
+    <section
+      id="references"
+      className="col-all grid justify-items-center pt-48 pb-48 p-8"
+    >
       <h3 className="pb-8 title2">Proudly delivered digital products with</h3>
       <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4 md:grid-cols-2">
         <a

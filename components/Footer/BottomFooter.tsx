@@ -27,7 +27,7 @@ const stories = cntl`
 
 const BottomFooter = () => {
   return (
-    <footer className={container}>
+    <footer id="page-bottom-footer" className={container}>
       <div className="col-start-2 md:col-start-1 md:col-span-3 md:pb-8">
         <Logo color="blue" />
       </div>

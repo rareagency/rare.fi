@@ -3,7 +3,7 @@ import NavBar from "../../components/Nav/NavBar";
 
 const Header = () => {
   return (
-    <header className="col-all layout-grid bg-black">
+    <header id="page-header" className="col-all layout-grid bg-black">
       <div className="col-start-2 col-end-8">
         <NavBar />
 
