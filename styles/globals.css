@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
+  :root {
+    --col-width: calc(1280px / 6);
+  }
   .layout-grid {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns:
+      1fr minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) 1fr;
   }
   .button-underline {
     border-bottom-width: 3px;
@@ -18,7 +25,7 @@
     line-height: 81px;
     letter-spacing: 0.085em;
     text-transform: uppercase;
-    @apply font-headerMono  font-bold;
+    @apply font-headerMono font-bold;
   }
 
   .title2 {
@@ -33,6 +40,9 @@
     line-height: 64px;
     letter-spacing: 0.085em;
     @apply font-default font-normal;
+  }
+  .word-spacing-xl {
+    word-spacing: 5rem;
   }
 }
 
