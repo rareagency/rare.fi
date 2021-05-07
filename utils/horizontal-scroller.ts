@@ -42,15 +42,15 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
   return {
     container: { ref },
     firstRow: {
-      children: firstRow,
+      children: `${firstRow} ${thirdRow} ${secondRow}`,
       ref: firstRowRef,
     },
     secondRow: {
-      children: secondRow,
+      children: `${secondRow} ${firstRow} ${thirdRow}`,
       ref: secondRowRef,
     },
     thirdRow: {
-      children: thirdRow,
+      children: `${thirdRow} ${secondRow} ${firstRow}`,
       ref: thirdRowRef,
     },
     ref,
