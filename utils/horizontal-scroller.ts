@@ -21,7 +21,7 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
 
     const scrollXPos = offsetFromScrollerElement * speed;
 
-    if (scrollXPos < 0 || scrollXPos > 800) {
+    if (scrollXPos < 0 || scrollXPos > 1000) {
       return;
     }
 
