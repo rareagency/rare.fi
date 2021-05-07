@@ -2,6 +2,7 @@ import React from "react";
 import cntl from "cntl";
 import { links } from "../../utils/pagelinks";
 import FooterItem from "./FooterItem";
+import TickerText from "./TickerText";
 
 const container = cntl`
   layout-grid
@@ -19,7 +20,7 @@ const Footer = () => {
     <footer className={container}>
       <section className="col-start-2 col-span-5 md:col-start-1">
         <h4 className="pb-2">Software made</h4>
-        <h2>collaborative</h2>
+        <TickerText />
       </section>
 
       <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-3">
