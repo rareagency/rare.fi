@@ -3,6 +3,7 @@ import cntl from "cntl";
 import { links } from "../../utils/pagelinks";
 import FooterItem from "./FooterItem";
 import TickerText from "./TickerText";
+import Image from "next/image";
 
 const container = cntl`
   layout-grid
@@ -51,10 +52,11 @@ const Footer = () => {
       </h6>
       <div className="layout-grid row-start-3 col-all uppercase text-sm md:text-left md:row-start-4">
         <div className="col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-4">
-          (c) copyright rare agency
+          © Rare Agency
         </div>
         <div className="col-span-2 text-center md:row-start-2 md:col-span-4 md:text-left">
-          🇫🇮 Made in Finland
+          <Image src="/static/finnish_flag.svg" width="20" height="13" /> Made
+          in Finland
         </div>
         <div className="col-span-2 text-right  md:row-start-3 md:col-span-4 md:text-left">
           <a href="#" className="button-underline">
