@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../layouts/index/Layout";
+import Layout from "../layouts/Lander";
 import ContactUs from "../components/ContactUsSection";
 import References from "../components/References";
 import Ingress from "../components/Ingress";

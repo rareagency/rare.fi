@@ -16,7 +16,7 @@ module.exports = {
     },
     fontFamily: {
       header: ["TTAutonomous"],
-      headerMono: ["TTAutonomousMono"],
+      "header-mono": ["TTAutonomousMono"],
       default: ["Altone"],
     },
     extend: {
@@ -29,6 +29,7 @@ module.exports = {
         black: "#000F1F",
         white: "#F9F9F9",
         light: "#D5D9E3",
+        "notification-red": "#EF6969",
       },
       height: {
         112: "28rem",

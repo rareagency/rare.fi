@@ -1,11 +1,11 @@
 import React from "react";
-import NavBar from "../../components/Nav/NavBar";
+import NavBar from "../Nav/NavBar";
 
 const Header = () => {
   return (
     <header id="page-header" className="col-all layout-grid bg-black">
       <div className="col-start-2 col-end-8">
-        <NavBar />
+        <NavBar theme="dark" />
 
         <div className="text-white pt-32 pb-64">
           <h1>Everyday</h1>

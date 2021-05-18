@@ -25,7 +25,7 @@
     line-height: 81px;
     letter-spacing: 0.085em;
     text-transform: uppercase;
-    @apply font-headerMono font-bold;
+    @apply font-header-mono font-bold;
   }
 
   .title2 {
@@ -58,7 +58,7 @@
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 103px;
-    @apply font-headerMono font-normal;
+    @apply font-header-mono font-normal;
   }
 
   h4 {
@@ -78,7 +78,7 @@
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.085em;
-    @apply font-headerMono font-medium;
+    @apply font-header-mono font-medium;
   }
 
   body {
@@ -89,7 +89,7 @@
   span {
     letter-spacing: 0.06em;
     line-height: 25px;
-    @apply font-headerMono font-normal text-lg;
+    @apply font-header-mono font-normal text-lg;
   }
 
   nav {

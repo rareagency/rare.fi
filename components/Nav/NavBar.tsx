@@ -1,22 +1,28 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "../Logo";
+import Logo, { DarkBlueLogo } from "../Logo";
 import NavItem from "./NavItem";
 import { links } from "../../utils/pagelinks";
 
-const NavBar = () => {
+const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
+  theme = "light",
+}) => {
   return (
-    <nav className="flex items-center justify-between h-16 text-white pt-8">
+    <nav className={"flex items-center justify-between h-16 pt-16 pb-16"}>
       <Link href="/">
-        <a>
-          <Logo className="h-8 w-auto" />
-        </a>
+        <a>{theme === "dark" ? <Logo /> : <DarkBlueLogo />}</a>
       </Link>
 
-      <div className="space-x-12 text-xl inline-flex lg:hidden">
-        {links.map((link, index) => {
-          return <NavItem url={link.url} text={link.text} key={index} />;
-        })}
+      <div className="space-x-16 text-xl inline-flex lg:hidden">
+        {links.map((link, index) => (
+          <NavItem
+            theme={theme}
+            url={link.url}
+            text={link.text}
+            key={index}
+            hasBadge={link.hasBadge}
+          />
+        ))}
       </div>
 
       <div className="hidden lg:inline-flex">
