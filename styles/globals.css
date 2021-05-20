@@ -48,9 +48,9 @@
 
 @layer base {
   h1 {
-    font-size: 80px;
+    font-size: 64px;
     letter-spacing: 0.085em;
-    line-height: 129px;
+    line-height: 96px;
     @apply font-header font-extrabold uppercase;
   }
 
