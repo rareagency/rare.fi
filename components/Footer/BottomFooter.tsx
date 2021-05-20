@@ -1,6 +1,6 @@
 import React from "react";
 import cntl from "cntl";
-import { BlueLogo } from "../Logo";
+import Logo from "../Logo";
 import TextLink from "../TextLink";
 
 const container = cntl`
@@ -29,7 +29,7 @@ const BottomFooter = () => {
   return (
     <footer id="page-bottom-footer" className={container}>
       <div className="col-start-2 md:col-start-1 md:col-span-3 md:pb-8">
-        <BlueLogo />
+        <Logo kind="accent" />
       </div>
       <span className={stories}>Follow our stories on:</span>
       <div className="col-span-2 text-right space-x-6 md:row-start-3 md:col-start-1">

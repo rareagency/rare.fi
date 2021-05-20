@@ -48,6 +48,12 @@ module.exports = {
         all: "span 8",
       },
     },
+    // Used in logo SVG
+    fill: (theme) => ({
+      "blue-light": theme("colors.blue.light"),
+      "blue-dark": theme("colors.blue.dark"),
+      white: theme("colors.white"),
+    }),
   },
   variants: {
     extend: {},
