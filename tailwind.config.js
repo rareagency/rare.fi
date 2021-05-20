@@ -16,7 +16,15 @@ module.exports = {
     },
     fontFamily: {
       header: ["TTAutonomous"],
-      "header-mono": ["TTAutonomousMono"],
+      "header-mono": [
+        "TTAutonomousMono",
+        "source-code-pro",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Courier New",
+        "monospace",
+      ],
       default: [
         "Altone",
         "-apple-system",
