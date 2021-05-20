@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="col-span-2 text-center md:row-start-2 md:col-span-4 md:text-left">
           <img
             className="inline-block align-text-top"
-            src="/static/finnish_flag.svg"
+            src="/static/icons/finnish_flag.svg"
             width="20"
             height="13"
           />{" "}
