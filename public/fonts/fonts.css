@@ -89,18 +89,19 @@
   font-weight: 400;
   src: url("web-fonts/AltoneRegular/font.woff2") format("woff2"),
     url("web-fonts/AltoneRegular/font.woff") format("woff");
+  font-display: swap;
 }
 @font-face {
   font-family: "Altone";
   font-weight: 500;
   src: url("web-fonts/AltoneMedium/font.woff2") format("woff2"),
     url("web-fonts/AltoneMedium/font.woff") format("woff");
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Altone";
   font-weight: 700;
   src: url("web-fonts/AltoneBold/font.woff2") format("woff2"),
     url("web-fonts/AltoneBold/font.woff") format("woff");
-  font-display: swap;
+  font-display: block;
 }
