@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 
 const Logo = () => (
-  <Image
+  <img
     className="h-8 w-auto"
     src="/static/logo.svg"
     alt="Rare Agency -logo"
@@ -12,7 +11,7 @@ const Logo = () => (
 );
 
 export const BlueLogo = () => (
-  <Image
+  <img
     src="/static/logo_blue.svg"
     alt="Rare Agency -logo"
     width="122"
@@ -21,7 +20,7 @@ export const BlueLogo = () => (
 );
 
 export const DarkBlueLogo = () => (
-  <Image
+  <img
     className="h-8 w-auto"
     src="/static/logo_dark_blue.svg"
     alt="Rare Agency -logo"
