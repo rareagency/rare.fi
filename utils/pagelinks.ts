@@ -6,9 +6,10 @@ export const links = [
   {
     url: "/about",
     text: "Careers",
+    hasBadge: true,
   },
   {
-    url: "/about",
+    url: "/stories",
     text: "Stories",
   },
   {
