@@ -86,7 +86,7 @@
     @apply font-default font-normal text-2xl text-dark-blue;
   }
 
-  span {
+  .small-header {
     letter-spacing: 0.06em;
     line-height: 25px;
     @apply font-header-mono font-normal text-lg;

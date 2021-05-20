@@ -15,13 +15,13 @@ const ContactUs = () => {
   return (
     <section id="contact-us" className="col-all bg-action-purple h-auto w-full">
       <div className="pt-16 grid justify-center justify-items-center grid-cols-3 gap-1 md:grid-cols-1 md:gap-y-4">
-        <span className={textBoxClass + " text-left"}>
+        <span className={textBoxClass + " small-header text-left"}>
           Join for a journey from conception to implemention
         </span>
-        <span className={textBoxClass + " text-center"}>
+        <span className={textBoxClass + " small-header text-center"}>
           Bring modern tech & practices to give a headstart
         </span>
-        <span className={textBoxClass + " text-right"}>
+        <span className={textBoxClass + " small-header text-right"}>
           Inject a missing capability & skill to your team
         </span>
         <Circle image="/static/logo.svg" />

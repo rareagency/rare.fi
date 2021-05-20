@@ -31,7 +31,7 @@ const Story = ({
       className={"w-112 md:w-48 col-start-4 col-span-3 row-start-1"}
     ></img>
     <div className="pl-16 pr-16 col-start-3 row-start-1">
-      <span className="font-mono font-medium uppercase md:text-sm text-mid-blue">
+      <span className="small-header font-mono font-medium uppercase md:text-sm text-mid-blue">
         {title}
       </span>
       <h4 className="w-96 md:w-32 md:text-sm text-dark-blue pt-6">{header}</h4>
