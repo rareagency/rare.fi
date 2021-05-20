@@ -17,7 +17,20 @@ module.exports = {
     fontFamily: {
       header: ["TTAutonomous"],
       "header-mono": ["TTAutonomousMono"],
-      default: ["Altone"],
+      default: [
+        "Altone",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "sans-serif",
+      ],
     },
     extend: {
       colors: {
