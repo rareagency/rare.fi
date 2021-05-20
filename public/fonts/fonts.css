@@ -50,34 +50,40 @@
 
 @font-face {
   font-family: "TTAutonomous";
-  font-weight: 800;
-  src: url("web-fonts/TTAutonomousExtraBold/font.woff2") format("woff2"),
-    url("web-fonts/TTAutonomousExtraBold/font.woff") format("woff");
-}
-@font-face {
-  font-family: "TTAutonomousMono";
-  font-weight: 500;
-  src: url("web-fonts/TTAutonomousMonoMedium/font.woff2") format("woff2"),
-    url("web-fonts/TTAutonomousMonoMedium/font.woff") format("woff");
-}
-@font-face {
-  font-family: "TTAutonomousMono";
-  font-weight: 700;
-  src: url("web-fonts/TTAutonomousMonoBold/font.woff2") format("woff2"),
-    url("web-fonts/TTAutonomousMonoBold/font.woff") format("woff");
-}
-@font-face {
-  font-family: "TTAutonomous";
   font-weight: 200;
   src: url("web-fonts/TTAutonomousExtraLight/font.woff2") format("woff2"),
     url("web-fonts/TTAutonomousExtraLight/font.woff") format("woff");
+  font-display: block;
 }
 @font-face {
   font-family: "TTAutonomousMono";
   font-weight: 400;
   src: url("web-fonts/TTAutonomousMonoRegular/font.woff2") format("woff2"),
     url("web-fonts/TTAutonomousMonoRegular/font.woff") format("woff");
+  font-display: block;
 }
+@font-face {
+  font-family: "TTAutonomousMono";
+  font-weight: 500;
+  src: url("web-fonts/TTAutonomousMonoMedium/font.woff2") format("woff2"),
+    url("web-fonts/TTAutonomousMonoMedium/font.woff") format("woff");
+  font-display: block;
+}
+@font-face {
+  font-family: "TTAutonomousMono";
+  font-weight: 700;
+  src: url("web-fonts/TTAutonomousMonoBold/font.woff2") format("woff2"),
+    url("web-fonts/TTAutonomousMonoBold/font.woff") format("woff");
+  font-display: block;
+}
+@font-face {
+  font-family: "TTAutonomous";
+  font-weight: 800;
+  src: url("web-fonts/TTAutonomousExtraBold/font.woff2") format("woff2"),
+    url("web-fonts/TTAutonomousExtraBold/font.woff") format("woff");
+  font-display: block;
+}
+
 @font-face {
   font-family: "Altone";
   font-weight: 400;
@@ -86,13 +92,15 @@
 }
 @font-face {
   font-family: "Altone";
-  font-weight: 700;
-  src: url("web-fonts/AltoneBold/font.woff2") format("woff2"),
-    url("web-fonts/AltoneBold/font.woff") format("woff");
-}
-@font-face {
-  font-family: "Altone";
   font-weight: 500;
   src: url("web-fonts/AltoneMedium/font.woff2") format("woff2"),
     url("web-fonts/AltoneMedium/font.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Altone";
+  font-weight: 700;
+  src: url("web-fonts/AltoneBold/font.woff2") format("woff2"),
+    url("web-fonts/AltoneBold/font.woff") format("woff");
+  font-display: swap;
 }
