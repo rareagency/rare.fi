@@ -22,7 +22,7 @@ const NavItem = ({ url, text, theme = "dark", hasBadge = false }: NavProps) => {
             "nav-link-active": isLinkActive,
             "nav-link-badge": hasBadge,
             "text-light": theme === "dark",
-            "text-blue-dark": theme === "light",
+            "text-dark-blue": theme === "light",
           })}
         >
           {text}

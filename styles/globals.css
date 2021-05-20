@@ -17,7 +17,7 @@
   .button-underline {
     border-bottom-width: 3px;
     border-style: solid;
-    @apply border-blue-light;
+    @apply border-action-purple;
   }
 
   .title {
@@ -83,7 +83,7 @@
 
   body {
     letter-spacing: 0.085em;
-    @apply font-default font-normal text-2xl text-blue-dark;
+    @apply font-default font-normal text-2xl text-dark-blue;
   }
 
   span {

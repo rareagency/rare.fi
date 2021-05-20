@@ -19,7 +19,7 @@ const stories = cntl`
   col-start-4
   col-span-2
   text-right
-  text-blue-mid
+  text-mid-blue
   md:col-start-1
   md:col-span-4
   md:text-left
