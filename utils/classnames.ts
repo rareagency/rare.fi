@@ -1,4 +1,4 @@
-type SupportedClassName = string | Record<string, boolean>;
+type SupportedClassName = string | Record<string, boolean> | undefined;
 
 const isString = (arg: SupportedClassName): arg is string =>
   typeof arg === "string";
@@ -14,6 +14,8 @@ const isRecord = (arg: SupportedClassName): arg is Record<string, boolean> =>
  * Returns: `pt-12 pb-12 grid-layout`
  */
 export const c = (...args: SupportedClassName[]) => {
+  args = args.filter((arg) => arg !== undefined);
+
   const classNames = args.filter(isString);
   const conditionals = args.filter(isRecord);
 
