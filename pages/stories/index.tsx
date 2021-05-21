@@ -1,10 +1,11 @@
 import React from "react";
+import FeaturedStory from "../../components/Stories/FeaturedStory";
 import Layout from "../../layouts/Stories";
 
 const Stories = () => {
   return (
     <Layout>
-      <div>Stories</div>
+      <FeaturedStory />
     </Layout>
   );
 };

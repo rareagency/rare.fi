@@ -15,19 +15,19 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   return (
     <section
       id="horizontal-scroller"
-      className="col-all flex flex-col overflow-x-hidden mt-64 mb-64 word-spacing-xl text-blue-light"
+      className="col-all flex flex-col overflow-x-hidden mt-64 mb-64 word-spacing-xl text-action-purple"
       {...container}
     >
       <span
-        className="text-[6rem] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
+        className="text-[90px] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
         {...firstRow}
       />
       <span
-        className="text-[6rem] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
+        className="text-[90px] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
         {...secondRow}
       />
       <span
-        className="text-[6rem] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
+        className="text-[90px] whitespace-nowrap font-thin leading-loose font-header word-spacing-xl"
         {...thirdRow}
       />
     </section>

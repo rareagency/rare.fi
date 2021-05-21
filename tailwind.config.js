@@ -16,20 +16,48 @@ module.exports = {
     },
     fontFamily: {
       header: ["TTAutonomous"],
-      "header-mono": ["TTAutonomousMono"],
-      default: ["Altone"],
+      "header-mono": [
+        "TTAutonomousMono",
+        "source-code-pro",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Courier New",
+        "monospace",
+      ],
+      default: [
+        "Altone",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "sans-serif",
+      ],
     },
     extend: {
       colors: {
-        blue: {
-          dark: "#0C1E4F",
-          light: "#1941AA",
-          mid: "#34517E",
-        },
-        black: "#000F1F",
-        white: "#F9F9F9",
-        light: "#D5D9E3",
+        // Colors from Figma
+        "off-white": "#F9F9F9",
+        "action-purple": "#1941AA",
+        "mid-blue": "#34517E",
+        "dark-blue": "#0C1E4F",
         "notification-red": "#EF6969",
+        "notification-green": "#84A849",
+        "notification-yellow": "#FDB127",
+        "light-green": "#CBE2D1",
+        "light-red": "#F3D4CD",
+        "light-yellow": "#F8F2E7",
+        "light-blue": "#D5D9E3",
+
+        // Colors not available in Figma
+        black: "#000F1F",
+        light: "#D5D9E3",
       },
       height: {
         112: "28rem",
@@ -50,9 +78,9 @@ module.exports = {
     },
     // Used in logo SVG
     fill: (theme) => ({
-      "blue-light": theme("colors.blue.light"),
-      "blue-dark": theme("colors.blue.dark"),
-      white: theme("colors.white"),
+      "action-purple": theme("colors.action-purple"),
+      "dark-blue": theme("colors.dark-blue"),
+      "off-white": theme("colors.off-white"),
     }),
   },
   variants: {

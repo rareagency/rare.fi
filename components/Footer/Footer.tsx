@@ -62,7 +62,7 @@ const Footer = () => {
           />{" "}
           Made in Finland
         </div>
-        <div className="col-span-2 text-right  md:row-start-3 md:col-span-4 md:text-left">
+        <div className="col-span-2 text-right md:row-start-3 md:col-span-4 md:text-left">
           <a href="#" className="button-underline">
             Cookie & Privacy policy
           </a>

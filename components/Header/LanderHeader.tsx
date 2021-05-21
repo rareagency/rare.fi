@@ -8,9 +8,14 @@ const Header = () => {
         <NavBar theme="dark" />
 
         <div className="text-white pt-32 pb-64">
-          <h1>Everyday</h1>
-          <h1>contribution to envision</h1>
-          <h2>a better digital world of tomorrow</h2>
+          <h1>
+            Everyday contribution to envision{" "}
+            <span className="font-header-mono lowercase lander-header font-light">
+              a better
+              <br />
+              digital world of tomorrow
+            </span>
+          </h1>
         </div>
       </div>
     </header>

@@ -9,7 +9,11 @@ const Stories = () => {
       <Story
         image="/static/stock/stock1.svg"
         imageAlt="Stock photo"
-        title="Case study / Tieto"
+        title={
+          <>
+            Case study <span className="font-light">/ Tieto</span>
+          </>
+        }
         header="Applying the right tech from the start"
         orientation="left"
       />
@@ -17,7 +21,13 @@ const Stories = () => {
         image="/static/stock/stock2.svg"
         imageAlt="Stock photo"
         title="Career story"
-        header="Pyry's journey with Rare"
+        header={
+          <>
+            Pyry&apos;s journey
+            <br />
+            with Rare
+          </>
+        }
         orientation="right"
       />
       <div className="pt-16 flex col-all justify-center">

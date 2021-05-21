@@ -10,12 +10,12 @@ const buttonClass = ({ kind = "primary", className }: ButtonProps) => cntl`
   ${
     kind === "primary"
       ? cntl`
-      bg-blue-light
-      text-white
+      bg-action-purple
+      text-off-white
     `
       : cntl`
-      bg-white
-      text-blue-light
+      bg-off-white
+      text-action-purple
     `
   }
 
@@ -24,7 +24,7 @@ const buttonClass = ({ kind = "primary", className }: ButtonProps) => cntl`
   font-bold
   text-lg
   border-solid
-  border-blue-light
+  border-action-purple
   border-[3px]
   rounded-full
   pl-8

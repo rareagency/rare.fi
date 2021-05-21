@@ -34,13 +34,13 @@ const Logo: React.FC<{ kind?: "accent" | "dark" | "light" }> = ({
 
     <style jsx>{`
       .light {
-        @apply fill-white;
+        @apply fill-off-white;
       }
       .accent {
-        @apply fill-blue-light;
+        @apply fill-action-purple;
       }
       .dark {
-        @apply fill-blue-dark;
+        @apply fill-dark-blue;
       }
     `}</style>
   </svg>
