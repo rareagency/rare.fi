@@ -86,7 +86,6 @@
     text-transform: uppercase;
   }
 
-  p,
   .paragraph {
     @apply font-default text-dark-blue;
     font-size: 24px;

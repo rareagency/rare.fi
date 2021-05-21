@@ -11,6 +11,7 @@ const container = cntl`
   pt-8
   pb-6
   md:pl-8
+  items-center
 `;
 
 const stories = cntl`
