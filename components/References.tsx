@@ -9,7 +9,7 @@ const References = () => {
       id="references"
       className="col-all grid justify-items-center pt-48 pb-48 p-8"
     >
-      <h3 className="pb-8 title2">Proudly delivered digital products with</h3>
+      <h5 className="pb-8">Proudly delivered digital products with</h5>
       <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4 md:grid-cols-2">
         <a
           href="https://www.tieto.com/fi/"
