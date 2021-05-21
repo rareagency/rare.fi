@@ -9,13 +9,13 @@ const FeaturedStory = () => (
     </h2>
 
     <p className="flex items-center">
-      <img src="/static/icons/fresh.svg" alt="Fresh" />
+      <img src="/static/icons/fresh.svg" alt="Fresh" width="107" height="44" />
       <span className="tag">
         <b className="tag font-bold">Practical guide</b> by Riku Rouvila
       </span>
     </p>
 
-    <div className="relative h-[425px] mt-12 mb-12">
+    <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12 mb-12">
       <Image
         src="/static/featured-article.png"
         layout="fill"
