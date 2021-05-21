@@ -23,7 +23,7 @@ const stories = cntl`
   md:col-start-1
   md:col-span-4
   md:text-left
-  small-header
+  tag
 `;
 
 const BottomFooter = () => {

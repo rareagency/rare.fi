@@ -11,7 +11,7 @@ const Stories = () => {
         imageAlt="Stock photo"
         title={
           <>
-            Case study <span className="font-light">/ Tieto</span>
+            <span className="tag font-bold">Case study</span> / Tieto
           </>
         }
         header="Applying the right tech from the start"

@@ -20,21 +20,6 @@
     @apply border-action-purple;
   }
 
-  .title {
-    font-size: 50px;
-    line-height: 81px;
-    letter-spacing: 0.085em;
-    text-transform: uppercase;
-    @apply font-header-mono font-bold;
-  }
-
-  .title2 {
-    font-size: 22px;
-    line-height: 36px;
-    letter-spacing: 0.085em;
-    @apply font-default font-bold;
-  }
-
   .ingress {
     font-size: 32px;
     line-height: 64px;
@@ -47,49 +32,91 @@
 }
 
 @layer base {
-  h1 {
+  /* From Figma style guide */
+  h1,
+  .h1 {
+    @apply font-header text-dark-blue;
     font-size: 64px;
     letter-spacing: 0.085em;
-    line-height: 96px;
-    @apply font-header font-extrabold uppercase;
+    line-height: 161.5%;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 
-  h2 {
+  h2,
+  .h2 {
+    @apply font-header-mono text-dark-blue;
     font-size: 64px;
     letter-spacing: 0.085em;
-    line-height: 103px;
-    @apply font-header-mono font-normal;
+    line-height: 161.5%;
   }
 
-  h4 {
-    font-size: 34px;
-    line-height: 50px;
-    @apply font-default font-medium;
+  h3,
+  .h3 {
+    @apply font-default text-dark-blue;
+    font-weight: 32px;
+    line-height: 161.5%;
+    letter-spacing: 0.085em;
   }
 
-  h5 {
+  h4,
+  .h4 {
+    @apply font-default text-dark-blue;
+    font-size: 28px;
+    line-height: 148%;
+    font-weight: 500;
+  }
+
+  h5,
+  .h5 {
+    @apply font-default text-dark-blue;
     font-size: 22px;
     letter-spacing: 0.085em;
-    line-height: 36px;
-    @apply font-default font-bold uppercase;
+    line-height: 161.5%;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
-  h6 {
+  h6,
+  .h6 {
+    @apply font-header-mono text-mid-blue;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 141%;
     letter-spacing: 0.085em;
-    @apply font-header-mono font-medium;
+    text-transform: uppercase;
   }
 
+  p,
+  .paragraph {
+    @apply font-default text-dark-blue;
+    font-size: 24px;
+    line-height: 161.5%;
+    letter-spacing: 0.085em;
+  }
+
+  .caption {
+    @apply font-default text-mid-blue;
+    font-size: 14px;
+  }
+
+  .tag {
+    @apply font-header-mono;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    line-height: 141.5%;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .tag.font-bold {
+    letter-spacing: 0.015em;
+    font-weight: 500;
+  }
+
+  /* Other */
   body {
     letter-spacing: 0.085em;
     @apply font-default font-normal text-2xl text-dark-blue;
-  }
-
-  .small-header {
-    letter-spacing: 0.06em;
-    line-height: 25px;
-    @apply font-header-mono font-normal text-lg;
   }
 
   nav {

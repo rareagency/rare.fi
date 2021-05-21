@@ -7,10 +7,10 @@ const Header = () => {
       <div className="col-start-2 col-end-8">
         <NavBar theme="dark" />
 
-        <div className="text-white pt-32 pb-64">
-          <h1>
+        <div className="pt-32 pb-64">
+          <h1 className="text-off-white">
             Everyday contribution to envision{" "}
-            <span className="font-header-mono lowercase lander-header font-light">
+            <span className="font-header-mono lowercase font-light">
               a better
               <br />
               digital world of tomorrow
