@@ -20,6 +20,7 @@ const FeaturedStory = () => (
         src="/static/featured-article.png"
         layout="fill"
         objectFit="cover"
+        priority
       />
     </div>
   </article>
