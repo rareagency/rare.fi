@@ -1,19 +1,28 @@
 import Link from "next/link";
 import React from "react";
+import { c } from "../utils/classnames";
 
 type CircleButtonProps = {
-  link?: string | undefined;
+  link?: string;
+  className?: string;
 };
 
-const CircleButton = ({ link }: CircleButtonProps) => {
+const CircleButton: React.FC<CircleButtonProps> = ({
+  link,
+  className,
+  children,
+}) => {
   if (!link) link = "#";
   return (
     <Link href={link}>
-      <img
-        src="/static/button.svg"
-        alt="Circle button"
-        className="cursor-pointer w-12"
-      />
+      <a className="inline-flex items-center ml-12">
+        <span className="h5 text-action-purple inline-block">{children}</span>
+        <img
+          src="/static/button.svg"
+          alt="Circle button"
+          className={c("cursor-pointer w-12 inline-block ml-6", className)}
+        />
+      </a>
     </Link>
   );
 };

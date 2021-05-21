@@ -15,7 +15,7 @@ const FeaturedStory = () => (
       </span>
     </p>
 
-    <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12 mb-12">
+    <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
       <Image
         src="/static/featured-article.png"
         layout="fill"

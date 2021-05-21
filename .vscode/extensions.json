@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "blanu.vscode-styled-jsx"
+    "blanu.vscode-styled-jsx",
+    "bradlc.vscode-tailwindcss"
   ]
 }
