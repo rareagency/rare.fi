@@ -21,8 +21,10 @@ const NavItem = ({ url, text, theme = "dark", hasBadge = false }: NavProps) => {
           className={c("lg:px-4 py-1 uppercase font-default font-bold", {
             "nav-link-active": isLinkActive,
             "nav-link-badge": hasBadge,
-            "text-light": theme === "dark",
+            "text-white": theme === "dark",
+            "hover:text-light-blue": theme === "dark",
             "text-dark-blue": theme === "light",
+            "hover:text-action-purple": theme === "light",
           })}
         >
           {text}
