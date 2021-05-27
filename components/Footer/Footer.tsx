@@ -12,18 +12,19 @@ const container = cntl`
   h-auto
   pb-12
   pt-48
-  md:pl-8
+  xl:p-8
+  xl:pt-16
 `;
 
 const Footer = () => {
   return (
     <footer id="page-footer" className={container}>
-      <section className="col-start-2 col-span-5 md:col-start-1">
+      <section className="col-start-2 col-span-5 md:col-start-1 md:col-span-full">
         <h4 className="text-off-white">Software made</h4>
         <TickerText />
       </section>
 
-      <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-3">
+      <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-full">
         {links.map((link, index) => (
           <li className="p-2 text-right md:text-left" key={index}>
             <FooterItem url={link.url} text={link.text} key={index} />

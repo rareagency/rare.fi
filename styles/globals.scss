@@ -21,18 +21,19 @@
     @apply border-action-purple;
   }
 
-  .ingress {
-    font-size: 32px;
-    line-height: 64px;
-    letter-spacing: 0.085em;
-    @apply font-default font-normal;
-  }
   .word-spacing-xl {
     word-spacing: 5rem;
+  }
+
+  .word-spacing-md {
+    word-spacing: 3rem;
   }
 }
 
 @layer base {
+  $mid: 1028px;
+  $small: 728px;
+
   /* From Figma style guide */
   h1,
   .h1 {
@@ -42,6 +43,22 @@
     line-height: 161.5%;
     text-transform: uppercase;
     font-weight: 800;
+
+    @media screen and (max-width: theme("screens.xl.max")) {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: theme("screens.lg.max")) {
+      font-size: 42px;
+    }
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 25px;
+    }
   }
 
   h2,
@@ -50,6 +67,22 @@
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
+
+    @media screen and (max-width: theme("screens.xl.max")) {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: theme("screens.lg.max")) {
+      font-size: 42px;
+    }
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 25px;
+    }
   }
 
   h3,
@@ -58,6 +91,10 @@
     font-weight: 32px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 30px;
+    }
   }
 
   h4,
@@ -85,6 +122,17 @@
     line-height: 141%;
     letter-spacing: 0.085em;
     text-transform: uppercase;
+  }
+
+  .ingress {
+    font-size: 32px;
+    line-height: 180%;
+    letter-spacing: 0.085em;
+    @apply font-default font-normal;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
   }
 
   .paragraph {

@@ -19,20 +19,20 @@ const Story = ({
   link,
   orientation,
 }: StoryProps) => (
-  <article className="pt-24 col-all layout-grid">
+  <article className="pt-24 col-all layout-grid md:pt-8">
     <img
       src={image}
       alt={imageAlt}
-      className={c("col-span-3", {
+      className={c("col-span-3 md:col-span-full", {
         "col-start-2": orientation === "left",
         "col-start-5": orientation === "right",
       })}
     />
 
     <div
-      className={c("col-span-3 pl-32 pr-32", {
+      className={c("col-span-3 pl-32 pr-32 md:col-span-full md:p-8", {
         "col-start-5": orientation === "left",
-        "col-start-2 text-right": orientation === "right",
+        "col-start-2 text-right md:text-left": orientation === "right",
       })}
     >
       <span className="tag text-mid-blue">{title}</span>
