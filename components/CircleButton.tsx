@@ -15,12 +15,15 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   if (!link) link = "#";
   return (
     <Link href={link}>
-      <a className="inline-flex items-center ml-12">
+      <a className="inline-flex items-center ml-12 md:ml-0">
         <span className="h5 text-action-purple inline-block">{children}</span>
         <img
           src="/static/button.svg"
           alt="Circle button"
-          className={c("cursor-pointer w-12 inline-block ml-6", className)}
+          className={c(
+            "cursor-pointer w-12 inline-block ml-6 md:ml-0",
+            className
+          )}
         />
       </a>
     </Link>

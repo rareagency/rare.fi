@@ -9,6 +9,7 @@ const Logo: React.FC<{ kind?: "accent" | "dark" | "light" }> = ({
     viewBox="0 0 194 47"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="md:w-1/2 lg:w-2/3"
   >
     <title>Rare Agency -logo</title>
     <path

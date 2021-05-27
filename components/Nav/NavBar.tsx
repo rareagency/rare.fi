@@ -8,7 +8,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
   theme = "light",
 }) => {
   return (
-    <nav className={"flex items-center justify-between h-16 pt-16 pb-16"}>
+    <nav className="flex items-center justify-between h-16 pt-16 pb-16 xl:pl-8 xl:pr-8">
       <Link href="/">
         <a>{theme === "dark" ? <Logo kind="light" /> : <Logo kind="dark" />}</a>
       </Link>
