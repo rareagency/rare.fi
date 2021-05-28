@@ -29,5 +29,8 @@ export const c = (...args: SupportedClassName[]) => {
     }
   }
 
-  return classNames.join(" ");
+  return classNames
+    .join(" ")
+    .trim()
+    .replace(/\s{2,}/g, " ");
 };

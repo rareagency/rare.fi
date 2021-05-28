@@ -1,16 +1,16 @@
 import React from "react";
-import cntl from "cntl";
 import Link from "next/link";
 import JourneyCircle from "./JourneyCircle";
 import Button from "./Button";
+import { c } from "../utils/classnames";
 
-const textBoxClass = cntl`
+const textBoxClass = c(`
   text-off-white
   w-3/5
   inline-block
   md:text-lg
   md:text-center
-`;
+`);
 
 const ContactUs = () => {
   return (
