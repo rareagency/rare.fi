@@ -1,9 +1,10 @@
 import React from "react";
+import { c } from "../utils/classnames";
 
 type ButtonProps = {
   kind?: "primary" | "secondary";
   className?: string;
-  xl?: boolean;
+  xl: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   className,
 }) => {
   return (
-    <button className={`${className} ${xl ? "xl" : ""} button ${kind}`}>
+    <button className={`${className} ${c("button", { xl }, kind)}`}>
       <style jsx>{`
         .button {
           @apply w-auto font-default font-bold text-lg border-solid border-action-purple border-[3px] rounded-full px-8 py-2 uppercase;
