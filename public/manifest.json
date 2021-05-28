@@ -1,0 +1,20 @@
+{
+  "name": "Rare Tampere",
+  "short_name": "Rare",
+  "theme_color": "#000F1F",
+  "background_color": "#000000",
+  "display": "browser",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/static/icons/rare-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/icons/rare-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
