@@ -3,6 +3,7 @@ import Header from "../components/Header/StoriesHeader";
 import Base from "./Base";
 import Footer from "../components/Footer/Footer";
 import BottomFooter from "../components/Footer/BottomFooter";
+import Floater from "../components/Floater";
 
 const Layout: React.FC = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout: React.FC = ({ children }) => {
       {children}
       <Footer />
       <BottomFooter />
+      <Floater />
     </Base>
   );
 };
