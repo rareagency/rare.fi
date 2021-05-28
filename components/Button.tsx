@@ -3,18 +3,20 @@ import React from "react";
 type ButtonProps = {
   kind?: "primary" | "secondary";
   className?: string;
+  xl?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
   children,
   kind = "primary",
+  xl,
   className,
 }) => {
   return (
-    <button className={`${className} button ${kind}`}>
+    <button className={`${className} ${xl ? "xl" : ""} button ${kind}`}>
       <style jsx>{`
         .button {
-          @apply w-auto font-default font-bold text-lg border-solid border-action-purple border-[3px] rounded-full pl-8 pr-8 pt-2 pb-2 uppercase;
+          @apply w-auto font-default font-bold text-lg border-solid border-action-purple border-[3px] rounded-full px-8 py-2 uppercase;
           animation-name: moveReverse;
           animation-duration: 0.1s;
         }
@@ -28,6 +30,9 @@ const Button: React.FC<ButtonProps> = ({
         }
         .secondary {
           @apply bg-off-white text-action-purple;
+        }
+        .xl {
+          @apply text-xl md:text-sm md:px-4;
         }
 
         @keyframes move {

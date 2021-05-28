@@ -69,6 +69,7 @@ const ContactUs = () => {
         <Button
           className="m-10 h-16 px-12 spacing tracking-wider"
           kind="secondary"
+          xl
         >
           <Link href="/about">Book our first no-obligation chat</Link>
         </Button>
