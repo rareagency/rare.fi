@@ -18,8 +18,8 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   return (
     <div
       id="button-container"
-      onMouseEnter={() => setTimeout(() => setIsShown(true), 250)}
-      onMouseLeave={() => setTimeout(() => setIsShown(false), 150)}
+      onMouseEnter={() => setTimeout(() => setIsShown(true), 150)}
+      onMouseLeave={() => setTimeout(() => setIsShown(false), 250)}
     >
       <Link href={link}>
         <a
@@ -33,12 +33,12 @@ const CircleButton: React.FC<CircleButtonProps> = ({
             }
             .img {
               animation-name: move;
-              animation-duration: 0.3s;
+              animation-duration: 0.2s;
               @apply rounded-full border-action-purple border-[3px] h-14 w-14 flex items-center justify-center;
             }
             .button {
               animation-name: moveReverse;
-              animation-duration: 0.2s;
+              animation-duration: 0.3s;
               @apply font-default text-lg border-solid border-action-purple border-[3px] rounded-full px-8 py-2 uppercase;
             }
 
