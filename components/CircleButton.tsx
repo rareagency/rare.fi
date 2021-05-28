@@ -11,7 +11,7 @@ type CircleButtonProps = {
 const CircleButton: React.FC<CircleButtonProps> = ({
   link,
   className,
-  children = <p>Click me! Me Me!</p>,
+  children = <p>Click me!</p>,
 }) => {
   const [isShown, setIsShown] = React.useState(false);
   if (!link) link = "#";
