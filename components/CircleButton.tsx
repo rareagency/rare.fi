@@ -22,9 +22,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       onMouseLeave={() => setTimeout(() => setIsShown(false), 250)}
     >
       <Link href={link}>
-        <a
-          className={`inline-flex items-center ml-12 md:ml-0 ${c(className)} `}
-        >
+        <a className={c(`inline-flex items-center ml-12 md:ml-0`, className)}>
           <style jsx>{`
             .text {
               display: inline-block;
