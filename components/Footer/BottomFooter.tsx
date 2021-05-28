@@ -1,9 +1,9 @@
 import React from "react";
-import cntl from "cntl";
 import Logo from "../Logo";
 import TextLink from "../TextLink";
+import { c } from "../../utils/classnames";
 
-const container = cntl`
+const container = c(`
   layout-grid
   col-all
   bg-white
@@ -12,9 +12,9 @@ const container = cntl`
   pb-6
   md:pl-8
   items-center
-`;
+`);
 
-const stories = cntl`
+const stories = c(`
   font-header-mono
   uppercase
   col-start-4
@@ -25,7 +25,7 @@ const stories = cntl`
   md:col-span-4
   md:text-left
   tag
-`;
+`);
 
 const BottomFooter = () => {
   return (

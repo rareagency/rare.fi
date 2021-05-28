@@ -1,10 +1,10 @@
 import React from "react";
-import cntl from "cntl";
 import { links } from "../../utils/pagelinks";
 import FooterItem from "./FooterItem";
 import TickerText from "./TickerText";
+import { c } from "../../utils/classnames";
 
-const container = cntl`
+const container = c(`
   layout-grid
   col-all
   bg-black
@@ -14,7 +14,7 @@ const container = cntl`
   pt-48
   xl:p-8
   xl:pt-16
-`;
+`);
 
 const Footer = () => {
   return (
