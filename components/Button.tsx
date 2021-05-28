@@ -4,13 +4,13 @@ import { c } from "../utils/classnames";
 type ButtonProps = {
   kind?: "primary" | "secondary";
   className?: string;
-  xl: boolean;
+  xl?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
   children,
   kind = "primary",
-  xl,
+  xl = false,
   className,
 }) => {
   return (
