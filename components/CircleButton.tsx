@@ -19,12 +19,12 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       <a className={c(`button text-action-purple text-bold text`, className)}>
         <style jsx>{`
           .button {
-            animation-name: move;
+            animation-name: retract;
             animation-duration: 0.2s;
             @apply rounded-full border-action-purple border-[3px] h-14 w-14 flex items-center justify-center;
           }
           .button:hover {
-            animation-name: moveReverse;
+            animation-name: extend;
             animation-duration: 0.3s;
             width: 16rem;
           }
@@ -46,7 +46,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
             display: none;
           }
 
-          @keyframes move {
+          @keyframes retract {
             from {
               width: 16rem;
             }
@@ -54,7 +54,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
               width: 3.5rem;
             }
           }
-          @keyframes moveReverse {
+          @keyframes extend {
             from {
               width: 3.5rem;
             }
