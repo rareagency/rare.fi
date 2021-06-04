@@ -16,7 +16,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   if (!link) link = "#";
   return (
     <Link href={link}>
-      <a className={c(`inline-flex items-center ml-12 md:ml-0`, className)}>
+      <a className={c(`button text-action-purple text-bold text`, className)}>
         <style jsx>{`
           .button {
             animation-name: move;
@@ -63,10 +63,8 @@ const CircleButton: React.FC<CircleButtonProps> = ({
             }
           }
         `}</style>
-        <button className="button text-action-purple text-bold text">
-          <span className="arrow">{">"}</span>
-          <span className="content">{children}</span>
-        </button>
+        <span className="arrow">{">"}</span>
+        <span className="content">{children}</span>
       </a>
     </Link>
   );

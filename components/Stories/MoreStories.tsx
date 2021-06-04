@@ -30,7 +30,7 @@ const MoreStories = () => (
       />
     </article>
 
-    <div className="col-start-6 col-span-2 pt-16 pb-16">
+    <div className="col-start-6 col-span-2 pt-16 pb-16 ml-12">
       <CircleButton>Load more</CircleButton>
     </div>
   </section>

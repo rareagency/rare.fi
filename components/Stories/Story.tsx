@@ -37,7 +37,9 @@ const Story = ({
     >
       <span className="tag text-mid-blue">{title}</span>
       <h4 className="md:text-sm text-dark-blue pt-6">{header}</h4>
-      <CircleButton link={link} className="pt-6" />
+      <div className="pt-6 inline-flex items-center">
+        <CircleButton link={link} />
+      </div>
     </div>
   </article>
 );
