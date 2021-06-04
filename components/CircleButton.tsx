@@ -27,7 +27,14 @@ const CircleButton: React.FC<CircleButtonProps> = ({
             animation-name: moveReverse;
             animation-duration: 0.3s;
             width: 16rem;
-            @apply py-4;
+          }
+
+          .arrow {
+            position: absolute;
+          }
+
+          .content {
+            opacity: 0;
           }
 
           .text:hover > .content {
@@ -35,15 +42,8 @@ const CircleButton: React.FC<CircleButtonProps> = ({
             transition: 0.1s 0.1s;
           }
 
-          .arrow {
-            position: absolute;
-          }
-
           .text:hover .arrow {
             display: none;
-          }
-          .content {
-            opacity: 0;
           }
 
           @keyframes move {
