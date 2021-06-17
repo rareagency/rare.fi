@@ -75,6 +75,9 @@ module.exports = {
       gridColumn: {
         all: "span 8",
       },
+      scale: {
+        125: "1.25",
+      },
     },
     // Used in logo SVG
     fill: (theme) => ({
