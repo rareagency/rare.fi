@@ -47,7 +47,7 @@ const Floater = () => {
         }
       `}</style>
       <p className="col-start-2 col-span-4 md:col-span-4 normal-case text-off-white md:text-[18px] text-[32px] my-2 tag">
-        Psst... Don't miss out!
+        Psst... Don&lsquo;t miss out!
       </p>
       <Button
         xl
