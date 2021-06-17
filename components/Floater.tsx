@@ -1,17 +1,31 @@
 import React from "react";
 import Button from "./Button";
+import { c } from "../utils/classnames";
 
 const Floater = () => {
-  const [hidden] = React.useState(false);
+  const [hidden, setHidden] = React.useState(false);
+  const [hiddenAnimation, setHiddenAnimation] = React.useState(false);
+
   if (hidden) {
     return null;
   }
   return (
-    <section className="bg-action-purple w-full p-4 layout-grid col-all sticky bottom-0 animation">
+    <section
+      className={c(
+        `bg-action-purple w-full p-4 layout-grid col-all sticky bottom-0 animation`,
+        { hidden: hiddenAnimation }
+      )}
+    >
       <style jsx>{`
         .animation {
           animation-name: move;
           animation-duration: 1s;
+        }
+        .hidden {
+          animation-name: moveDown;
+          animation-duration: 0.7s;
+          height: 0px;
+          bottom: -50px;
         }
         @keyframes move {
           from {
@@ -19,6 +33,16 @@ const Floater = () => {
           }
           to {
             height: 93px;
+          }
+        }
+        @keyframes moveDown {
+          from {
+            height: 93px;
+            bottom: 0px;
+          }
+          to {
+            height: 0px;
+            bottom: -50px;
           }
         }
       `}</style>
@@ -32,6 +56,15 @@ const Floater = () => {
       >
         Subscribe to rare
       </Button>
+      <button
+        className={"absolute right-0 top-0 pt-2 pr-4 text-light-red"}
+        onClick={() => {
+          setHiddenAnimation(true);
+          setTimeout(() => setHidden(true), 700);
+        }}
+      >
+        x
+      </button>
     </section>
   );
 };
