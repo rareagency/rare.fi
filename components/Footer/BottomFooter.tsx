@@ -22,7 +22,7 @@ const stories = c(`
   text-right
   text-mid-blue
   md:col-start-1
-  md:col-span-4
+  md:col-span-6
   md:text-left
   tag
 `);
