@@ -4,7 +4,7 @@ import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Stories";
-import { Post } from "./Post";
+import { Post } from "../../types/Post";
 
 export async function getStaticProps() {
   const writers = [

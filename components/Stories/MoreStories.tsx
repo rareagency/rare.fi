@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "../../pages/stories/Post";
+import { Post } from "../../types/Post";
 import CircleButton from "../CircleButton";
 import BlogPostCard from "./BlogPostCard";
 

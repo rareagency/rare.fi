@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "../../pages/stories/Post";
+import { Post } from "../../types/Post";
 import BlogPostCard from "./BlogPostCard";
 
 const BlogPosts = (props: { posts: Post[] }) => {

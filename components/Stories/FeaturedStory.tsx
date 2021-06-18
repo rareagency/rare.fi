@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Post } from "../../pages/stories/Post";
+import { Post } from "../../types/Post";
 
 const FeaturedStory = (props: { post: Post }) => (
   <article id="featured-story" className="col-start-2 col-span-6 mt-12">
