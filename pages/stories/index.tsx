@@ -21,7 +21,13 @@ export async function getStaticProps() {
     const res = await fetch(
       `https://dev.to/api/articles?username=${writer.username}`
     );
-    posts = posts.concat(await res.json());
+    let newPosts: Post[] = await res.json();
+    newPosts = newPosts.filter((p) => {
+      return !posts.find((post) => {
+        return post.id === p.id;
+      });
+    });
+    posts = posts.concat(newPosts);
   }
 
   return {
