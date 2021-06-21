@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import { c } from "../utils/classnames";
+import { getItem, setItem } from "../utils/localStorage";
 
 const Floater = () => {
   const [hidden, setHidden] = React.useState(false);
   const [hiddenAnimation, setHiddenAnimation] = React.useState(false);
+
+  const handleClose = () => {
+    setHiddenAnimation(true);
+    setTimeout(() => setHidden(true), 700);
+    setItem("floater_hidden", true);
+  };
+
+  useEffect(() => {
+    const item = getItem("floater_hidden");
+    if (item) {
+      setHidden(true);
+    }
+  }, []);
 
   if (hidden) {
     return null;
@@ -58,10 +72,7 @@ const Floater = () => {
       </Button>
       <button
         className={"absolute right-0 top-0 pt-2 pr-4 text-light-red"}
-        onClick={() => {
-          setHiddenAnimation(true);
-          setTimeout(() => setHidden(true), 700);
-        }}
+        onClick={handleClose}
       >
         x
       </button>
