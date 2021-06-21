@@ -37,11 +37,11 @@ const Stories = () => {
         orientation="right"
       />
       <div className="pt-16 flex col-all justify-center">
-        <Button kind="secondary">
-          <Link href="/stories">
-            <a>See all stories</a>
-          </Link>
-        </Button>
+        <Link href="/stories">
+          <a>
+            <Button kind="secondary">See all stories</Button>
+          </a>
+        </Link>
       </div>
 
       <style jsx>{`
