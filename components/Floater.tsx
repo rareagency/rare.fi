@@ -10,7 +10,7 @@ const Floater = () => {
   const handleClose = () => {
     setHiddenAnimation(true);
     setTimeout(() => setHidden(true), 700);
-    //setItem("floater_hidden", true);
+    setItem("floater_hidden", true);
   };
 
   useEffect(() => {
