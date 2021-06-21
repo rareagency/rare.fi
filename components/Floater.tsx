@@ -71,7 +71,7 @@ const Floater = () => {
         Subscribe to rare
       </Button>
       <button
-        className={"absolute right-0 top-0 pt-2 pr-4 text-light-red"}
+        className={"absolute right-0 top-0 p-4 text-light-red"}
         onClick={handleClose}
       >
         x
