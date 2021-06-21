@@ -14,12 +14,12 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
       </Link>
 
       <div className="space-x-16 text-xl inline-flex lg:hidden">
-        {links.map((link, index) => (
+        {links.map((link) => (
           <NavItem
             theme={theme}
             url={link.url}
             text={link.text}
-            key={index}
+            key={link.text}
             hasBadge={link.hasBadge}
           />
         ))}

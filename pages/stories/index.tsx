@@ -4,14 +4,47 @@ import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Stories";
+import { Post } from "../../types/Post";
 
-const Stories = () => {
+export async function getStaticProps() {
+  const writers = [
+    { name: "Riku Rouvila", username: "rikurouvila" },
+    { name: "Hannes Aaltonen", username: "haalto" },
+    { name: "Kalle Hirvola", username: "eioo" },
+    { name: "Cihan Bebek", username: "keksike" },
+  ];
+
+  const res = await fetch("https://dev.to/api/articles?username=rare");
+  let posts: Post[] = await res.json();
+
+  for (const writer of writers) {
+    const res = await fetch(
+      `https://dev.to/api/articles?username=${writer.username}`
+    );
+    posts = posts.concat(await res.json());
+  }
+
+  return {
+    props: {
+      posts: posts.sort(
+        (a, b) =>
+          new Date(b.published_at).valueOf() -
+          new Date(a.published_at).valueOf()
+      ),
+    },
+  };
+}
+
+interface Props {
+  posts: Post[];
+}
+const Stories = (props: Props) => {
   return (
     <Layout>
-      <FeaturedStory />
-      <BlogPosts />
+      <FeaturedStory post={props.posts[0]} />
+      <BlogPosts posts={props.posts.slice(1, 5)} />
       <JoinUsSection />
-      <MoreStories />
+      <MoreStories posts={props.posts.slice(5)} />
     </Layout>
   );
 };
