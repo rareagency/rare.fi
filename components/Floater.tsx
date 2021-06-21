@@ -10,7 +10,7 @@ const Floater = () => {
   const handleClose = () => {
     setHiddenAnimation(true);
     setTimeout(() => setHidden(true), 700);
-    setItem("floater_hidden", true);
+    //setItem("floater_hidden", true);
   };
 
   useEffect(() => {
@@ -42,19 +42,26 @@ const Floater = () => {
           bottom: -50px;
         }
         @keyframes move {
-          from {
+          0% {
             height: 0px;
           }
-          to {
+          70% {
+            height: 100px;
+          }
+          100% {
             height: 93px;
           }
         }
         @keyframes moveDown {
-          from {
+          0% {
             height: 93px;
             bottom: 0px;
           }
-          to {
+          40% {
+            height: 115px;
+            bottom: 5px;
+          }
+          100% {
             height: 0px;
             bottom: -50px;
           }
