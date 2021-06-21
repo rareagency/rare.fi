@@ -38,7 +38,9 @@ const Stories = () => {
       />
       <div className="pt-16 flex col-all justify-center">
         <Button kind="secondary">
-          <Link href="#">See all stories</Link>
+          <Link href="/stories">
+            <a>See all stories</a>
+          </Link>
         </Button>
       </div>
 
