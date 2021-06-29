@@ -2,33 +2,51 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { c } from "../../utils/classnames";
+import { smoothScroll } from "../../utils/smoothScroll";
 
 type NavProps = {
   url: string;
   text: string;
   theme?: "dark" | "light";
   hasBadge?: boolean;
+  scroll?: boolean;
 };
 
-const NavItem = ({ url, text, theme = "dark", hasBadge = false }: NavProps) => {
+const NavItem = ({
+  url,
+  text,
+  theme = "dark",
+  hasBadge = false,
+  scroll,
+}: NavProps) => {
   const router = useRouter();
   const isLinkActive = router.asPath === url;
+
+  const linkClasses = c("lg:px-4 py-1 uppercase font-default font-bold", {
+    "nav-link-active": isLinkActive,
+    "nav-link-badge": hasBadge,
+    "text-white": theme === "dark",
+    "hover:text-light-blue": theme === "dark",
+    "text-dark-blue": theme === "light",
+    "hover:text-action-purple": theme === "light",
+  });
+
+  if (scroll) {
+    return (
+      <a
+        href={`/#${url}`}
+        className={`${linkClasses} cursor-pointer`}
+        onClick={(e) => smoothScroll(url, e)}
+      >
+        {text}
+      </a>
+    );
+  }
 
   return (
     <>
       <Link href={url}>
-        <a
-          className={c("lg:px-4 py-1 uppercase font-default font-bold", {
-            "nav-link-active": isLinkActive,
-            "nav-link-badge": hasBadge,
-            "text-white": theme === "dark",
-            "hover:text-light-blue": theme === "dark",
-            "text-dark-blue": theme === "light",
-            "hover:text-action-purple": theme === "light",
-          })}
-        >
-          {text}
-        </a>
+        <a className={linkClasses}>{text}</a>
       </Link>
 
       <style jsx>{`

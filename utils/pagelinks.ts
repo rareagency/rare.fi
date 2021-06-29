@@ -1,23 +1,16 @@
 export const links = [
   {
-    url: "/about",
+    url: "/",
     text: "Why us?",
-  },
-  {
-    url: "/about",
-    text: "Careers",
-    hasBadge: true,
   },
   {
     url: "/stories",
     text: "Stories",
   },
   {
-    url: "/about",
-    text: "Training",
-  },
-  {
-    url: "/about",
+    url: "contact-us",
     text: "Let's chat",
+    scroll: true,
+    hasBadge: false,
   },
 ];

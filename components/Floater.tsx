@@ -59,7 +59,7 @@ const Floater = () => {
           }
           40% {
             height: 115px;
-            bottom: 5px;
+            bottom: 0px;
           }
           100% {
             height: 0px;

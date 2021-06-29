@@ -21,6 +21,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
             text={link.text}
             key={link.text}
             hasBadge={link.hasBadge}
+            scroll={link.scroll}
           />
         ))}
       </div>
