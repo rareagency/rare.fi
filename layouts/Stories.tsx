@@ -7,7 +7,7 @@ import Floater from "../components/Floater";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <Base>
+    <Base title="Rare Tampere - Stories">
       <Header />
       {children}
       <Footer />
