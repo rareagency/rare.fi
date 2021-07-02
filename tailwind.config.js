@@ -79,7 +79,7 @@ module.exports = {
         125: "1.25",
       },
       backgroundImage: () => ({
-        'footer-map': "linear-gradient(to bottom, rgba(0, 15, 31, 1), rgba(0, 15, 31, 0.4)), url('/static/tampere-map.png');"
+        'footer-map': "linear-gradient(to bottom, rgba(0, 15, 31, 1), rgba(0, 15, 31, 0.7)), url('/static/tampere-map.png');"
       })
     },
     // Used in logo SVG
