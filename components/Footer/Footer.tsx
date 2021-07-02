@@ -14,6 +14,9 @@ const container = c(`
   pt-48
   xl:p-8
   xl:pt-16
+  bg-footer-map
+  bg-cover
+  bg-top
 `);
 
 const Footer = () => {
