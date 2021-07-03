@@ -80,7 +80,16 @@ module.exports = {
       },
       backgroundImage: () => ({
         'footer-map': "linear-gradient(to bottom, rgba(0, 15, 31, 1), rgba(0, 15, 31, 0.75)), url('/static/tampere-map.png');"
-      })
+      }),
+      animation: {
+        'blur-in': 'blur 0.2s linear',
+      },
+      keyframes: {
+        'blur': {
+          '0%': { opacity: '0', 'filter': 'blur(100px)' },
+          '100%': { opacity: '1', 'filter': 'blur(0px)' },
+        }
+      }
     },
     // Used in logo SVG
     fill: (theme) => ({

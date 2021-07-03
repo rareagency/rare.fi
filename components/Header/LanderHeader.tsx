@@ -10,7 +10,7 @@ const Header = () => {
       <div className="col-start-2 col-end-8 relative">
         <NavBar theme="dark" />
 
-        <h1 className="text-off-white mt-[17vh] mb-20 xl:p-8">
+        <h1 className="text-off-white mt-[30vh] mb-20 xl:p-8">
           Everyday
           <br />
           contribution to
