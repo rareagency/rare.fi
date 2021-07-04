@@ -9,7 +9,6 @@ const Header = () => {
     >
       <NavBar theme="dark" />
       <div className="col-start-2 col-end-8 relative flex flex-col">
-
         <h1 className="text-off-white mt-[34vh] mb-20 xl:p-8">
           Everyday
           <br />

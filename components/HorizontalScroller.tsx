@@ -8,9 +8,8 @@ type HorizontalScrollerProps = {
 const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   textRows,
 }) => {
-  const { container, firstRow, secondRow, thirdRow } = useHorizontalScroller(
-    textRows
-  );
+  const { container, firstRow, secondRow, thirdRow } =
+    useHorizontalScroller(textRows);
 
   return (
     <section
