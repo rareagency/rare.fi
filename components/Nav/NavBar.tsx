@@ -82,7 +82,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
         </div>
 
         <div className={`${menuIsOpen ? 'fixed w-full h-screen overflow-hidden animate-blur-in' : 'hidden'} inset-0 bg-action-purple z-20 flex flex-col`}>
-          <section className="flex flex-1 flex-col content-start pt-40 px-4">
+          <section className="flex flex-1 flex-col content-start pt-44 px-4">
             {links.map((link) => (
               <div key={link.text} className="pb-10 text-left">
                 <NavItem
