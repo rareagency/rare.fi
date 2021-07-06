@@ -41,7 +41,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
           display: none;
         }
       `}</style>
-      <span className="arrow relative top-[3px] text-2xl">{"→"}</span>
+      <span className="arrow relative top-[2px] text-2xl">{"→"}</span>
       <span className="content">{children}</span>
     </button>
   );
