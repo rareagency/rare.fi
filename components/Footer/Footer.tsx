@@ -1,6 +1,6 @@
 import React from "react";
 import { links } from "../../utils/pagelinks";
-import FooterItem from "./FooterItem";
+import NavItem from "../Nav/NavItem";
 import TickerText from "./TickerText";
 import { c } from "../../utils/classnames";
 
@@ -30,7 +30,7 @@ const Footer = () => {
       <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
         {links.map((link, index) => (
           <li className="p-2 text-right md:text-left w-48" key={index}>
-            <FooterItem
+            <NavItem
               url={link.url}
               text={link.text}
               key={index}
