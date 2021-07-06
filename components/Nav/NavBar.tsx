@@ -59,7 +59,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
     >
       <div
         className={`${
-          userIsScrolled && !menuIsOpen ? "pt-4 pb-4" : "pt-16 pb-16"
+          userIsScrolled && !menuIsOpen ? "py-4" : "py-16"
         } transition-all duration-300 flex items-center justify-between col-start-2 col-end-8`}
       >
         <Link href="/">
