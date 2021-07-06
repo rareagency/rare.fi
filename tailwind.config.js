@@ -91,6 +91,9 @@ module.exports = {
           "100%": { opacity: "1", filter: "blur(0px)" },
         },
       },
+      transitionProperty: {
+        "size": 'height, width, font-size'
+      }
     },
     // Used in logo SVG
     fill: (theme) => ({
