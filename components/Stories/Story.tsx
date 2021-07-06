@@ -38,7 +38,7 @@ const Story = ({
       <span className="tag text-mid-blue">{title}</span>
       <h4 className="md:text-sm text-dark-blue pt-6">{header}</h4>
       <div className="pt-6 inline-flex items-center">
-        <CircleButton link={link} />
+        <CircleButton link={link}>I&apos;m an arrow button</CircleButton>
       </div>
     </div>
   </article>
