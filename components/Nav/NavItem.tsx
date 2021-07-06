@@ -25,7 +25,7 @@ const NavItem = ({
   const isLinkActive = router.asPath === url;
 
   const linkClasses = c("lg:px-4 py-1 uppercase font-default font-bold transition-size duration-300", {
-    "text-sm": size === 'sm',
+    "text-base": size === 'sm',
     "nav-link-active": isLinkActive,
     "nav-link-badge": hasBadge,
     "text-white": theme === "dark",
