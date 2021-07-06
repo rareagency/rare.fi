@@ -34,11 +34,11 @@ const BottomFooter = () => {
         <Logo kind="accent" />
       </div>
       <span className={stories}>Follow our stories on:</span>
-      <div className="col-span-2 text-right space-x-6 md:row-start-3 md:col-start-1">
-        <TextLink url="https://github.com/rareagency" text="Github" />
+      <div className="col-span-2 text-right space-x-12 md:row-start-3 md:col-start-1 font-bold">
+        <TextLink url="https://github.com/rareagency" text="GitHub" />
         <TextLink
           url="https://www.linkedin.com/company/rareagency/"
-          text="Linkedin"
+          text="LinkedIn"
         />
         <TextLink url="https://instagram.com/rarekoodaa" text="Instagram" />
       </div>
