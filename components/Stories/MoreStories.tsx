@@ -32,7 +32,7 @@ const MoreStories = (props: { posts: Post[] }) => {
       ))}
 
       <div className="col-start-6 row-start-1 col-span-2 pt-16 pb-16 ml-12">
-        <CircleButton onClick={handlePosts}>Load More</CircleButton>
+        <CircleButton onClick={handlePosts}>See more</CircleButton>
       </div>
     </section>
   );
