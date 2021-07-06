@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Post } from "../../types/Post";
 
 const FeaturedStory = (props: { post: Post }) => (
-  <article id="featured-story" className="col-start-2 col-span-6 mt-12">
+  <article id="featured-story" className="col-start-2 col-span-6 mt-24">
     <Link href={props.post.url}>
       <a>
         <h2 className="text-4xl leading-relaxed text-dark-blue pt-6 pb-6">

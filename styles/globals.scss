@@ -167,6 +167,10 @@
     @apply font-default font-normal text-2xl text-dark-blue;
   }
 
+  body.modal-open {
+    overflow: hidden;
+  }
+
   nav {
     font-size: 18px;
     line-height: 29px;
