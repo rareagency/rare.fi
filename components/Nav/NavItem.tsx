@@ -4,12 +4,13 @@ import { useRouter } from "next/dist/client/router";
 import { c } from "../../utils/classnames";
 import { smoothScroll } from "../../utils/smoothScroll";
 
-type NavProps = {
+type Props = {
   url: string;
   text: string;
   theme?: "dark" | "light";
   hasBadge?: boolean;
   scroll?: boolean;
+  size?: 'sm' | 'md';
 };
 
 const NavItem = ({
@@ -18,11 +19,13 @@ const NavItem = ({
   theme = "dark",
   hasBadge = false,
   scroll,
-}: NavProps) => {
+  size
+}: Props) => {
   const router = useRouter();
   const isLinkActive = router.asPath === url;
 
-  const linkClasses = c("lg:px-4 py-1 uppercase font-default font-bold", {
+  const linkClasses = c("lg:px-4 py-1 uppercase font-default font-bold transition-size duration-300", {
+    "text-base": size === 'sm',
     "nav-link-active": isLinkActive,
     "nav-link-badge": hasBadge,
     "text-white": theme === "dark",

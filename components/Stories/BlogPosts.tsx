@@ -11,7 +11,7 @@ const BlogPosts = (props: { posts: Post[] }) => {
       <div className="col-start-6 col-span-2 pt-16 flex justify-center">
         <ul className="table-of-contents">
           <li>
-            <h5 data-count="10">All of Rare</h5>
+            <h5 className="selected" data-count="10">All of Rare</h5>
           </li>
           <li>
             <h5 data-count="3">Career journeys</h5>
@@ -47,11 +47,14 @@ const BlogPosts = (props: { posts: Post[] }) => {
 
       <style jsx>{`
         .table-of-contents h5 {
-          @apply inline-block relative pb-8;
+          @apply inline-block relative pb-8 text-mid-blue;
         }
         .table-of-contents h5:after {
           @apply font-header-mono inline-block font-light align-top text-sm pl-2;
           content: attr(data-count);
+        }
+        .table-of-contents h5.selected {
+          @apply text-action-purple;
         }
       `}</style>
     </section>

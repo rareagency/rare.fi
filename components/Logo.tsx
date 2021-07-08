@@ -1,7 +1,13 @@
 import React from "react";
 
-const Logo: React.FC<{ kind?: "accent" | "dark" | "light" }> = ({
+type Props = {
+  kind?: "accent" | "dark" | "light";
+  size?: "sm" | "md"
+}
+
+const Logo: React.FC<Props> = ({
   kind = "default",
+  size
 }) => (
   <svg
     width="194"
@@ -9,7 +15,7 @@ const Logo: React.FC<{ kind?: "accent" | "dark" | "light" }> = ({
     viewBox="0 0 194 47"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="md:w-5/12 w-2/3"
+    className={`md:w-5/12 ${size === 'sm' ? 'w-5/12' : 'w-2/3'} transition-size duration-300`}
   >
     <title>Rare Agency -logo</title>
     <path

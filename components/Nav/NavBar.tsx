@@ -64,11 +64,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
       >
         <Link href="/">
           <a className="z-30">
-            {theme === "dark" || userIsScrolled || menuIsOpen ? (
-              <Logo kind="light" />
-            ) : (
-              <Logo kind="dark" />
-            )}
+            <Logo kind={theme === "dark" || userIsScrolled || menuIsOpen ? 'light' : 'dark'} size={ userIsScrolled ? 'sm' : 'md'} />
           </a>
         </Link>
 
@@ -81,6 +77,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               key={link.text}
               hasBadge={link.hasBadge}
               scroll={link.scroll}
+              size={userIsScrolled ? 'sm' : 'md'}
             />
           ))}
         </section>
@@ -116,7 +113,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               : "hidden"
           } inset-0 bg-action-purple z-20 flex flex-col`}
         >
-          <section className="flex flex-1 flex-col content-start pt-44 px-4">
+          <section className="flex flex-1 flex-col content-start pt-44 px-4 text-xl">
             {links.map((link) => (
               <div key={link.text} className="pb-10 text-left">
                 <NavItem
