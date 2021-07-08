@@ -11,7 +11,9 @@ const BlogPosts = (props: { posts: Post[] }) => {
       <div className="col-start-6 col-span-2 pt-16 flex justify-center">
         <ul className="table-of-contents">
           <li>
-            <h5 className="selected" data-count="10">All of Rare</h5>
+            <h5 className="selected" data-count="10">
+              All of Rare
+            </h5>
           </li>
           <li>
             <h5 data-count="3">Career journeys</h5>

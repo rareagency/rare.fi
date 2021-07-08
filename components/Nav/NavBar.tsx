@@ -64,7 +64,14 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
       >
         <Link href="/">
           <a className="z-30">
-            <Logo kind={theme === "dark" || userIsScrolled || menuIsOpen ? 'light' : 'dark'} size={ userIsScrolled ? 'sm' : 'md'} />
+            <Logo
+              kind={
+                theme === "dark" || userIsScrolled || menuIsOpen
+                  ? "light"
+                  : "dark"
+              }
+              size={userIsScrolled ? "sm" : "md"}
+            />
           </a>
         </Link>
 
@@ -77,7 +84,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               key={link.text}
               hasBadge={link.hasBadge}
               scroll={link.scroll}
-              size={userIsScrolled ? 'sm' : 'md'}
+              size={userIsScrolled ? "sm" : "md"}
             />
           ))}
         </section>

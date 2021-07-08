@@ -10,7 +10,7 @@ type Props = {
   theme?: "dark" | "light";
   hasBadge?: boolean;
   scroll?: boolean;
-  size?: 'sm' | 'md';
+  size?: "sm" | "md";
 };
 
 const NavItem = ({
@@ -19,20 +19,23 @@ const NavItem = ({
   theme = "dark",
   hasBadge = false,
   scroll,
-  size
+  size,
 }: Props) => {
   const router = useRouter();
   const isLinkActive = router.asPath === url;
 
-  const linkClasses = c("lg:px-4 py-1 uppercase font-default font-bold transition-size duration-300", {
-    "text-base": size === 'sm',
-    "nav-link-active": isLinkActive,
-    "nav-link-badge": hasBadge,
-    "text-white": theme === "dark",
-    "hover:text-light-blue": theme === "dark",
-    "text-dark-blue": theme === "light",
-    "hover:text-action-purple": theme === "light",
-  });
+  const linkClasses = c(
+    "lg:px-4 py-1 uppercase font-default font-bold transition-size duration-300",
+    {
+      "text-base": size === "sm",
+      "nav-link-active": isLinkActive,
+      "nav-link-badge": hasBadge,
+      "text-white": theme === "dark",
+      "hover:text-light-blue": theme === "dark",
+      "text-dark-blue": theme === "light",
+      "hover:text-action-purple": theme === "light",
+    }
+  );
 
   if (scroll) {
     return (

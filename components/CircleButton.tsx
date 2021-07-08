@@ -17,7 +17,10 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={c(`button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all duration-300 text-action-purple text-bold text-base uppercase font-bold`, className)}
+      className={c(
+        `button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all duration-300 text-action-purple text-bold text-base uppercase font-bold`,
+        className
+      )}
     >
       <style jsx>{`
         .button:hover {

@@ -92,8 +92,8 @@ module.exports = {
         },
       },
       transitionProperty: {
-        "size": 'height, width, font-size'
-      }
+        size: "height, width, font-size",
+      },
     },
     // Used in logo SVG
     fill: (theme) => ({

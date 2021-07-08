@@ -2,20 +2,19 @@ import React from "react";
 
 type Props = {
   kind?: "accent" | "dark" | "light";
-  size?: "sm" | "md"
-}
+  size?: "sm" | "md";
+};
 
-const Logo: React.FC<Props> = ({
-  kind = "default",
-  size
-}) => (
+const Logo: React.FC<Props> = ({ kind = "default", size }) => (
   <svg
     width="194"
     height="47"
     viewBox="0 0 194 47"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={`md:w-5/12 ${size === 'sm' ? 'w-5/12' : 'w-2/3'} transition-size duration-300`}
+    className={`md:w-5/12 ${
+      size === "sm" ? "w-5/12" : "w-2/3"
+    } transition-size duration-300`}
   >
     <title>Rare Agency -logo</title>
     <path
