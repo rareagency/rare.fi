@@ -1,7 +1,8 @@
-import React from "react";
-import Head from "next/head";
+import Head from 'next/head';
+import React from 'react';
+import CookieConsent from '../components/CookieConsent';
 
-const TITLE = "Rare Tampere - 2020-luvun ohjelmistokehitystä";
+const TITLE = 'Rare Tampere - 2020-luvun ohjelmistokehitystä';
 
 const Base: React.FC<{ title?: string }> = ({ title, children }) => {
   return (
@@ -28,6 +29,8 @@ const Base: React.FC<{ title?: string }> = ({ title, children }) => {
       </Head>
 
       <main className="layout-grid">{children}</main>
+
+      <CookieConsent />
     </>
   );
 };
