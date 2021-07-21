@@ -37,12 +37,13 @@ const FeatureBox = () => {
           <div>6</div>
         </div>
       </div>
-      <Button
-        className="mt-16 row-start-3 col-start-4 col-span-2 md:row-start-4 md:col-start-2 md:col-span-full"
-        kind="secondary"
-      >
-        <Link href="#">Learn how we apply it</Link>
-      </Button>
+      <div className="mt-16 row-start-3 col-start-4 col-span-2 md:row-start-4 md:col-start-2 md:col-span-full">
+        <Link href="#">
+          <a>
+            <Button kind="secondary">Learn how we apply it</Button>
+          </a>
+        </Link>
+      </div>
     </section>
   );
 };
