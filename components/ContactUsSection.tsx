@@ -70,13 +70,17 @@ const ContactUs = () => {
       </h4>
 
       <div className="col-all text-center">
-        <Button
-          className="m-10 h-16 px-12 spacing tracking-wider"
-          kind="secondary"
-          xl
-        >
-          <Link href="/about">Book our first no-obligation chat</Link>
-        </Button>
+        <Link href="/about">
+          <a>
+            <Button
+              className="m-10 h-16 px-12 spacing tracking-wider"
+              kind="secondary"
+              xl
+            >
+              Book our first no-obligation chat
+            </Button>
+          </a>
+        </Link>
       </div>
     </section>
   );
