@@ -4,13 +4,18 @@ const References = () => {
   const logo =
     "opacity-90 hover:opacity-100 transform transition-opacity hover:scale-105";
 
+  const logoRow =
+    "col-start-2 col-span-6 flex justify-between items-center w-full mb-16 space-x-8 lg:grid lg:grid-cols-2 lg:space-x-0 lg:justify-items-center lg:gap-y-16 md:grid-cols-1";
+
   return (
     <section
       id="references"
-      className="col-all grid justify-items-center pt-48 pb-48 p-8"
+      className="layout-grid col-all justify-items-center pt-48 pb-48 p-8"
     >
-      <h5 className="pb-8">Proudly delivered digital products with</h5>
-      <div className="grid grid-cols-4 gap-x-16 gap-y-8 p-4 md:grid-cols-2">
+      <h5 className="col-start-2 col-span-6 pb-16 text-center">
+        Proudly delivered digital products with
+      </h5>
+      <div className={logoRow}>
         <a
           href="https://www.tieto.com/fi/"
           target="_blank"
@@ -47,6 +52,8 @@ const References = () => {
         >
           <img src="/static/references/plan.svg" alt="Plan International" />
         </a>
+      </div>
+      <div className={logoRow}>
         <a
           href="https://linnunrata.fi"
           target="_blank"
