@@ -48,8 +48,8 @@ const Footer = () => {
           <li className="pb-6">
             <h5 className="text-off-white">Tampere</h5>
           </li>
-          <li>Polttimonkatu 4</li>
-          <li>33210 Tampere</li>
+          <li>Kyttälänkatu 1</li>
+          <li>33100 Tampere</li>
           <li>Finland</li>
         </ol>
         <ul>
