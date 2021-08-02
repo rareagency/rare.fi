@@ -77,6 +77,7 @@ module.exports = {
       },
       scale: {
         125: "1.25",
+        135: "1.35",
       },
       backgroundImage: () => ({
         "footer-map":
