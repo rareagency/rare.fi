@@ -38,7 +38,7 @@ const BottomFooter = () => {
         <Logo kind="accent" />
       </div>
       <span className={stories}>Follow our stories on:</span>
-      <div className="col-span-2 text-right space-x-12 xl:row-start-3 xl:col-start-1 font-bold sm:invisible">
+      <div className="col-span-2 text-right space-x-12 xl:row-start-3 xl:col-start-1 xl:col-span-full font-bold sm:hidden">
         <TextLink url="https://github.com/rareagency" text="GitHub" />
         <TextLink
           url="https://www.linkedin.com/company/rareagency/"

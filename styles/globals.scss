@@ -14,6 +14,7 @@
       minmax(0, var(--col-width)) minmax(0, var(--col-width))
       minmax(0, var(--col-width)) 1fr;
     grid-auto-flow: dense;
+    width: 100%;
   }
   .button-underline {
     border-bottom-width: 3px;
@@ -57,7 +58,11 @@
     }
 
     @media screen and (max-width: theme("screens.sm.max")) {
-      font-size: 25px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: 20px;
     }
   }
 
@@ -81,7 +86,11 @@
     }
 
     @media screen and (max-width: theme("screens.sm.max")) {
-      font-size: 25px;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: 20px;
     }
   }
 
@@ -132,6 +141,9 @@
 
     @media screen and (max-width: theme("screens.md.max")) {
       font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 16px;
     }
   }
 
