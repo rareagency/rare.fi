@@ -22,14 +22,17 @@ const container = c(`
 const Footer = () => {
   return (
     <footer id="page-footer" className={container}>
-      <section className="col-start-2 col-span-5 md:col-start-1 md:col-span-full">
+      <section className="col-start-2 col-span-4 md:col-start-1 md:col-span-full">
         <h4 className="text-off-white">Software made</h4>
         <TickerText />
       </section>
 
-      <ol className="col-start-7 row-start-1 md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
+      <ol className="col-start-6 col-span-2 row-start-1 justify-self-end md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
         {links.map((link, index) => (
-          <li className="p-2 text-right md:text-left w-48" key={index}>
+          <li
+            className="py-2 text-right lg:-mx-4 md:text-left w-48"
+            key={index}
+          >
             <NavItem
               url={link.url}
               text={link.text}
@@ -45,8 +48,8 @@ const Footer = () => {
           <li className="pb-6">
             <h5 className="text-off-white">Tampere</h5>
           </li>
-          <li>Polttimonkatu 4</li>
-          <li>33210 Tampere</li>
+          <li>Kyttälänkatu 1</li>
+          <li>33100 Tampere</li>
           <li>Finland</li>
         </ol>
         <ul>

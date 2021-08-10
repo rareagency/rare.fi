@@ -34,6 +34,9 @@ const Button: React.FC<ButtonProps> = ({
       .xl {
         @apply text-xl md:text-sm md:px-4;
       }
+      span {
+        vertical-align: -15%;
+      }
 
       @keyframes move {
         from {
@@ -52,7 +55,7 @@ const Button: React.FC<ButtonProps> = ({
         }
       }
     `}</style>
-    {children}
+    <span>{children}</span>
   </button>
 );
 

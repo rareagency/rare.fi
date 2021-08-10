@@ -36,7 +36,7 @@ const Stories = () => {
         }
         orientation="right"
       />
-      <div className="pt-16 flex col-all justify-center">
+      <div className="pt-16 flex col-all justify-center md:pt-0">
         <Link href="/stories">
           <a>
             <Button kind="secondary">See all stories</Button>
