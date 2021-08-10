@@ -19,7 +19,7 @@ const ContactUs = () => {
       id="contact-us"
       className="layout-grid col-all bg-action-purple h-auto w-full py-32 p-8"
     >
-      <div className="text-left col-start-2 col-span-2 lg:text-center lg:row-start-1 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center">
+      <div className="text-left col-start-2 col-span-2 lg:text-center lg:row-start-1 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
         <span className={textBoxClass + " tag"}>
           Join for a journey
           <br />
@@ -35,7 +35,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center">
+      <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
         <span className={textBoxClass + " tag"}>
           Bring modern tech &<br />
           practices to give a<br />
@@ -50,7 +50,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <div className="text-right col-start-6 col-span-2 lg:text-center lg:row-start-3 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center">
+      <div className="text-right col-start-6 col-span-2 lg:text-center lg:row-start-3 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
         <span className={textBoxClass + " tag"}>
           Inject a missing
           <br />
@@ -66,12 +66,12 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <h2 className="col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold text-[36px]">
+      <h2 className="col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold text-[36px] sm:text-[24px]">
         We adapt to our client&apos;s
         <br />
         environment & needs
       </h2>
-      <h4 className="col-all text-off-white pt-8 text-center">
+      <h4 className="col-all text-off-white pt-8 text-center sm:text-[18px]">
         Let&apos;s explore yours
       </h4>
 
