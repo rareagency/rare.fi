@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { getItem, setItem } from '../utils/localStorage';
+import React, { useEffect, useState } from "react";
+import { getItem, setItem } from "../utils/localStorage";
 
 const CookieConsent = () => {
   const [hidden, setHidden] = useState(true);
 
   const accept = () => {
-    setItem('cookie_consent', true);
+    setItem("cookie_consent", true);
     setHidden(true);
   };
 
   useEffect(() => {
     setHidden(
-      getItem('cookie_consent') !== null &&
-        getItem('cookie_consent') !== undefined
+      getItem("cookie_consent") !== null &&
+        getItem("cookie_consent") !== undefined
     );
   }, []);
 
@@ -27,7 +27,7 @@ const CookieConsent = () => {
           We use cookies to collect and analyze website usage and improve the
           experience of our users.
           <p className="mt-0 md:mt-4">
-            Find out more about the cookies we use:{' '}
+            Find out more about the cookies we use:{" "}
             <a
               href="#"
               className="button-underline text-action-purple hover:text-dark-blue"
