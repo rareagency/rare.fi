@@ -9,7 +9,6 @@ const Company = () => {
       </h1>
       <div className="row-start-2 col-all">
         <FeatureBox />
-        <FeatureBox />
       </div>
     </section>
   );

@@ -173,6 +173,11 @@
     font-weight: 500;
   }
 
+  .description {
+    @apply font-default;
+    font-size: 14px;
+  }
+
   /* Other */
   body {
     letter-spacing: 0.085em;

@@ -18,26 +18,29 @@ const CircleButton: React.FC<CircleButtonProps> = ({
     <button
       onClick={onClick}
       className={c(
-        `button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all duration-300 text-action-purple text-bold text-base uppercase font-bold`,
+        `button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all duration-300 text-action-purple text-bold text-base uppercase font-bold whitespace-nowrap overflow-hidden`,
         className
       )}
     >
       <style jsx>{`
+        .button {
+          padding: 0.5rem;
+          width: 3.5rem;
+        }
         .button:hover {
-          padding-left: 4rem;
-          padding-right: 4rem;
-          width: auto;
+          width: 172px;
         }
 
         .content {
           display: none;
           opacity: 0;
+          padding: 0 1rem;
         }
 
         .button:hover > .content {
           display: inline-block;
           opacity: 1;
-          transition: 0.3s;
+          transition: width 0.3s;
         }
 
         .button:hover .arrow {

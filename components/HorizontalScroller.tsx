@@ -14,7 +14,7 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   return (
     <section
       id="horizontal-scroller"
-      className="col-all flex flex-col overflow-x-hidden mt-64 mb-64 word-spacing-xl xl:word-spacing-md text-action-purple"
+      className="col-all flex flex-col overflow-x-hidden mt-64 mb-32 word-spacing-xl xl:word-spacing-md text-action-purple"
       {...container}
     >
       <span
