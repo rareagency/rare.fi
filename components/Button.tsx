@@ -21,9 +21,7 @@ const Button: React.FC<ButtonProps> = ({
         animation-duration: 0.1s;
       }
       .button:hover {
-        animation-name: move;
-        animation-duration: 0.25s;
-        animation-fill-mode: forwards;
+        animation: move 0.15s ease-out forwards;
       }
       .primary {
         @apply bg-action-purple text-off-white;
@@ -40,18 +38,18 @@ const Button: React.FC<ButtonProps> = ({
 
       @keyframes move {
         from {
-          box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px #1941aa;
+          box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px #1941aa;
         }
         to {
-          box-shadow: 0px 7px 0px -4px #ffffff, 0px 6px 0px #1941aa;
+          box-shadow: 0px 6px 0px -4px #fff, 0px 5px 0px #1941aa;
         }
       }
       @keyframes moveReverse {
         from {
-          box-shadow: 0px 7px 0px -4px #ffffff, 0px 6px 0px #1941aa;
+          box-shadow: 0px 6px 0px -4px #fff, 0px 5px 0px #1941aa;
         }
         to {
-          box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px #1941aa;
+          box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px #1941aa;
         }
       }
     `}</style>
