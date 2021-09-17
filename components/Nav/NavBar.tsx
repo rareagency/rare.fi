@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 import Lottie from "react-lottie";
 import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
-import { links } from "../../utils/pagelinks";
+import { links } from "./pagelinks";
 
 const SMALL_MENU_SCROLL_THRESHOLD = 150;
 

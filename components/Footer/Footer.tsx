@@ -1,5 +1,5 @@
 import React from "react";
-import { links } from "../../utils/pagelinks";
+import { links } from "../Nav/pagelinks";
 import NavItem from "../Nav/NavItem";
 import TickerText from "./TickerText";
 import { c } from "../../utils/classnames";
