@@ -27,10 +27,10 @@ const Footer = () => {
         <TickerText />
       </section>
 
-      <ol className="col-start-6 col-span-2 row-start-1 justify-self-end md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
+      <ol className="col-start-6 col-span-2 row-start-1 justify-self-end lg:w-full md:mt-20 md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
         {links.map((link, index) => (
           <li
-            className="py-2 text-right lg:-mx-4 md:text-left w-48"
+            className="py-2 text-right lg:-mx-4 md:text-left w-48 lg:w-full"
             key={index}
           >
             <NavItem url={link.url} text={link.text} key={index} />
@@ -38,7 +38,7 @@ const Footer = () => {
         ))}
       </ol>
 
-      <div className="h6 text-off-white space-y-6 col-start-2 row-start-2 col-span-3 pb-24 pt-24 md:row-start-3 md:col-start-1 md:col-span-6">
+      <div className="h6 text-off-white space-y-6 col-start-2 row-start-2 col-span-3 pb-20 pt-20 md:row-start-3 md:col-start-1 md:col-span-6">
         <ol className="pt-16">
           <li className="pb-6">
             <h5 className="text-off-white">Tampere</h5>
@@ -57,10 +57,10 @@ const Footer = () => {
         </ul>
       </div>
       <div className="layout-grid row-start-3 col-all uppercase text-sm md:text-left md:row-start-4">
-        <div className="col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-4">
+        <div className="col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-4 md:py-1">
           © Rare Agency
         </div>
-        <div className="col-span-2 text-center md:row-start-2 md:col-span-6 md:text-left">
+        <div className="col-span-2 text-center md:row-start-2 md:col-span-6 md:text-left md:py-1">
           <img
             className="inline-block align-text-top"
             src="/static/icons/finnish_flag.svg"
@@ -69,7 +69,7 @@ const Footer = () => {
           />{" "}
           Made in Finland
         </div>
-        <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left">
+        <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left md:py-1">
           <a href="#" className="button-underline">
             Cookie & Privacy policy
           </a>
