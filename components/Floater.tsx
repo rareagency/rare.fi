@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Button from "./Button";
 import { c } from "../utils/classnames";
-import { getItem, setItem } from "../utils/localStorage";
+import { getItem, setItem } from "../utils/local-storage";
 
 const Floater = () => {
   const [hidden, setHidden] = React.useState(false);
