@@ -178,6 +178,13 @@
     font-size: 14px;
   }
 
+  .link-text {
+    @apply text-action-purple button-underline  hover:text-dark-blue hover:border-dark-blue;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.085em;
+  }
+
   /* Other */
   body {
     letter-spacing: 0.085em;
