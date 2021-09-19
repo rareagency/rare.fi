@@ -94,6 +94,28 @@
     }
   }
 
+  h2.h2-small,
+  .h2.h2-small {
+    @apply leading-relaxed;
+    font-size: 36px;
+
+    @media screen and (max-width: theme("screens.lg.max")) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 370px) {
+      font-size: 20px;
+    }
+  }
+
   h3,
   .h3 {
     @apply font-default text-dark-blue;
