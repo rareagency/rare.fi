@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import CookieConsent from "../components/CookieConsent";
 
-const TITLE = "Rare Tampere - 2020-luvun ohjelmistokehitystä";
+const TITLE = "Rare Tampere - Software made collaborative";
 
 const Base: React.FC<{ title?: string }> = ({ title, children }) => {
   return (

@@ -11,7 +11,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <Base title="Rare Tampere - Software made collaborative">
+    <Base>
       <Header />
       {children}
       <Footer />

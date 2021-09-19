@@ -3,7 +3,7 @@ import JoinUsSection from "../../components/JoinUsSection";
 import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
-import Layout from "../../layouts/Stories";
+import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
 
 export async function getStaticProps() {
@@ -46,7 +46,7 @@ interface Props {
 }
 const Stories = (props: Props) => {
   return (
-    <Layout>
+    <Layout title="Stories - Rare Tampere">
       <FeaturedStory post={props.posts[0]} />
       <BlogPosts posts={props.posts.slice(1, 5)} />
       <JoinUsSection />
