@@ -2,6 +2,7 @@
   "recommendations": [
     "blanu.vscode-styled-jsx",
     "bradlc.vscode-tailwindcss",
-    "csstools.postcss"
+    "csstools.postcss",
+    "esbenp.prettier-vscode"
   ]
 }
