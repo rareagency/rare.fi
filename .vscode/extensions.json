@@ -3,6 +3,7 @@
     "blanu.vscode-styled-jsx",
     "bradlc.vscode-tailwindcss",
     "csstools.postcss",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
   ]
 }

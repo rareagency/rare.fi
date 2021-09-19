@@ -9,11 +9,11 @@ export const ContactRiku = () => (
     />
 
     <p className="paragraph col-start-6 col-span-2 self-center lg:col-all lg:px-8 lg:mt-20">
-      Hi, I'm Riku –<br />
+      Hi, I&apos;m Riku –<br />
       Lead Developer &<br /> Co-Founder of Rare.
       <br />
       <br />
-      I'm also your best pal to explore your unique needs, strengths and
+      I&apos;m also your best pal to explore your unique needs, strengths and
       potential collaboration.
     </p>
 
@@ -27,7 +27,12 @@ export const ContactRiku = () => (
 
       <span className="h6 col-start-2 mt-16 md:my-3">Listen:</span>
       <span className="h4 col-start-3 col-span-2 mt-16 md:my-3">
-        <a href="https://webbidevaus.fi" target="_blank" className="link-text">
+        <a
+          href="https://webbidevaus.fi"
+          target="_blank"
+          rel="noreferrer"
+          className="link-text"
+        >
           Webbidevaus podcast{" "}
           <img
             className="inline-block ml-2"
