@@ -10,6 +10,7 @@ const container = c(`
   bg-black
   text-white
   h-auto
+  p-8
   pb-12
   pt-48
   xl:p-8
