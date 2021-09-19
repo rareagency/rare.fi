@@ -33,12 +33,7 @@ const Footer = () => {
             className="py-2 text-right lg:-mx-4 md:text-left w-48"
             key={index}
           >
-            <NavItem
-              url={link.url}
-              text={link.text}
-              key={index}
-              scroll={link.scroll}
-            />
+            <NavItem url={link.url} text={link.text} key={index} />
           </li>
         ))}
       </ol>

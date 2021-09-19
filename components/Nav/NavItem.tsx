@@ -2,14 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { c } from "../../utils/classnames";
-import { smoothScroll } from "../../utils/smoothScroll";
 
 type Props = {
   url: string;
   text: string;
   theme?: "dark" | "light";
   hasBadge?: boolean;
-  scroll?: boolean;
   size?: "sm" | "md";
 };
 
@@ -18,7 +16,6 @@ const NavItem = ({
   text,
   theme = "dark",
   hasBadge = false,
-  scroll,
   size,
 }: Props) => {
   const router = useRouter();
@@ -36,18 +33,6 @@ const NavItem = ({
       "hover:text-action-purple": theme === "light",
     }
   );
-
-  if (scroll) {
-    return (
-      <a
-        href={`/#${url}`}
-        className={`${linkClasses} cursor-pointer`}
-        onClick={(e) => smoothScroll(url, e)}
-      >
-        {text}
-      </a>
-    );
-  }
 
   return (
     <>

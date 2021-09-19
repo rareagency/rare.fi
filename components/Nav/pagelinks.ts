@@ -8,9 +8,8 @@ export const links = [
     text: "Stories",
   },
   {
-    url: "contact-us",
+    url: "/contact-us",
     text: "Let's chat",
-    scroll: true,
     hasBadge: false,
   },
 ];
