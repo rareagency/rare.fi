@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../Logo";
 import NavItem from "./NavItem";
 import Lottie from "react-lottie";
@@ -16,20 +16,18 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
 
   const userIsScrolled = useThresholdScroller();
 
+  const toggleBodyElementLock = () => {
+    if (menuIsOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  };
+  useEffect(toggleBodyElementLock, [menuIsOpen]);
+
   function toggleMenu() {
     setMenuIsOpen(!menuIsOpen);
     setAnimationPaused(false);
-
-    // kinda dirty solution to remove scrolling when menu is open, but it works
-    const bodyElement = document.getElementsByTagName("body")[0];
-
-    if (menuIsOpen) {
-      bodyElement.classList.remove("modal-open");
-      return;
-    }
-
-    bodyElement.classList.add("modal-open");
-    return;
   }
 
   return (
