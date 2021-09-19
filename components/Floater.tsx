@@ -5,10 +5,8 @@ import { getItem, setItem } from "../utils/local-storage";
 
 const Floater = () => {
   const [hidden, setHidden] = React.useState(false);
-  const [hiddenAnimation, setHiddenAnimation] = React.useState(false);
 
   const handleClose = () => {
-    setHiddenAnimation(true);
     setTimeout(() => setHidden(true), 700);
     setItem("floater_hidden", true);
   };
@@ -26,8 +24,7 @@ const Floater = () => {
   return (
     <section
       className={c(
-        `bg-action-purple w-full p-4 layout-grid col-all sticky bottom-0 animation`,
-        { hidden: hiddenAnimation }
+        `bg-action-purple w-full p-4 layout-grid col-all sticky bottom-0 animation`
       )}
     >
       <style jsx>{`
