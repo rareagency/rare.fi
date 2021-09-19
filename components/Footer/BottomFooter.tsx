@@ -23,8 +23,9 @@ const stories = c(`
   text-right
   text-mid-blue
   xl:col-start-1
-  xl:col-span-6
+  xl:col-span-4
   xl:text-left
+  md:col-all
   sm:font-thin
   sm:text-sm
   sm:pb-6
@@ -38,7 +39,7 @@ const BottomFooter = () => {
         <Logo kind="accent" />
       </div>
       <span className={stories}>Follow our stories on:</span>
-      <div className="col-span-2 text-right space-x-12 xl:row-start-3 xl:col-start-1 xl:col-span-full font-bold sm:hidden">
+      <div className="col-span-2 text-right space-x-12 font-bold md:hidden xl:col-start-5 xl:col-span-4">
         <TextLink url="https://github.com/rareagency" text="GitHub" />
         <TextLink
           url="https://www.linkedin.com/company/rareagency/"
@@ -46,7 +47,7 @@ const BottomFooter = () => {
         />
         <TextLink url="https://instagram.com/rarekoodaa" text="Instagram" />
       </div>
-      <div className=" invisible sm:space-x-12 sm:row-start-3 sm:col-start-1 sm:col-span-full sm:visible">
+      <div className="invisible md:space-x-12 md:row-start-3 md:col-start-1 md:col-span-full md:visible md:mt-6 sm:mt-0">
         <div className="flex">
           <a
             href="https://github.com/rareagency/rareagency.fi"
