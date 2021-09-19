@@ -78,11 +78,7 @@ const ContactUs = () => {
       <div className="col-all text-center">
         <Link href="/about">
           <a>
-            <Button
-              className="m-10 h-16 px-12 spacing tracking-wider"
-              kind="secondary"
-              xl
-            >
+            <Button className="m-10 px-12" kind="secondary" xl>
               Book our first no-obligation chat
             </Button>
           </a>
