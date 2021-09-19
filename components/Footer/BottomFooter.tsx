@@ -72,7 +72,7 @@ const BottomFooter = () => {
             />
           </a>
           <a
-            href="https://fi.linkedin.com/company/rareagency"
+            href="https://linkedin.com/company/rareagency"
             target="_blank"
             rel="noreferrer"
           >
