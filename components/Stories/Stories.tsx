@@ -13,7 +13,7 @@ const Stories = () => {
       />
 
       <Story
-        image="/static/stock/stock1.svg"
+        image="/static/pictures/stock1.svg"
         imageAlt="Stock photo"
         title={
           <>
@@ -24,7 +24,7 @@ const Stories = () => {
         orientation="left"
       />
       <Story
-        image="/static/stock/stock2.svg"
+        image="/static/pictures/stock2.svg"
         imageAlt="Stock photo"
         title="Career story"
         header={
