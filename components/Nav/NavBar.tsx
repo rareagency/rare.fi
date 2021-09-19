@@ -1,20 +1,20 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Logo from "../Logo";
 import NavItem from "./NavItem";
 import Lottie from "react-lottie";
 import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
 import { links } from "./pagelinks";
-
-const SMALL_MENU_SCROLL_THRESHOLD = 150;
+import { useThresholdScroller } from "../../utils/threshold-scroller";
 
 const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
   theme = "light",
 }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [animationPaused, setAnimationPaused] = useState(true);
-  const [userIsScrolled, setUserIsScrolled] = useState(false);
+
+  const userIsScrolled = useThresholdScroller();
 
   function toggleMenu() {
     setMenuIsOpen(!menuIsOpen);
@@ -31,23 +31,6 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
     bodyElement.classList.add("modal-open");
     return;
   }
-
-  function listenScrollEvent() {
-    if (window.scrollY < SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(false);
-    } else if (window.scrollY >= SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(true);
-    }
-  }
-
-  useEffect(() => {
-    if (window.scrollY > SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(true);
-    }
-
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
 
   return (
     <nav
@@ -83,7 +66,6 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               text={link.text}
               key={link.text}
               hasBadge={link.hasBadge}
-              scroll={link.scroll}
               size={userIsScrolled ? "sm" : "md"}
             />
           ))}
@@ -127,7 +109,6 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
                   url={link.url}
                   text={link.text}
                   hasBadge={link.hasBadge}
-                  scroll={link.scroll}
                 />
               </div>
             ))}
