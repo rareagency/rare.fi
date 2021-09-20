@@ -35,7 +35,9 @@ const CircleButton: React.FC<CircleButtonProps> = ({
         className
       )}
     >
-      <span className="arrow relative top-[2px] text-2xl md:hidden">{"→"}</span>
+      <span className="arrow relative top-[2px] text-2xl group-hover:hidden md:hidden">
+        {"→"}
+      </span>
       <span
         className={c(`
         hidden
