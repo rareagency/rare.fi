@@ -66,7 +66,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <h2 className="col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold text-[36px] sm:text-[24px]">
+      <h2 className="h2-small col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold">
         We adapt to our client&apos;s
         <br />
         environment & needs
