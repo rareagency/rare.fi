@@ -18,37 +18,38 @@ const CircleButton: React.FC<CircleButtonProps> = ({
     <button
       onClick={onClick}
       className={c(
-        `button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all duration-300 text-action-purple text-bold text-base uppercase font-bold whitespace-nowrap overflow-hidden`,
+        `
+        group
+
+        button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all
+        duration-300 text-action-purple text-bold text-base uppercase
+        font-bold whitespace-nowrap overflow-hidden
+        p-[0.5rem]
+        hover:w-[172px]
+        inline-block
+
+        md:border-[3px]
+        md:w-full
+        md:hover:w-full
+        `,
         className
       )}
     >
-      <style jsx>{`
-        .button {
-          padding: 0.5rem;
-          width: 3.5rem;
-        }
-        .button:hover {
-          width: 172px;
-        }
+      <span className="arrow relative top-[2px] text-2xl md:hidden">{"→"}</span>
+      <span
+        className={c(`
+        hidden
+        opacity-0
+        px-4
 
-        .content {
-          display: none;
-          opacity: 0;
-          padding: 0 1rem;
-        }
-
-        .button:hover > .content {
-          display: inline-block;
-          opacity: 1;
-          transition: width 0.3s;
-        }
-
-        .button:hover .arrow {
-          display: none;
-        }
-      `}</style>
-      <span className="arrow relative top-[2px] text-2xl">{"→"}</span>
-      <span className="content">{children}</span>
+        group-hover:inline-block
+        group-hover:opacity-100
+        
+        md:opacity-100
+        md:inline-block`)}
+      >
+        {children}
+      </span>
     </button>
   );
 };
