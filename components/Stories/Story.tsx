@@ -19,7 +19,7 @@ const Story = ({
   link,
   orientation,
 }: StoryProps) => (
-  <article className="pt-24 col-all layout-grid md:pb-8 md:pt-0">
+  <article className="pt-24 col-all layout-grid md:pt-0 md:pb-2">
     <img
       src={image}
       alt={imageAlt}
@@ -36,8 +36,8 @@ const Story = ({
       })}
     >
       <span className="tag text-mid-blue">{title}</span>
-      <h4 className="md:text-sm text-dark-blue pt-6">{header}</h4>
-      <div className="pt-6 inline-flex items-center">
+      <h4 className="text-dark-blue pt-6">{header}</h4>
+      <div className="pt-8 inline-flex items-center md:w-full">
         <CircleButton link={link}>Read article</CircleButton>
       </div>
     </div>

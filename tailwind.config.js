@@ -84,7 +84,7 @@ module.exports = {
           "linear-gradient(to bottom, rgba(0, 15, 31, 1), rgba(0, 15, 31, 0.75)), url('/static/tampere-map.png');",
       }),
       animation: {
-        "blur-in": "blur 0.2s linear",
+        "blur-in": "blur 180ms ease-out",
       },
       keyframes: {
         blur: {

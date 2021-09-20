@@ -13,10 +13,11 @@ const Button: React.FC<ButtonProps> = ({
   xl = false,
   className,
 }) => (
-  <button className={c(className, "button", { xl }, kind)}>
+  <button className={c("button", { xl }, kind, className)}>
     <style jsx>{`
       .button {
-        @apply w-auto font-default font-bold text-lg border-solid border-action-purple border-[3px] rounded-full px-8 py-2 uppercase;
+        @apply w-auto font-default font-bold text-lg border-solid border-action-purple;
+        @apply border-[5px] rounded-full px-8 py-2 min-h-[60px] uppercase tracking-wider;
         animation-name: moveReverse;
         animation-duration: 0.1s;
       }
