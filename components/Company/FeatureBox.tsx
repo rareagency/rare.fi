@@ -55,9 +55,11 @@ const FeatureBox = () => {
             <img
               src="/static/illustrations/agile.svg"
               alt="Circle-shaped character smiling with it's teeth saying Agile"
+              width={100}
+              style={{ width: "100px" }}
             />
             <p className={illustrationDescription}>
-              Agile practice from the get-go
+              Agile practices from the get-go
             </p>
           </div>
           <div className={illustrationCol}>

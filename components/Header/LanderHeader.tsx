@@ -28,13 +28,20 @@ const Header = () => {
         >
           Everyday
           <br />
-          contribution to
-          <br />
-          envision{" "}
+          contribution
+          <br className="hidden md:inline" />
+          <span className="md:hidden"> </span>
+          to
+          <br className="md:hidden" />
+          <span className="hidden md:inline"> </span>
+          envision <br className="hidden md:inline" />
           <span className="font-header-mono lowercase font-light">
             a better
-            <br />
-            digital world of tomorrow
+            <br className="md:hidden" />
+            <span className="hidden md:inline"> </span>
+            digital
+            <br className="hidden md:inline" />
+            <span className="md:hidden"> </span>world of tomorrow
           </span>
         </h1>
       </div>
