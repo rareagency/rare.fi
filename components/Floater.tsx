@@ -7,7 +7,7 @@ const Floater = () => {
   const [hidden, setHidden] = React.useState(false);
 
   const handleClose = () => {
-    setTimeout(() => setHidden(true), 700);
+    setHidden(true);
     setItem("floater_hidden", true);
   };
 
