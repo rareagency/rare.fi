@@ -5,6 +5,7 @@ type ButtonProps = {
   kind?: "primary" | "secondary";
   className?: string;
   xl?: boolean;
+  onClick?: () => void;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,8 +13,9 @@ const Button: React.FC<ButtonProps> = ({
   kind = "primary",
   xl = false,
   className,
+  onClick,
 }) => (
-  <button className={c("button", { xl }, kind, className)}>
+  <button className={c("button", { xl }, kind, className)} onClick={onClick}>
     <style jsx>{`
       .button {
         @apply w-auto font-default font-bold text-lg border-solid border-action-purple;
