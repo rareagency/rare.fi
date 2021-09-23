@@ -1,4 +1,5 @@
 import React from "react";
+import TextLink from "../TextLink";
 
 export const ContactRiku = () => (
   <section id="contact-riku" className="col-all layout-grid p-0 mt-48">
@@ -27,9 +28,8 @@ export const ContactRiku = () => (
 
       <span className="h6 col-start-2 mt-16 md:my-3">Listen:</span>
       <span className="h4 col-start-3 col-span-2 mt-16 md:my-3">
-        <a
+        <TextLink
           href="https://webbidevaus.fi"
-          target="_blank"
           rel="noreferrer"
           className="link-text"
         >
@@ -40,7 +40,7 @@ export const ContactRiku = () => (
             width="20"
             height="13"
           />
-        </a>
+        </TextLink>
       </span>
 
       <span className="h6 col-start-2 mt-16 md:my-3">Tune in:</span>

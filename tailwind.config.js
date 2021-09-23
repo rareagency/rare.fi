@@ -54,6 +54,7 @@ module.exports = {
         "light-red": "#F3D4CD",
         "light-yellow": "#F8F2E7",
         "light-blue": "#D5D9E3",
+        "light-action-purple": "#547CE4",
 
         // Colors not available in Figma
         black: "#000F1F",

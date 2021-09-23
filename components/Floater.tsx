@@ -70,7 +70,7 @@ const Floater = () => {
       <Button
         xl
         className="col-start-6 col-span-2 md:col-start-5 md:col-span-3"
-        kind="secondary"
+        kind="secondary-light"
       >
         Subscribe to rare
       </Button>

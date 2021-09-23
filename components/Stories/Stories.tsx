@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Button from "../Button";
+import TextLink from "../TextLink";
 import Story from "./Story";
 
 const Stories = () => {
@@ -45,7 +46,7 @@ const Stories = () => {
         </Link>
       </div>
       <div className="col-all text-center justify-center pt-0 hidden md:block">
-        <a className="link-text">See all stories</a>
+        <TextLink className="link-text">See all stories</TextLink>
       </div>
 
       <style jsx>{`
