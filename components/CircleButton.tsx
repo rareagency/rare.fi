@@ -19,9 +19,11 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       onClick={onClick}
       className={c(
         `
+        circle-button
+
         group
 
-        button border-action-purple border-[5px] h-14 w-14 rounded-full transition-all
+        button border-action-purple border-[4px] h-14 w-14 rounded-full transition-all
         duration-300 text-action-purple text-bold text-base uppercase
         font-bold whitespace-nowrap overflow-hidden
         p-[0.5rem]
@@ -52,6 +54,12 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       >
         {children}
       </span>
+
+      <style jsx>{`
+        .circle-button:focus:not(:focus-visible) {
+          outline: none;
+        }
+      `}</style>
     </button>
   );
 };
