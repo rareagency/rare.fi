@@ -1,4 +1,7 @@
-export const setItem = (key: string, value: any) => {
+export const setItem = (
+  key: string,
+  value: Parameters<typeof JSON.stringify>[0]
+) => {
   try {
     window.localStorage.setItem(key, JSON.stringify(value));
   } catch (error) {

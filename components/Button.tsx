@@ -2,9 +2,15 @@ import React from "react";
 import { c } from "../utils/classnames";
 
 type ButtonProps = {
-  kind?: "primary" | "secondary";
+  kind?:
+    | "primary"
+    | "secondary"
+    | "primary-light"
+    | "secondary-light"
+    | "arrow";
   className?: string;
   xl?: boolean;
+  onClick?: () => void;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,45 +18,61 @@ const Button: React.FC<ButtonProps> = ({
   kind = "primary",
   xl = false,
   className,
+  onClick,
 }) => (
-  <button className={c(className, "button", { xl }, kind)}>
+  <button className={c("button", { xl }, kind, className)} onClick={onClick}>
     <style jsx>{`
       .button {
-        @apply w-auto font-default font-bold text-lg border-solid border-action-purple border-[3px] rounded-full px-8 py-2 uppercase;
-        animation-name: moveReverse;
-        animation-duration: 0.1s;
+        @apply font-default font-bold text-lg border-solid border-action-purple;
+        @apply border-[4px] rounded-full px-8 py-2 min-h-[60px] uppercase tracking-wider;
+        @apply text-[22px];
+        @apply transition;
       }
-      .button:hover {
-        animation: move 0.15s ease-out forwards;
-      }
+
       .primary {
         @apply bg-action-purple text-off-white;
       }
+      .primary:hover {
+        @apply bg-light-action-purple border-light-action-purple;
+      }
+
       .secondary {
+        @apply text-action-purple;
+      }
+      .secondary:hover {
+        @apply bg-action-purple text-off-white;
+      }
+
+      .primary-light {
+        @apply text-action-purple;
+      }
+      .primary-light:hover {
+        @apply text-light-action-purple;
+      }
+
+      .secondary-light {
+        @apply bg-transparent text-off-white border-off-white;
+      }
+      .secondary-light:hover {
         @apply bg-off-white text-action-purple;
+      }
+
+      .arrow {
+        @apply text-action-purple px-0 w-16 hover:w-[275px] md:w-full md:hover:w-full;
+        transition: width 200ms ease-in-out;
+      }
+
+      .button:active {
+        transform: scale(0.98);
+      }
+      .button:focus:not(:focus-visible) {
+        outline: none;
       }
       .xl {
         @apply text-xl md:text-sm md:px-4;
       }
       span {
         vertical-align: -15%;
-      }
-
-      @keyframes move {
-        from {
-          box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px #1941aa;
-        }
-        to {
-          box-shadow: 0px 6px 0px -4px #fff, 0px 5px 0px #1941aa;
-        }
-      }
-      @keyframes moveReverse {
-        from {
-          box-shadow: 0px 6px 0px -4px #fff, 0px 5px 0px #1941aa;
-        }
-        to {
-          box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px #1941aa;
-        }
       }
     `}</style>
     <span>{children}</span>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getItem, setItem } from "../utils/localStorage";
+import { getItem, setItem } from "../utils/local-storage";
+import TextLink from "./TextLink";
 
 const CookieConsent = () => {
   const [hidden, setHidden] = useState(true);
@@ -30,7 +31,7 @@ const CookieConsent = () => {
             Find out more about the cookies we use:{" "}
             <a
               href="#"
-              className="button-underline text-action-purple hover:text-dark-blue"
+              className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
             >
               Cookie & Privacy policy
             </a>

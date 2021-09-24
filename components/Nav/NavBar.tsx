@@ -5,49 +5,30 @@ import NavItem from "./NavItem";
 import Lottie from "react-lottie";
 import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
-import { links } from "../../utils/pagelinks";
-
-const SMALL_MENU_SCROLL_THRESHOLD = 150;
+import { links } from "./pagelinks";
+import { useThresholdScroller } from "../../utils/threshold-scroller";
 
 const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
   theme = "light",
 }) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [animationPaused, setAnimationPaused] = useState(true);
-  const [userIsScrolled, setUserIsScrolled] = useState(false);
+
+  const userIsScrolled = useThresholdScroller();
+
+  const toggleBodyElementLock = () => {
+    if (menuIsOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  };
+  useEffect(toggleBodyElementLock, [menuIsOpen]);
 
   function toggleMenu() {
     setMenuIsOpen(!menuIsOpen);
     setAnimationPaused(false);
-
-    // kinda dirty solution to remove scrolling when menu is open, but it works
-    const bodyElement = document.getElementsByTagName("body")[0];
-
-    if (menuIsOpen) {
-      bodyElement.classList.remove("modal-open");
-      return;
-    }
-
-    bodyElement.classList.add("modal-open");
-    return;
   }
-
-  function listenScrollEvent() {
-    if (window.scrollY < SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(false);
-    } else if (window.scrollY >= SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(true);
-    }
-  }
-
-  useEffect(() => {
-    if (window.scrollY > SMALL_MENU_SCROLL_THRESHOLD) {
-      setUserIsScrolled(true);
-    }
-
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
 
   return (
     <nav
@@ -83,7 +64,6 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               text={link.text}
               key={link.text}
               hasBadge={link.hasBadge}
-              scroll={link.scroll}
               size={userIsScrolled ? "sm" : "md"}
             />
           ))}
@@ -127,7 +107,6 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
                   url={link.url}
                   text={link.text}
                   hasBadge={link.hasBadge}
-                  scroll={link.scroll}
                 />
               </div>
             ))}

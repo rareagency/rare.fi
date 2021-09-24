@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
   string,
@@ -10,7 +10,7 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
   const secondRowRef = useRef<HTMLElement>(null);
   const thirdRowRef = useRef<HTMLElement>(null);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (!firstRowRef.current || !secondRowRef.current || !thirdRowRef.current) {
       return;
     }
@@ -32,7 +32,7 @@ export function useHorizontalScroller([firstRow, secondRow, thirdRow]: [
     thirdRowRef.current.style.transform = `translateX(${
       -550 + scrollXPos * 0.6
     }px)`;
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

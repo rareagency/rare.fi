@@ -4,12 +4,10 @@ import Link from "next/link";
 import { Post } from "../../types/Post";
 
 const FeaturedStory = (props: { post: Post }) => (
-  <article id="featured-story" className="col-start-2 col-span-6 mt-48">
+  <article id="featured-story" className="col-start-2 col-span-6 mt-64">
     <Link href={props.post.url}>
       <a>
-        <h2 className="text-4xl leading-relaxed text-dark-blue pt-6 pb-6">
-          {props.post.title}
-        </h2>
+        <h2 className="h2-small text-dark-blue pb-6">{props.post.title}</h2>
 
         <p className="flex items-center">
           <img

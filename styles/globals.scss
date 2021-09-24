@@ -32,9 +32,6 @@
 }
 
 @layer base {
-  $mid: 1028px;
-  $small: 728px;
-
   /* From Figma style guide */
   h1,
   .h1 {
@@ -68,7 +65,7 @@
 
   h2,
   .h2 {
-    @apply font-header-mono text-dark-blue;
+    @apply font-header-mono;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -83,6 +80,30 @@
 
     @media screen and (max-width: theme("screens.md.max")) {
       font-size: 35px;
+    }
+  }
+
+  a h2,
+  a.h2 {
+    @apply text-dark-blue;
+  }
+
+  a:hover h2,
+  a:hover .h2 {
+    @apply text-action-purple;
+  }
+
+  h2.h2-small,
+  .h2.h2-small {
+    @apply leading-relaxed;
+    font-size: 36px;
+
+    @media screen and (max-width: theme("screens.lg.max")) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 28px;
     }
 
     @media screen and (max-width: theme("screens.sm.max")) {
@@ -112,6 +133,14 @@
     font-size: 28px;
     line-height: 148%;
     font-weight: 500;
+
+    @media screen and (max-width: theme("screens.xl.max")) {
+      font-size: 22px;
+    }
+
+    @media screen and (max-width: theme("screens.lg.max")) {
+      font-size: 20px;
+    }
   }
 
   h5,
@@ -166,16 +195,36 @@
     line-height: 141.5%;
     text-transform: uppercase;
     font-weight: 400;
-  }
 
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 14px;
+    }
+  }
   .tag.font-bold {
     letter-spacing: 0.015em;
     font-weight: 500;
   }
 
+  a .tag {
+    @apply text-mid-blue;
+  }
+
+  a:hover .tag {
+    @apply text-light-action-purple;
+  }
+
   .description {
     @apply font-default;
     font-size: 14px;
+  }
+
+  .link-text {
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.085em;
   }
 
   /* Other */

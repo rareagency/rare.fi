@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Button from "../Button";
+import TextLink from "../TextLink";
 import Story from "./Story";
 
 const Stories = () => {
@@ -9,11 +10,11 @@ const Stories = () => {
       <img
         src="/static/rare_est.svg"
         alt="Rare Est. 2019"
-        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2"
+        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2"
       />
 
       <Story
-        image="/static/stock/stock1.svg"
+        image="/static/pictures/stock1.svg"
         imageAlt="Stock photo"
         title={
           <>
@@ -24,7 +25,7 @@ const Stories = () => {
         orientation="left"
       />
       <Story
-        image="/static/stock/stock2.svg"
+        image="/static/pictures/stock2.svg"
         imageAlt="Stock photo"
         title="Career story"
         header={
@@ -36,12 +37,16 @@ const Stories = () => {
         }
         orientation="right"
       />
-      <div className="pt-16 flex col-all justify-center md:pt-0">
+      <div className="pt-16 flex col-all justify-center md:hidden">
         <Link href="/stories">
           <a>
+            {/* TODO: This should be link instead of button too */}
             <Button kind="secondary">See all stories</Button>
           </a>
         </Link>
+      </div>
+      <div className="col-all text-center justify-center pt-0 hidden md:block">
+        <TextLink className="link-text">See all stories</TextLink>
       </div>
 
       <style jsx>{`
