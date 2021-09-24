@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getItem, setItem } from "../utils/local-storage";
-import TextLink from "./TextLink";
 
 const CookieConsent = () => {
   const [hidden, setHidden] = useState(true);
