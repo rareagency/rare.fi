@@ -40,7 +40,7 @@ const TextLink: React.FC<TextLinkProps> = ({
         height: 5px;
         content: "";
         transform: scaleX(1);
-        transition: transform 250ms ease-in-out;
+        transition: transform 150ms ease-in-out;
         transform-origin: 100% 50%;
       }
       .link-text:hover:not(:active)::after {

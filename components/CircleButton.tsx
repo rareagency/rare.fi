@@ -1,5 +1,6 @@
 import React from "react";
 import { c } from "../utils/classnames";
+import Button from "./Button";
 
 type CircleButtonProps = {
   link?: string;
@@ -15,52 +16,48 @@ const CircleButton: React.FC<CircleButtonProps> = ({
 }) => {
   if (!link) link = "";
   return (
-    <button
+    <Button
+      kind="arrow"
       onClick={onClick}
       className={c(
         `
-        circle-button
-
-        group
-
-        button border-action-purple border-[4px] h-14 w-14 rounded-full transition-all
-        duration-300 text-action-purple text-bold text-base uppercase
-        font-bold whitespace-nowrap overflow-hidden
-        p-[0.5rem]
-        hover:w-[172px]
-        inline-block
-
-        md:border-[3px]
-        md:w-full
-        md:hover:w-full
-        `,
+      group
+      relative
+      whitespace-nowrap
+      overflow-hidden
+      `,
         className
       )}
     >
-      <span className="arrow relative top-[2px] text-2xl group-hover:hidden md:hidden">
-        {"→"}
-      </span>
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute right-[16px] top-4 group-hover:hidden md:hidden"
+      >
+        <path
+          d="M19.4411 9.96L13.5211 19.04H8.12111L12.2811 12.12H0.40111V7.8H12.2411L8.12111 0.959998H13.5211L19.4411 9.96Z"
+          fill="#1941AA"
+        />
+      </svg>
+
       <span
         className={c(`
-        hidden
-        opacity-0
-        px-4
+      hidden
+      opacity-0
+      px-4
 
-        group-hover:inline-block
-        group-hover:opacity-100
-        
-        md:opacity-100
-        md:inline-block`)}
+      group-hover:inline-block
+      group-hover:opacity-100
+      
+      md:opacity-100
+      md:inline-block`)}
       >
         {children}
       </span>
-
-      <style jsx>{`
-        .circle-button:focus:not(:focus-visible) {
-          outline: none;
-        }
-      `}</style>
-    </button>
+    </Button>
   );
 };
 

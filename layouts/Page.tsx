@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import BottomFooter from "../components/Footer/BottomFooter";
 import Floater from "../components/Floater";
 
-const Layout: React.FC<{ title: string }> = ({ children, title }) => (
+const Page: React.FC<{ title: string }> = ({ children, title }) => (
   <Base title={title}>
     <Header />
     {children}
@@ -15,4 +15,4 @@ const Layout: React.FC<{ title: string }> = ({ children, title }) => (
   </Base>
 );
 
-export default Layout;
+export default Page;

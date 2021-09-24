@@ -32,9 +32,6 @@
 }
 
 @layer base {
-  $mid: 1028px;
-  $small: 728px;
-
   /* From Figma style guide */
   h1,
   .h1 {
@@ -68,7 +65,7 @@
 
   h2,
   .h2 {
-    @apply font-header-mono text-dark-blue;
+    @apply font-header-mono;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -84,6 +81,16 @@
     @media screen and (max-width: theme("screens.md.max")) {
       font-size: 35px;
     }
+  }
+
+  a h2,
+  a.h2 {
+    @apply text-dark-blue;
+  }
+
+  a:hover h2,
+  a:hover .h2 {
+    @apply text-action-purple;
   }
 
   h2.h2-small,
@@ -196,10 +203,17 @@
       font-size: 14px;
     }
   }
-
   .tag.font-bold {
     letter-spacing: 0.015em;
     font-weight: 500;
+  }
+
+  a .tag {
+    @apply text-mid-blue;
+  }
+
+  a:hover .tag {
+    @apply text-light-action-purple;
   }
 
   .description {

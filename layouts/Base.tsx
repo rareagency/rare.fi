@@ -1,10 +1,15 @@
 import Head from "next/head";
 import React from "react";
 import CookieConsent from "../components/CookieConsent";
+import { c } from "../utils/classnames";
 
 const TITLE = "Rare Tampere - Software made collaborative";
 
-const Base: React.FC<{ title?: string }> = ({ title, children }) => {
+const Base: React.FC<{ title?: string; kind?: "dark" | "light" }> = ({
+  title,
+  children,
+  kind = "light",
+}) => {
   return (
     <>
       <Head>
@@ -28,9 +33,21 @@ const Base: React.FC<{ title?: string }> = ({ title, children }) => {
         />
       </Head>
 
-      <main className="layout-grid">{children}</main>
+      <main className={c("layout-grid", kind)}>{children}</main>
 
       <CookieConsent />
+
+      <style jsx>{`
+        .layout-grid {
+          transition: background-color 150ms ease-in-out;
+        }
+        .light {
+          @apply bg-white;
+        }
+        .dark {
+          @apply bg-black md:bg-white;
+        }
+      `}</style>
     </>
   );
 };

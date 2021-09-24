@@ -2,7 +2,12 @@ import React from "react";
 import { c } from "../utils/classnames";
 
 type ButtonProps = {
-  kind?: "primary" | "secondary" | "secondary-light";
+  kind?:
+    | "primary"
+    | "secondary"
+    | "primary-light"
+    | "secondary-light"
+    | "arrow";
   className?: string;
   xl?: boolean;
   onClick?: () => void;
@@ -18,28 +23,45 @@ const Button: React.FC<ButtonProps> = ({
   <button className={c("button", { xl }, kind, className)} onClick={onClick}>
     <style jsx>{`
       .button {
-        @apply w-auto font-default font-bold text-lg border-solid border-action-purple;
+        @apply font-default font-bold text-lg border-solid border-action-purple;
         @apply border-[4px] rounded-full px-8 py-2 min-h-[60px] uppercase tracking-wider;
+        @apply text-[22px];
         @apply transition;
       }
+
       .primary {
         @apply bg-action-purple text-off-white;
       }
       .primary:hover {
         @apply bg-light-action-purple border-light-action-purple;
       }
+
       .secondary {
-        @apply bg-off-white text-action-purple;
+        @apply text-action-purple;
       }
       .secondary:hover {
         @apply bg-action-purple text-off-white;
       }
+
+      .primary-light {
+        @apply text-action-purple;
+      }
+      .primary-light:hover {
+        @apply text-light-action-purple;
+      }
+
       .secondary-light {
         @apply bg-transparent text-off-white border-off-white;
       }
       .secondary-light:hover {
         @apply bg-off-white text-action-purple;
       }
+
+      .arrow {
+        @apply text-action-purple px-0 w-16 hover:w-[275px] md:w-full md:hover:w-full;
+        transition: width 200ms ease-in-out;
+      }
+
       .button:active {
         transform: scale(0.98);
       }
