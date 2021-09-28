@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import Button from "../Button";
 import TextLink from "../TextLink";
@@ -38,12 +37,9 @@ const Stories = () => {
         orientation="right"
       />
       <div className="pt-16 flex col-all justify-center md:hidden">
-        <Link href="/stories">
-          <a>
-            {/* TODO: This should be link instead of button too */}
-            <Button kind="secondary">See all stories</Button>
-          </a>
-        </Link>
+        <Button href="/stories" kind="secondary">
+          See all stories
+        </Button>
       </div>
       <div className="col-all text-center justify-center pt-0 hidden md:block">
         <TextLink className="link-text">See all stories</TextLink>
