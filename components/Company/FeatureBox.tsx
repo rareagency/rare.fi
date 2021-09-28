@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import Button from "../Button";
-import { c } from "../../utils/classnames";
 
 // TODO, use theese in stead of hardcoded values
 // type FeatureBoxProps = {
@@ -18,8 +16,30 @@ import { c } from "../../utils/classnames";
 //   text: string;
 // };
 
-const illustrationCol = c("flex items-center");
-const illustrationDescription = c("description p-8");
+interface IllustrationProps {
+  imgSrc: string;
+  imgAlt: string;
+  imgStyles?: React.CSSProperties;
+  children: React.ReactNode;
+}
+
+const Illustration = ({
+  children,
+  imgSrc,
+  imgAlt,
+  imgStyles,
+}: IllustrationProps) => (
+  <div className="flex items-center">
+    <img src={imgSrc} alt={imgAlt} style={imgStyles} />
+    <p className="description p-8">{children}</p>
+
+    <style jsx>{`
+      img {
+        width: 100px;
+      }
+    `}</style>
+  </div>
+);
 
 const FeatureBox = () => {
   return (
@@ -33,77 +53,50 @@ const FeatureBox = () => {
       </p>
       <div className="row-start-2 col-start-4 col-span-4 pt-16 md:row-start-3 md:col-start-1 md:col-span-8">
         <div className="grid grid-cols-2 grid-rows-auto gap-16 md:grid-cols-1 md:gap-8">
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/nailing.svg"
-              alt="Smiling person showing OK-sign"
-            />
-            <p className={illustrationDescription}>
-              Nailing it in frontend and backend, API and cloud development
-            </p>
-          </div>
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/idea.svg"
-              alt="Jolly character with a hat saying 'IDEA'"
-            />
-            <p className={illustrationDescription}>
-              Guiding projects from idea to production
-            </p>
-          </div>
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/agile.svg"
-              alt="Circle-shaped character smiling with it's teeth saying Agile"
-              width={100}
-              style={{ width: "100px" }}
-            />
-            <p className={illustrationDescription}>
-              Agile practices from the get-go
-            </p>
-          </div>
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/care.svg"
-              alt="Heart-shaped eye surfing"
-            />
-            <p className={illustrationDescription}>
-              Strong co-creation and collaboration mindset
-            </p>
-          </div>
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/wow.svg"
-              alt="Zig-zag character dancing"
-            />
-            <p className={illustrationDescription}>
-              Transparent ways of working & next level comms
-            </p>
-          </div>
-          <div className={illustrationCol}>
-            <img
-              src="/static/illustrations/problem.svg"
-              alt="Fingers snapping"
-            />
-            <p className={illustrationDescription}>
-              Proudly building high usability products to resolve painful needs
-            </p>
-          </div>
+          <Illustration
+            imgSrc="/static/illustrations/nailing.svg"
+            imgAlt="Smiling person showing OK-sign"
+          >
+            Nailing it in frontend and backend, API and cloud development
+          </Illustration>
+          <Illustration
+            imgSrc="/static/illustrations/idea.svg"
+            imgAlt="Jolly character with a hat saying 'IDEA'"
+          >
+            Guiding projects from idea to production
+          </Illustration>
+          <Illustration
+            imgSrc="/static/illustrations/agile.svg"
+            imgAlt="Circle-shaped character smiling with it's teeth saying Agile"
+          >
+            Agile practices from the get-go
+          </Illustration>
+          <Illustration
+            imgSrc="/static/illustrations/care.svg"
+            imgAlt="Heart-shaped eye surfing"
+          >
+            Strong co-creation and collaboration mindset
+          </Illustration>
+          <Illustration
+            imgSrc="/static/illustrations/wow.svg"
+            imgAlt="Zig-zag character dancing"
+          >
+            Transparent ways of working & next level comms
+          </Illustration>
+          <Illustration
+            imgSrc="/static/illustrations/problem.svg"
+            imgAlt="Fingers snapping"
+          >
+            Proudly building high usability products to resolve painful needs
+          </Illustration>
         </div>
       </div>
-      <div className="mt-16 flex col-all justify-center">
-        <Link href="#">
-          <a>
-            <Button kind="secondary">Learn how we apply it</Button>
-          </a>
-        </Link>
-      </div>
 
-      <style jsx>{`
-        img {
-          width: 100px;
-        }
-      `}</style>
+      <div className="mt-16 flex col-all justify-center">
+        <Button href="#" kind="secondary">
+          Learn how we apply it
+        </Button>
+      </div>
     </section>
   );
 };
