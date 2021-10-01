@@ -1,6 +1,4 @@
-import Image from "next/image";
 import React from "react";
-import skaterImage from "../public/static/skateramp.png";
 import Button from "./Button";
 
 const JoinUsSection: React.FC = ({
@@ -10,26 +8,22 @@ const JoinUsSection: React.FC = ({
     id="join-us"
     className="col-all px-8 relative layout-grid bg-light-yellow pt-16 pb-16"
   >
-    <h2 className="h2-small text-action-purple col-start-2 col-span-3 md:col-all">
+    <h2 className="h2-small text-action-purple col-start-2 col-span-3 lg:text-center lg:col-all">
       {children}
     </h2>
     <Button
       kind="secondary"
-      className="col-start-2 col-span-2 md:col-all mt-8"
+      className="col-start-2 col-span-2 lg:col-all mt-8"
       xl
     >
       Dare to join Rare
     </Button>
 
-    <figure className="lg:hidden">
-      <Image
-        src={skaterImage}
-        alt="Person skating in a ramp"
-        layout="fill"
-        objectFit="contain"
-        objectPosition="right"
-      />
-    </figure>
+    <img
+      src="/static/skateramp.png"
+      alt="Person skating in a pool ramp"
+      className="object-cover w-1/2 h-full absolute right-0 top-0 opacity-100 lg:w-full lg:opacity-50"
+    />
   </section>
 );
 
