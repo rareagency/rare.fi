@@ -36,6 +36,7 @@
   h1,
   .h1 {
     @apply font-header text-dark-blue;
+    display: block;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -66,6 +67,7 @@
   h2,
   .h2 {
     @apply font-header-mono;
+    display: block;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -96,6 +98,7 @@
   h2.h2-small,
   .h2.h2-small {
     @apply leading-relaxed;
+    display: block;
     font-size: 36px;
 
     @media screen and (max-width: theme("screens.lg.max")) {
@@ -118,6 +121,7 @@
   h3,
   .h3 {
     @apply font-default text-dark-blue;
+    display: block;
     font-weight: 32px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
@@ -130,6 +134,7 @@
   h4,
   .h4 {
     @apply font-default text-dark-blue;
+    display: block;
     font-size: 28px;
     line-height: 148%;
     font-weight: 500;
@@ -146,6 +151,7 @@
   h5,
   .h5 {
     @apply font-default text-dark-blue;
+    display: block;
     font-size: 22px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -156,6 +162,7 @@
   h6,
   .h6 {
     @apply font-header-mono text-mid-blue;
+    display: block;
     font-size: 20px;
     line-height: 141%;
     letter-spacing: 0.085em;
