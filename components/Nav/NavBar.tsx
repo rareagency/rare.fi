@@ -125,7 +125,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               >
                 <img
                   src="/static/social-media/github.svg"
-                  alt="Instagram"
+                  alt="GitHub logo"
                   className="w-1/7 pr-4"
                 />
               </a>
@@ -136,7 +136,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               >
                 <img
                   src="/static/social-media/instagram.svg"
-                  alt="Instagram"
+                  alt="Instagram logo"
                   className="w-1/7 pr-4"
                 />
               </a>
@@ -147,7 +147,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
               >
                 <img
                   src="/static/social-media/linkedin.svg"
-                  alt="Instagram"
+                  alt="LinkedIn logo"
                   className="w-1/7"
                 />
               </a>
