@@ -216,6 +216,10 @@
     @apply text-light-action-purple;
   }
 
+  a:hover .icon {
+    filter: brightness(1.5);
+  }
+
   .description {
     @apply font-default;
     font-size: 14px;

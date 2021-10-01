@@ -12,6 +12,7 @@ const FeaturedStory = (props: { post: Post }) => (
         <p className="flex items-center">
           <img
             src="/static/icons/fresh.svg"
+            className="icon"
             alt="Fresh"
             width="107"
             height="44"
