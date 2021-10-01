@@ -69,6 +69,8 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
           ))}
         </section>
 
+        {/* The onClick is passed o the Lottie -instance, so it shouldn't matter if its div and not button which is clickable */}
+        {/* eslint-disable jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
         <div className="hidden lg:inline-flex z-30" onClick={toggleMenu}>
           <Lottie
             options={{

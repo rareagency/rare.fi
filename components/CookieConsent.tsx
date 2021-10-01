@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { getItem, setItem } from "../utils/local-storage";
 
@@ -28,12 +29,14 @@ const CookieConsent = () => {
           experience of our users.
           <p className="mt-0 md:mt-4">
             Find out more about the cookies we use:{" "}
-            <a
-              href="#"
-              className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
-            >
-              Cookie & Privacy policy
-            </a>
+            <Link href="/privacy">
+              <a
+                target="_blank"
+                className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
+              >
+                Cookie & Privacy policy
+              </a>
+            </Link>
           </p>
         </div>
       </section>

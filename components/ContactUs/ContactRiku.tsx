@@ -39,6 +39,7 @@ export const ContactRiku = () => (
             src="/static/icons/finnish_flag.svg"
             width="20"
             height="13"
+            alt="Finnish flag"
           />
         </TextLink>
       </span>
@@ -50,7 +51,7 @@ export const ContactRiku = () => (
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/static/social-media/github.svg" />
+          <img src="/static/social-media/github.svg" alt="GitHub" />
         </a>
         <a
           href="https://instagram.com/rarekoodaa"
@@ -58,7 +59,7 @@ export const ContactRiku = () => (
           rel="noreferrer"
           className="ml-4"
         >
-          <img src="/static/social-media/instagram.svg" />
+          <img src="/static/social-media/instagram.svg" alt="Instagram" />
         </a>
         <a
           href="https://www.linkedin.com/company/rareagency"
@@ -66,7 +67,7 @@ export const ContactRiku = () => (
           rel="noreferrer"
           className="ml-4"
         >
-          <img src="/static/social-media/linkedin.svg" />
+          <img src="/static/social-media/linkedin.svg" alt="LinkedIn" />
         </a>
       </div>
     </div>

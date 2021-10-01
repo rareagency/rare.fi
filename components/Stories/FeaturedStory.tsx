@@ -4,7 +4,10 @@ import Link from "next/link";
 import { Post } from "../../types/Post";
 
 const FeaturedStory = (props: { post: Post }) => (
-  <article id="featured-story" className="col-start-2 col-span-6 mt-64">
+  <article
+    id="featured-story"
+    className="col-start-2 col-span-6 mt-64 md:mt-32"
+  >
     <Link href={props.post.url}>
       <a>
         <h2 className="h2-small text-dark-blue pb-6">{props.post.title}</h2>
@@ -26,6 +29,7 @@ const FeaturedStory = (props: { post: Post }) => (
         <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
           <Image
             src={props.post.cover_image}
+            alt=""
             layout="fill"
             objectFit="cover"
             priority
