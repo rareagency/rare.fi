@@ -7,12 +7,18 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react-hooks"],
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "jsx-a11y"
+  ],
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals",
     "prettier"
   ],
   "rules": {
@@ -20,7 +26,9 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "jsx-a11y/anchor-is-valid": "off", // Next.js <Link> doesn't work well with this rule
+    "@next/next/no-img-element": "off" // <Image>'s have some kind of lag with Netlify. TODO: Check if still lags
   },
   "settings": {
     "react": {

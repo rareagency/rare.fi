@@ -31,6 +31,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-1.svg"
             className="transform translate-x-8 translate-y-8 xl:translate-x-6 xl:translate-y-6 xl:scale-90"
+            alt="Swift person with a Rare -paper in it's hand"
           />
         </JourneyCircle>
       </div>
@@ -46,6 +47,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-2.svg"
             className="transform scale-135 translate-y-4"
+            alt="Person running to a futuristic car with a paper in it's hand"
           />
         </JourneyCircle>
       </div>
@@ -62,6 +64,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-3.svg"
             className="transform translate-y-2"
+            alt="Flying hero with a lemon in it's hand"
           />
         </JourneyCircle>
       </div>
