@@ -68,6 +68,7 @@ const Footer = () => {
             src="/static/icons/finnish_flag.svg"
             width="20"
             height="13"
+            alt="Finnish flag"
           />{" "}
           Made in Finland
         </div>
