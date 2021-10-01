@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import skaterImage from "../public/static/skateramp.png";
 import Button from "./Button";
 
 const JoinUsSection: React.FC = ({
@@ -6,7 +8,7 @@ const JoinUsSection: React.FC = ({
 }) => (
   <section
     id="join-us"
-    className="col-all px-8 layout-grid bg-light-yellow pt-16 pb-16"
+    className="col-all px-8 relative layout-grid bg-light-yellow pt-16 pb-16"
   >
     <h2 className="h2-small text-action-purple col-start-2 col-span-3 md:col-all">
       {children}
@@ -18,6 +20,16 @@ const JoinUsSection: React.FC = ({
     >
       Dare to join Rare
     </Button>
+
+    <figure className="lg:hidden">
+      <Image
+        src={skaterImage}
+        alt="Person skating in a ramp"
+        layout="fill"
+        objectFit="contain"
+        objectPosition="right"
+      />
+    </figure>
   </section>
 );
 
