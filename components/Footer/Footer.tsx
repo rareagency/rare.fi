@@ -73,7 +73,7 @@ const Footer = () => {
           Made in Finland
         </div>
         <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left md:py-1">
-          <TextLink href="#" kind="light">
+          <TextLink href="/privacy" kind="light">
             Cookie & Privacy policy
           </TextLink>
         </div>
