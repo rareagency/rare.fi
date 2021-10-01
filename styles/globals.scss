@@ -35,7 +35,7 @@
   /* From Figma style guide */
   h1,
   .h1 {
-    @apply font-header text-dark-blue;
+    @apply block font-header text-dark-blue;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -65,7 +65,7 @@
 
   h2,
   .h2 {
-    @apply font-header-mono;
+    @apply block font-header-mono;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -95,7 +95,7 @@
 
   h2.h2-small,
   .h2.h2-small {
-    @apply leading-relaxed;
+    @apply block leading-relaxed;
     font-size: 36px;
 
     @media screen and (max-width: theme("screens.lg.max")) {
@@ -117,7 +117,7 @@
 
   h3,
   .h3 {
-    @apply font-default text-dark-blue;
+    @apply block font-default text-dark-blue;
     font-weight: 32px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
@@ -129,7 +129,7 @@
 
   h4,
   .h4 {
-    @apply font-default text-dark-blue;
+    @apply block font-default text-dark-blue;
     font-size: 28px;
     line-height: 148%;
     font-weight: 500;
@@ -145,7 +145,7 @@
 
   h5,
   .h5 {
-    @apply font-default text-dark-blue;
+    @apply block font-default text-dark-blue;
     font-size: 22px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -155,7 +155,7 @@
 
   h6,
   .h6 {
-    @apply font-header-mono text-mid-blue;
+    @apply block font-header-mono text-mid-blue;
     font-size: 20px;
     line-height: 141%;
     letter-spacing: 0.085em;
@@ -214,6 +214,10 @@
 
   a:hover .tag {
     @apply text-light-action-purple;
+  }
+
+  a:hover .icon {
+    filter: brightness(1.5);
   }
 
   .description {
