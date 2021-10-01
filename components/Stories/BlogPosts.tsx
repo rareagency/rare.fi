@@ -8,7 +8,7 @@ const BlogPosts = (props: { posts: Post[] }) => {
       id="blog-posts"
       className="layout-grid col-start-2 col-span-6 pt-16"
     >
-      <div className="col-start-6 col-span-2 pt-16 flex justify-center">
+      {/*<div className="col-start-6 col-span-2 pt-16 flex justify-center">
         <ul className="table-of-contents">
           <li>
             <h5 className="selected" data-count="10">
@@ -25,7 +25,7 @@ const BlogPosts = (props: { posts: Post[] }) => {
             <h5 data-count="4">Practical guides</h5>
           </li>
         </ul>
-      </div>
+  </div>*/}
 
       {props.posts.map((post, i) => (
         <article
