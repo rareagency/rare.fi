@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="h6 text-off-white space-y-6 col-start-2 row-start-2 col-span-3 pb-20 pt-20 md:row-start-3 md:col-start-1 md:col-span-6">
         <ol className="pt-16">
           <li className="pb-6">
-            <h5 className="text-off-white">Tampere</h5>
+            <b className="h5 text-off-white">Tampere</b>
           </li>
           <li>Kyttälänkatu 1</li>
           <li>33100 Tampere</li>
@@ -68,11 +68,12 @@ const Footer = () => {
             src="/static/icons/finnish_flag.svg"
             width="20"
             height="13"
+            alt="Finnish flag"
           />{" "}
           Made in Finland
         </div>
         <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left md:py-1">
-          <TextLink href="#" kind="light">
+          <TextLink href="/privacy" kind="light">
             Cookie & Privacy policy
           </TextLink>
         </div>
