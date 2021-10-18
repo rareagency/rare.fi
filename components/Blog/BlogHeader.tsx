@@ -19,7 +19,7 @@ const BlogHeader = ({
   readLength,
 }: Props) => {
   return (
-    <header className="col-all layout-grid mt-48 mb-56 2xl:mb-0 sm:mt-24">
+    <header className="col-all layout-grid mt-48 sm:mt-24">
       <img
         src={imgUrl}
         alt={imgAlt}
@@ -29,11 +29,10 @@ const BlogHeader = ({
 
       <article
         className={c(
-          "absolute mx-auto left-0 right-0",
-          "2xl:static 2xl:col-all",
+          "mx-auto col-all",
           "layout-grid bg-light-yellow py-16 px-8"
         )}
-        style={{ maxWidth: "1680px", bottom: "-40%" }}
+        style={{ maxWidth: "1560px", marginTop: "-15rem" }}
       >
         <section className="col-start-2 col-span-6">
           <h2
