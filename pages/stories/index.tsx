@@ -1,5 +1,5 @@
 import React from "react";
-import JoinUsSection from "../../components/JoinUsSection";
+import SkaterBlock from "../../components/SkaterBlock";
 import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
@@ -49,7 +49,9 @@ const Stories = (props: Props) => {
     <Layout title="Stories - Rare Tampere">
       <FeaturedStory post={props.posts[0]} />
       <BlogPosts posts={props.posts.slice(1, 5)} />
-      <JoinUsSection />
+      <SkaterBlock buttonUrl="/" buttonTxt="Dare to join Rare">
+        Rare family welcomes people of any shape and form
+      </SkaterBlock>
       <MoreStories posts={props.posts.slice(5)} />
     </Layout>
   );
