@@ -167,6 +167,14 @@
     line-height: 141%;
     letter-spacing: 0.085em;
     text-transform: uppercase;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 16px;
+    }
   }
 
   .ingress {
