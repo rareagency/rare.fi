@@ -29,10 +29,11 @@ const BlogHeader = ({
 
       <article
         className={c(
-          "mx-auto col-all",
-          "layout-grid bg-light-yellow py-16 px-8"
+          "col-all layout-grid bg-light-yellow",
+          "mx-auto py-16 px-8 -mt-64",
+          "md:-mt-4 2xl:w-full 2xl:-mt-24"
         )}
-        style={{ maxWidth: "1560px", marginTop: "-15rem" }}
+        style={{ maxWidth: "1535px" }}
       >
         <section className="col-start-2 col-span-6">
           <h2

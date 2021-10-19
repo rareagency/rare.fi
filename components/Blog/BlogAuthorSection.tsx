@@ -30,7 +30,7 @@ const BlogAuthorSection = ({
       <span className="tag block my-4">Written by</span>
       <span className="h5 border-b-2 border-dark-blue block">{name}</span>
 
-      <section id="socials" className="flex jusitfy-center mt-4">
+      <section id="socials" className="flex mt-4">
         {githubUrl && (
           <a href={githubUrl}>
             <img src="/static/social-media/github.svg" alt="GitHub logo" />
