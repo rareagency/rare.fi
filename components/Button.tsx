@@ -86,7 +86,7 @@ const Button: React.FC<ButtonProps> = ({
           outline: none;
         }
         .xl {
-          @apply text-xl md:text-sm md:px-4;
+          @apply text-xl sm:text-sm md:text-base md:px-4;
         }
       `}</style>
     </>
