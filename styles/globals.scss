@@ -151,6 +151,13 @@
     line-height: 161.5%;
     text-transform: uppercase;
     font-weight: bold;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
   }
 
   h6,
@@ -181,6 +188,13 @@
     font-size: 24px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
   }
 
   .caption {
