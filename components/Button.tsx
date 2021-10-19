@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
         .button {
           @apply flex items-center justify-center text-center font-default font-bold text-lg border-solid border-action-purple;
           @apply border-[4px] rounded-full px-8 pb-2 pt-3 min-h-[60px] uppercase tracking-wider;
-          @apply text-[22px];
+          @apply text-[22px] sm:text-[20px];
           @apply transition;
         }
 
