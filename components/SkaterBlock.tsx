@@ -1,22 +1,28 @@
 import React from "react";
 import Button from "./Button";
 
-const JoinUsSection: React.FC = ({
-  children = "Rare family welcomes people of any shape and form",
-}) => (
+interface Props {
+  buttonTxt: string;
+  buttonUrl: string;
+  children: React.ReactNode;
+}
+
+const SkaterBlock = ({ buttonTxt, buttonUrl, children }: Props) => (
   <section
     id="join-us"
-    className="col-all px-8 relative layout-grid bg-light-yellow pt-16 pb-16"
+    className="col-all px-8 relative layout-grid bg-light-yellow pt-24 pb-24"
   >
-    <h2 className="h2-small text-action-purple col-start-2 col-span-3 lg:text-center lg:col-all">
+    <span className="h2-small text-action-purple col-start-2 col-span-3 pr-4 lg:pr-0 lg:text-center lg:col-all">
       {children}
-    </h2>
+    </span>
+
     <Button
+      href={buttonUrl}
       kind="secondary"
       className="col-start-2 col-span-2 lg:col-all mt-8"
       xl
     >
-      Dare to join Rare
+      {buttonTxt}
     </Button>
 
     <img
@@ -27,4 +33,4 @@ const JoinUsSection: React.FC = ({
   </section>
 );
 
-export default JoinUsSection;
+export default SkaterBlock;

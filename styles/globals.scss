@@ -118,7 +118,8 @@
   h3,
   .h3 {
     @apply block font-default text-dark-blue;
-    font-weight: 32px;
+    font-size: 32px;
+    font-weight: bold;
     line-height: 161.5%;
     letter-spacing: 0.085em;
 
@@ -203,6 +204,13 @@
     @media screen and (max-width: theme("screens.sm.max")) {
       font-size: 18px;
     }
+  }
+
+  .paragraph-sm {
+    @apply font-default text-dark-blue;
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: 0.08em;
   }
 
   .caption {

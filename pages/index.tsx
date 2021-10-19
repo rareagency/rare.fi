@@ -1,14 +1,13 @@
 import React from "react";
-
-import ContactUs from "../components/ContactUsSection";
-import References from "../components/References";
-import Ingress from "../components/Ingress";
-import Stories from "../components/Stories/Stories";
 import Company from "../components/Company/Company";
-import HorizontalScroller from "../components/HorizontalScroller";
+import ContactUs from "../components/ContactUsSection";
 import BottomFooter from "../components/Footer/BottomFooter";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/LanderHeader";
+import HorizontalScroller from "../components/HorizontalScroller";
+import Ingress from "../components/Ingress";
+import References from "../components/References";
+import Stories from "../components/Stories/Stories";
 import Base from "../layouts/Base";
 import { useThresholdScroller } from "../utils/threshold-scroller";
 
