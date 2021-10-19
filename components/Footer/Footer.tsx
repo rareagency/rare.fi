@@ -1,9 +1,9 @@
 import React from "react";
-import { links } from "../Nav/pagelinks";
-import NavItem from "../Nav/NavItem";
-import TickerText from "./TickerText";
 import { c } from "../../utils/classnames";
+import NavItem from "../Nav/NavItem";
+import { links } from "../Nav/pagelinks";
 import TextLink from "../TextLink";
+import TickerText from "./TickerText";
 
 const container = c(`
   layout-grid
@@ -59,7 +59,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="layout-grid row-start-3 col-all text-sm md:text-left md:row-start-4">
-        <div className="uppercase h6 text-off-white col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-4 md:py-1">
+        <div className="uppercase h6 text-off-white col-start-2 col-span-2 md:row-start-1 md:col-start-1 md:col-span-6 md:py-1">
           © Rare Agency
         </div>
         <div className="uppercase h6 text-off-white col-span-2 text-center md:row-start-2 md:col-span-6 md:text-left md:py-1">
