@@ -1,14 +1,12 @@
-import React from "react";
 import Link from "next/link";
-import JourneyCircle from "./JourneyCircle";
-import Button from "./Button";
+import React from "react";
 import { c } from "../utils/classnames";
+import Button from "./Button";
+import JourneyCircle from "./JourneyCircle";
 
 const textBoxClass = c(`
   text-off-white
-  w-3/5
   inline-block
-  w-64
   md:text-lg
   md:text-center
 `);
