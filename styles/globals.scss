@@ -212,6 +212,7 @@
 
   .tag {
     @apply font-header-mono;
+    display: inline-block;
     font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 141.5%;
@@ -222,7 +223,7 @@
       font-size: 16px;
     }
     @media screen and (max-width: theme("screens.sm.max")) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .tag.font-bold {
