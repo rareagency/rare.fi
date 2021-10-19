@@ -1,14 +1,29 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import ReactGA from "react-ga";
+import { hotjar } from "react-hotjar";
 import { getItem, setItem } from "../utils/local-storage";
 
 const CookieConsent = () => {
   const [hidden, setHidden] = useState(true);
+  const [consent, setConsent] = useState(getItem("cookie_consent"));
 
-  const accept = () => {
-    setItem("cookie_consent", true);
+  const choose = (accept: boolean) => {
+    setItem("cookie_consent", accept);
+    setConsent(accept);
     setHidden(true);
   };
+
+  useEffect(() => {
+    if (consent === true) {
+      hotjar.initialize(2110726, 6);
+      // TODO: Add production GA tracking code to the 2nd string
+      ReactGA.initialize(
+        process.env.NODE_ENV !== "production" ? "G-GJYBBWVBDL" : "G-GJYBBWVBDL"
+      );
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+  }, [consent]);
 
   useEffect(() => {
     setHidden(
@@ -43,10 +58,17 @@ const CookieConsent = () => {
 
       <section className="flex items-center justify-end md:justify-start w-full col-start-6 col-span-2 mt-0 md:col-start-2 md:col-span-8 md:mt-8">
         <button
-          className="button-underline font-semibold text-lg text-action-purple hover:text-dark-blue hover:border-dark-blue"
-          onClick={accept}
+          className="underline mr-6 text-base"
+          onClick={() => choose(false)}
         >
-          Accept & Continue
+          Opt-out
+        </button>
+
+        <button
+          className="button-underline font-semibold text-lg text-action-purple hover:text-dark-blue hover:border-dark-blue"
+          onClick={() => choose(true)}
+        >
+          Accept
         </button>
       </section>
     </div>
