@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import Button from "./Button";
 import { c } from "../utils/classnames";
 import { getItem, setItem } from "../utils/local-storage";
+import Button from "./Button";
 
 const Floater = () => {
   const [hidden, setHidden] = React.useState(false);
@@ -64,21 +64,21 @@ const Floater = () => {
           }
         }
       `}</style>
-      <p className="col-start-2 col-span-4 md:col-span-4 normal-case text-off-white md:text-[18px] text-[32px] my-2 tag">
-        Psst... Don&lsquo;t miss out!
+      <p className="col-start-1 col-span-4 md:col-span-4 normal-case text-off-white sm:text-[16px] md:text-[16px] lg:text-[24px] text-[32px] my-4 h6">
+        Psst… Don&lsquo;t miss out!
       </p>
       <Button
         xl
-        className="col-start-6 col-span-2 md:col-start-5 md:col-span-3"
+        className="col-start-5 col-span-3 sm:col-start-5 sm:col-span-3 w-5/6"
         kind="secondary-light"
       >
-        Subscribe to rare
+        Subscribe to Rare
       </Button>
       <button
         className={"absolute right-0 top-0 p-4 text-light-red"}
         onClick={handleClose}
       >
-        x
+        X
       </button>
     </section>
   );
