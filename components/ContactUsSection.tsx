@@ -76,10 +76,10 @@ const ContactUs = () => {
         Let&apos;s explore yours
       </h4>
 
-      <div className="col-all text-center">
-        <Link href="/about">
+      <div className="col-all flex items-center justify-center text-center">
+        <Link href="/contact-us">
           <a>
-            <Button className="m-10 px-12" kind="primary-light" xl>
+            <Button className="m-10 px-12" kind="secondary-light" xl>
               Book our first no-obligation chat
             </Button>
           </a>
