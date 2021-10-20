@@ -2,7 +2,7 @@ import React from "react";
 import TextLink from "../TextLink";
 
 export const ContactRiku = () => (
-  <section id="contact-riku" className="col-all layout-grid p-0 mt-48">
+  <section id="contact-riku" className="col-all layout-grid p-0 mt-48 md:mt-16">
     <img
       src="/static/pictures/riku-rouvila.jpg"
       alt="Riku Rouvila - Lead developer and Co-Founder of the company"
@@ -18,7 +18,7 @@ export const ContactRiku = () => (
       potential collaboration.
     </p>
 
-    <div className="table-row col-all layout-grid px-8 md:flex md:flex-col md:mt-32">
+    <div className="table-row col-all layout-grid px-8 md:flex md:flex-col md:mt-24">
       <span className="h6 col-start-2 mt-32 lg:mt-20 md:my-3">Say hi:</span>
       <span className="h4 col-start-3 col-span-2 mt-32 lg:mt-20 text-action-purple md:my-3">
         riku@rare.fi

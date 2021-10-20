@@ -3,7 +3,10 @@ import { openPopupWidget } from "react-calendly";
 import Button from "../Button";
 
 export const ContactUsHeader = () => (
-  <section id="contact-us-header" className="col-all layout-grid p-8 mt-64">
+  <section
+    id="contact-us-header"
+    className="col-all layout-grid p-8 mt-64 md:mt-32"
+  >
     <h2 className="h2-small col-start-2 col-span-4 leading-relaxed md:col-span-6 lg:col-start-1">
       You have a higher chance to succeed if we work together.
     </h2>
