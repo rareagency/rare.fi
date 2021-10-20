@@ -1,0 +1,26 @@
+{
+  "users":[
+    {
+      "name": "Riku Rouvila",
+      "username": "rikurouvila"
+    },
+    {
+      "name": "Hannes Aaltonen",
+      "username": "haalto"
+    },
+    {
+      "name": "Kalle Hirvola",
+      "username": "eioo"
+    },
+    {
+      "name": "Cihan Bebek",
+      "username": "keksike"
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Rare",
+      "username": "rare"
+    }
+  ]
+}

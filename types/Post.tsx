@@ -23,6 +23,7 @@ export interface Post {
   reading_time_minutes: number;
   tag_list: string[];
   tags: string;
+  body_markdown: string;
   user: User;
   organization: Organization;
 }
