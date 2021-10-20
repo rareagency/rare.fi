@@ -69,7 +69,7 @@ const Floater = () => {
       </p>
       <Button
         xl
-        className="flex-none w-64 sm:w-32 sm:whitespace-normal whitespace-nowrap"
+        className="flex-1 max-w-lg sm:whitespace-normal whitespace-nowrap"
         kind="secondary-light"
       >
         Subscribe to Rare
