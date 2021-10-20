@@ -21,7 +21,7 @@ const TickerText = () => {
       typingDelay={1000}
       eraseDelay={3000}
       displayTextRenderer={(text: string) => {
-        return <h2 className="text-off-white">{text}</h2>;
+        return <h2 className="text-off-white sm:text-xl">{text}</h2>;
       }}
     />
   );

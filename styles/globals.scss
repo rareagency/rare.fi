@@ -152,6 +152,13 @@
     line-height: 161.5%;
     text-transform: uppercase;
     font-weight: bold;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
   }
 
   h6,
@@ -161,6 +168,14 @@
     line-height: 141%;
     letter-spacing: 0.085em;
     text-transform: uppercase;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 16px;
+    }
   }
 
   .ingress {
@@ -182,6 +197,13 @@
     font-size: 24px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
   }
 
   .paragraph-sm {
@@ -198,6 +220,7 @@
 
   .tag {
     @apply font-header-mono;
+    display: inline-block;
     font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 141.5%;
@@ -208,7 +231,7 @@
       font-size: 16px;
     }
     @media screen and (max-width: theme("screens.sm.max")) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .tag.font-bold {

@@ -1,14 +1,12 @@
-import React from "react";
 import Link from "next/link";
-import JourneyCircle from "./JourneyCircle";
-import Button from "./Button";
+import React from "react";
 import { c } from "../utils/classnames";
+import Button from "./Button";
+import JourneyCircle from "./JourneyCircle";
 
 const textBoxClass = c(`
   text-off-white
-  w-3/5
   inline-block
-  w-64
   md:text-lg
   md:text-center
 `);
@@ -78,10 +76,10 @@ const ContactUs = () => {
         Let&apos;s explore yours
       </h4>
 
-      <div className="col-all text-center">
-        <Link href="/about">
+      <div className="col-all flex items-center justify-center text-center">
+        <Link href="/contact-us">
           <a>
-            <Button className="m-10 px-12" kind="primary-light" xl>
+            <Button className="m-10 px-12" kind="secondary-light" xl>
               Book our first no-obligation chat
             </Button>
           </a>
