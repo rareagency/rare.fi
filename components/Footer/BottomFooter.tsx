@@ -1,7 +1,7 @@
 import React from "react";
+import { c } from "../../utils/classnames";
 import Logo from "../Logo";
 import TextLink from "../TextLink";
-import { c } from "../../utils/classnames";
 
 const container = c(`
   layout-grid

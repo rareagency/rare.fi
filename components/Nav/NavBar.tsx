@@ -114,7 +114,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
             ))}
           </section>
           <section className="bg-white p-8">
-            <p className="font-header-mono font-thin text-sm text-left uppercase pt-0 pb-8">
+            <p className="font-header-mono font-thin text-sm text-left uppercase pt-0 pb-6">
               Follow our stories on:
             </p>
             <div className="flex">
