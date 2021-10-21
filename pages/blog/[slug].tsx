@@ -3,9 +3,9 @@ import React from "react";
 import Markdown from "react-markdown";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogBulletList from "../../components/Blog/BlogBulletList";
+import BlogCode from "../../components/Blog/BlogCode";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
-import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
 import { fetchArticles, fetchDevto } from "../../utils/api";
@@ -41,16 +41,20 @@ const Article = ({ article }: ArticleProps) => {
             components={{
               p: BlogParagraph,
               ul: BlogBulletList,
+              // eslint-disable-next-line react/display-name
+              code: ({ inline, className, children }) => {
+                return (
+                  <BlogCode className={className} inline={inline}>
+                    {children}
+                  </BlogCode>
+                );
+              },
             }}
           >
             {article.body_markdown}
           </Markdown>
         </div>
       </section>
-
-      <SkaterBlock buttonUrl="/" buttonTxt="Check the bot out">
-        Give the Telegram bot a try - and tell us what you think! :)
-      </SkaterBlock>
     </Layout>
   );
 };
