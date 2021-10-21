@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { Post } from "../../types/Post";
 
 const FeaturedStory = (props: { post: Post }) => (
@@ -27,13 +27,15 @@ const FeaturedStory = (props: { post: Post }) => (
         </p>
 
         <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
-          <Image
-            src={props.post.cover_image}
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
+          {props.post.cover_image && (
+            <Image
+              src={props.post.cover_image}
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+          )}
         </div>
       </a>
     </Link>
