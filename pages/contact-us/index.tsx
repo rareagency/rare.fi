@@ -8,7 +8,7 @@ const ContactUs = () => (
   <Layout title="Let's chat - Rare Tampere">
     <ContactUsHeader />
     <ContactRiku />
-    <SkaterBlock buttonUrl="/" buttonTxt="Dare to join Rare">
+    <SkaterBlock buttonUrl="mailto:rekry@rare.fi" buttonTxt="Dare to join Rare">
       Rare family welcomes people of any shape and form
     </SkaterBlock>
   </Layout>

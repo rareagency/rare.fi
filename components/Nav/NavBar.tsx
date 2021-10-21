@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import { useThresholdScroller } from "../../utils/threshold-scroller";
 import Logo from "../Logo";
 import NavItem from "./NavItem";
-import Lottie from "react-lottie";
-import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
+import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import { links } from "./pagelinks";
-import { useThresholdScroller } from "../../utils/threshold-scroller";
 
 const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
   theme = "light",

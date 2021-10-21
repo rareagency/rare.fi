@@ -1,12 +1,17 @@
 # rare.fi
 
-## dev
+## Requirements
+
+- nvm
+
+## Dev
 
 ```
+nvm use
 npm install
 npm run dev
 ```
 
-## build
+## Build
 
 `npm run build`
