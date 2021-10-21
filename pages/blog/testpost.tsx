@@ -44,7 +44,7 @@ const BlogDetail = () => {
             frontend app stickershirts.com.
           </BlogParagraph>
 
-          <BlogParagraph title="Smaller title" titleSize="sm" textSize="sm">
+          <BlogParagraph title="Smaller title" titleSize="sm">
             The future is now! Get yourself a cool sticker T-Shirt without never
             leaving Telegram. I wanted to try out Telegram Bot AP&lsquo;s
             Payments feature so I built @StickerShirtsBot. It also comes with a

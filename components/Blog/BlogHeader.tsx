@@ -43,7 +43,7 @@ const BlogHeader = ({
             {title}
           </h2>
 
-          <div className="tag">
+          <div className="text-[20px] sm:text-[14px]">
             {tags.map((tag) => {
               return `#${tag} `;
             })}

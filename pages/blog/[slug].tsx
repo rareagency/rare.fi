@@ -28,7 +28,7 @@ const Article = ({ article }: ArticleProps) => {
         readLength={article.reading_time_minutes}
       />
 
-      <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
+      <section className="layout-grid col-span-6 col-start-2 sm:px-0 pb-32 px-8 mt-16">
         <BlogAuthorSection
           name={article.user.name}
           avatarUrl={article.user.profile_image}
@@ -47,7 +47,9 @@ const Article = ({ article }: ArticleProps) => {
                   {children}
                 </a>
               ),
-              h2: ({ children }) => <h3>{children}</h3>,
+              h2: ({ children }) => (
+                <h3 className="sm:text-[20px]">{children}</h3>
+              ),
               p: BlogParagraph,
               ul: BlogList,
               ol: ({ children }) => <BlogList ordered>{children}</BlogList>,
