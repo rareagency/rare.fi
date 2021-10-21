@@ -57,10 +57,6 @@ const Article = ({ article }: ArticleProps) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles: Post[] = await fetchArticles();
 
-  articles.forEach((article: Post) =>
-    console.log("PATH: ", combineSlug(article.slug, article.id))
-  );
-
   return {
     paths: articles.map((article: Post) => ({
       params: {
@@ -83,7 +79,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       ? extractId(params.slug[0])
       : extractId(params.slug);
 
-  console.log("ID: ", id);
   const article = await fetchDevto(`/articles/${id}`);
 
   if (!article?.slug) {

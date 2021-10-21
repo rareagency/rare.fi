@@ -2,9 +2,14 @@ import { Post } from "../types/Post";
 import writers from "../writers.json";
 
 export async function fetchDevto(path: string) {
-  const resp = await fetch(`https://dev.to/api${path}`);
-  const data = await resp.json();
-  return data;
+  try {
+    const resp = await fetch(`https://dev.to/api${path}`);
+    const data = await resp.json();
+    return data;
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
 }
 
 export async function fetchArticles() {
