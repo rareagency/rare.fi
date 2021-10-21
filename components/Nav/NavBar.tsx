@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import { useThresholdScroller } from "../../utils/threshold-scroller";
 import Logo from "../Logo";
 import NavItem from "./NavItem";
-import Lottie from "react-lottie";
-import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
+import * as menuAnimationWhite from "./lottie-menu-icon.json";
 import { links } from "./pagelinks";
-import { useThresholdScroller } from "../../utils/threshold-scroller";
 
 const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
   theme = "light",
@@ -114,7 +114,7 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
             ))}
           </section>
           <section className="bg-white p-8">
-            <p className="font-header-mono font-thin text-sm text-left uppercase pt-0 pb-6">
+            <p className="font-header-mono font-thin text-sm text-left uppercase pt-0 pb-8">
               Follow our stories on:
             </p>
             <div className="flex">
