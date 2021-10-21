@@ -9,7 +9,7 @@ interface Props {
 
 const BlogParagraph = ({ title, titleSize, children, textSize }: Props) => {
   return (
-    <article className="mb-24">
+    <article className="mb-6">
       {title && (
         <header className={titleSize === "sm" ? "h5" : "h3"}>{title}</header>
       )}

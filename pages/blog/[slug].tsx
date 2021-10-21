@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import Markdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import rehypeSanitize from "rehype-sanitize";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
+import BlogBulletList from "../../components/Blog/BlogBulletList";
 import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogParagraph from "../../components/Blog/BlogParagraph";
 import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
@@ -25,10 +25,7 @@ const Article = ({ article }: ArticleProps) => {
         category="Practical guide"
         readLength={article.reading_time_minutes}
       >
-        The future is now! Get yourself a cool sticker T-Shirt without never
-        leaving Telegram. I wanted to try out Telegram Bot AP&lsquo;s Payments
-        feature so I built @StickerShirtsBot. It also comes with a frontend app
-        stickershirts.com.
+        {article.description}
       </BlogHeader>
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
@@ -40,8 +37,12 @@ const Article = ({ article }: ArticleProps) => {
         />
 
         <div className="col-span-5 xl:col-all">
-          {/* TODO: Integrate stuff from testpost.tsx */}
-          <Markdown rehypePlugins={[rehypeRaw, rehypeSanitize]}>
+          <Markdown
+            components={{
+              p: BlogParagraph,
+              ul: BlogBulletList,
+            }}
+          >
             {article.body_markdown}
           </Markdown>
         </div>
