@@ -9,6 +9,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "emoji-dictionary": "^1.0.11",
     "next": "latest",
     "react": "^17.0.2",
     "react-calendly": "^2.2.2",
@@ -16,13 +17,18 @@
     "react-ga": "^3.3.0",
     "react-hotjar": "^3.0.1",
     "react-lottie": "^1.2.3",
-    "react-typing-effect": "^2.0.5"
+    "react-markdown": "^7.0.1",
+    "react-syntax-highlighter": "^15.4.4",
+    "react-typing-effect": "^2.0.5",
+    "rehype-raw": "^6.1.0",
+    "rehype-sanitize": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.5",
     "@types/react-lottie": "^1.2.5",
+    "@types/react-syntax-highlighter": "^13.5.2",
     "@types/react-typing-effect": "^2.0.1",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",

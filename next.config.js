@@ -6,6 +6,15 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
   target: "serverless",
+  async redirects() {
+    return [
+      {
+        source: "/blog",
+        destination: "/stories",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

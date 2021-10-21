@@ -1,6 +1,7 @@
 import React from "react";
 import { Post } from "../../types/Post";
 import { c } from "../../utils/classnames";
+import { combineSlug } from "../../utils/slug";
 import CircleButton from "../CircleButton";
 import BlogPostCard from "./BlogPostCard";
 
@@ -42,7 +43,7 @@ const MoreStories = (props: { posts: Post[] }) => {
                 <span className="tag font-bold">{post.tags}</span>
               </>
             }
-            href={post.url}
+            href={`/blog/${combineSlug(post.slug, post.id)}`}
             header={post.title}
           />
         </article>

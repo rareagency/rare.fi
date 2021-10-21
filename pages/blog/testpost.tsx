@@ -1,8 +1,8 @@
 import React from "react";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
-import BlogBulletList from "../../components/Blog/BlogBulletList";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogImageRow from "../../components/Blog/BlogImageRow";
+import BlogList from "../../components/Blog/BlogList";
 import BlogNumberedTitle from "../../components/Blog/BlogNumberedTitle";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
@@ -16,14 +16,10 @@ const BlogDetail = () => {
         title="What I learned from"
         imgUrl="https://via.placeholder.com/1980x960.jpg"
         imgAlt="placeholder"
-        category="Practical guide"
+        tags={["github", "azure"]}
+        publishedAt="Jan 1"
         readLength={2}
-      >
-        The future is now! Get yourself a cool sticker T-Shirt without never
-        leaving Telegram. I wanted to try out Telegram Bot AP&lsquo;s Payments
-        feature so I built @StickerShirtsBot. It also comes with a frontend app
-        stickershirts.com.
-      </BlogHeader>
+      />
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
         <BlogAuthorSection
@@ -48,7 +44,7 @@ const BlogDetail = () => {
             frontend app stickershirts.com.
           </BlogParagraph>
 
-          <BlogParagraph title="Smaller title" titleSize="sm" textSize="sm">
+          <BlogParagraph title="Smaller title" titleSize="sm">
             The future is now! Get yourself a cool sticker T-Shirt without never
             leaving Telegram. I wanted to try out Telegram Bot AP&lsquo;s
             Payments feature so I built @StickerShirtsBot. It also comes with a
@@ -84,7 +80,7 @@ const BlogDetail = () => {
           <div className="mb-24">
             <span className="h5 mb-8">Bullets</span>
 
-            <BlogBulletList points={["Point 1", "Point 2", "Point 3"]} />
+            <BlogList points={["Point 1", "Point 2", "Point 3"]} />
           </div>
 
           <div>

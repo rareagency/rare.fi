@@ -5,17 +5,17 @@ interface Props {
   imgUrl: string;
   imgAlt: string;
   title: string;
-  category: string;
+  tags: string[];
+  publishedAt: string;
   readLength?: number;
-  children: React.ReactNode;
 }
 
 const BlogHeader = ({
   imgUrl,
   imgAlt,
   title,
-  category,
-  children,
+  tags,
+  publishedAt,
   readLength,
 }: Props) => {
   return (
@@ -23,7 +23,7 @@ const BlogHeader = ({
       <img
         src={imgUrl}
         alt={imgAlt}
-        className="col-all object-cover"
+        className="col-all object-fill w-full"
         style={{ minHeight: "20rem" }}
       />
 
@@ -43,7 +43,11 @@ const BlogHeader = ({
             {title}
           </h2>
 
-          <div>{children}</div>
+          <div className="text-[20px] sm:text-[14px]">
+            {tags.map((tag) => {
+              return `#${tag} `;
+            })}
+          </div>
 
           <footer className="mt-8 uppercase tag flex items-center">
             <img
@@ -51,7 +55,8 @@ const BlogHeader = ({
               className="w-24 mr-4"
               alt="Fresh"
             />
-            {category} {readLength && `/ ${readLength} min read`}
+            {`${publishedAt} `}
+            {readLength && `/ ${readLength} min read`}
           </footer>
         </section>
       </article>

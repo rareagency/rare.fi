@@ -1,6 +1,7 @@
 import React from "react";
 import { Post } from "../../types/Post";
 import { c } from "../../utils/classnames";
+import { combineSlug } from "../../utils/slug";
 import BlogPostCard from "./BlogPostCard";
 
 const BlogPosts = (props: { posts: Post[] }) => {
@@ -47,7 +48,7 @@ const BlogPosts = (props: { posts: Post[] }) => {
                 <span className="tag font-bold">{post.tags}</span>
               </>
             }
-            href={post.url}
+            href={`/blog/${combineSlug(post.slug, post.id)}`}
             header={post.title}
           />
         </article>
