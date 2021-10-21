@@ -2,11 +2,11 @@
   "name": "rare.fi",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc",
-    "prettier": "prettier --write ."
+    "dev": "nvm use && next",
+    "build": "nvm use && next build",
+    "start": "nvm use && next start",
+    "type-check": "nvm use && tsc",
+    "prettier": "nvm use && prettier --write ."
   },
   "dependencies": {
     "next": "latest",
