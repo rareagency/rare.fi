@@ -3,7 +3,7 @@ import Layout from "../layouts/Page";
 
 const Privacy = () => (
   <Layout title="Privacy Policy">
-    <div className="mt-48 pb-12 px-8 col-start-2 col-span-5">
+    <div className="mt-48 pb-12 col-start-2 col-span-5">
       <h2>Privacy Policy</h2>
       <p>
         Your privacy is important to us. It is Rare&#39;s policy to respect your
