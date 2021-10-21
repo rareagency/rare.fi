@@ -1,10 +1,11 @@
+/* eslint-disable react/display-name */
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import Markdown from "react-markdown";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
-import BlogBulletList from "../../components/Blog/BlogBulletList";
 import BlogCode from "../../components/Blog/BlogCode";
 import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
@@ -39,16 +40,24 @@ const Article = ({ article }: ArticleProps) => {
         <div className="col-span-5 xl:col-all">
           <Markdown
             components={{
+              a: ({ children, href }) => (
+                <a
+                  href={href}
+                  className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
+                >
+                  {children}
+                </a>
+              ),
+              h2: ({ children }) => <h3>{children}</h3>,
               p: BlogParagraph,
-              ul: BlogBulletList,
-              // eslint-disable-next-line react/display-name
-              code: ({ inline, className, children }) => {
-                return (
-                  <BlogCode className={className} inline={inline}>
-                    {children}
-                  </BlogCode>
-                );
-              },
+              ul: BlogList,
+              ol: ({ children }) => <BlogList ordered>{children}</BlogList>,
+
+              code: ({ inline, className, children }) => (
+                <BlogCode className={className} inline={inline}>
+                  {children}
+                </BlogCode>
+              ),
             }}
           >
             {article.body_markdown}

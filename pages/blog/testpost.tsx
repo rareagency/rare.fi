@@ -1,8 +1,8 @@
 import React from "react";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
-import BlogBulletList from "../../components/Blog/BlogBulletList";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogImageRow from "../../components/Blog/BlogImageRow";
+import BlogList from "../../components/Blog/BlogList";
 import BlogNumberedTitle from "../../components/Blog/BlogNumberedTitle";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
@@ -84,7 +84,7 @@ const BlogDetail = () => {
           <div className="mb-24">
             <span className="h5 mb-8">Bullets</span>
 
-            <BlogBulletList points={["Point 1", "Point 2", "Point 3"]} />
+            <BlogList points={["Point 1", "Point 2", "Point 3"]} />
           </div>
 
           <div>
