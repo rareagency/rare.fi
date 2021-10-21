@@ -9,6 +9,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "emoji-dictionary": "^1.0.11",
     "next": "latest",
     "react": "^17.0.2",
     "react-calendly": "^2.2.2",
@@ -18,7 +19,9 @@
     "react-lottie": "^1.2.3",
     "react-markdown": "^7.0.1",
     "react-syntax-highlighter": "^15.4.4",
-    "react-typing-effect": "^2.0.5"
+    "react-typing-effect": "^2.0.5",
+    "rehype-raw": "^6.1.0",
+    "rehype-sanitize": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^15.6.1",
