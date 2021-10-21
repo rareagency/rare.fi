@@ -2,7 +2,7 @@ import React from "react";
 import TextLink from "../TextLink";
 
 export const ContactRiku = () => (
-  <section id="contact-riku" className="col-all layout-grid p-0 mt-48">
+  <section id="contact-riku" className="col-all layout-grid p-0 mt-48 md:mt-16">
     <img
       src="/static/pictures/riku-rouvila.jpg"
       alt="Riku Rouvila - Lead developer and Co-Founder of the company"
@@ -18,7 +18,7 @@ export const ContactRiku = () => (
       potential collaboration.
     </p>
 
-    <div className="table-row col-all layout-grid px-8 md:flex md:flex-col md:mt-32">
+    <div className="table-row col-all layout-grid px-8 md:flex md:flex-col md:mt-24">
       <span className="h6 col-start-2 mt-32 lg:mt-20 md:my-3">Say hi:</span>
       <span className="h4 col-start-3 col-span-2 mt-32 lg:mt-20 text-action-purple md:my-3">
         riku@rare.fi
@@ -39,6 +39,7 @@ export const ContactRiku = () => (
             src="/static/icons/finnish_flag.svg"
             width="20"
             height="13"
+            alt="Finnish flag"
           />
         </TextLink>
       </span>
@@ -50,7 +51,7 @@ export const ContactRiku = () => (
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/static/social-media/github.svg" />
+          <img src="/static/social-media/github.svg" alt="GitHub logo" />
         </a>
         <a
           href="https://instagram.com/rarekoodaa"
@@ -58,7 +59,7 @@ export const ContactRiku = () => (
           rel="noreferrer"
           className="ml-4"
         >
-          <img src="/static/social-media/instagram.svg" />
+          <img src="/static/social-media/instagram.svg" alt="Instagram logo" />
         </a>
         <a
           href="https://www.linkedin.com/company/rareagency"
@@ -66,7 +67,7 @@ export const ContactRiku = () => (
           rel="noreferrer"
           className="ml-4"
         >
-          <img src="/static/social-media/linkedin.svg" />
+          <img src="/static/social-media/linkedin.svg" alt="LinkedIn logo" />
         </a>
       </div>
     </div>

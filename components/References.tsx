@@ -8,14 +8,14 @@ const References = () => {
     "absolute bottom-0 left-0 transition hover:translate-y-1 duration-150 opacity-20 md:hidden";
 
   const logoRow = `col-start-2 col-span-6 flex justify-between items-center w-full mb-16 space-x-8
-  lg:grid lg:grid-cols-2 lg:space-x-0 lg:justify-items-center lg:gap-y-16 md:grid-cols-1
-  md:grid md:grid-cols-2 md:gap-4 lg:mb-6
+  lg:grid lg:grid-cols-2 lg:space-x-0 lg:justify-items-center md:grid-cols-1
+  gapmd:grid md:grid-cols-2 lg:gap-y-16 md:-y-6 md:gap-x-4 lg:mb-6
   `;
 
   return (
     <section
       id="references"
-      className="layout-grid col-all justify-items-center pt-48 pb-48 p-8"
+      className="layout-grid col-all justify-items-center pt-48 pb-48 p-8 lg:gap-y-16 md:gap-y-8"
     >
       <h5 className="col-start-2 col-span-6 pb-16 text-center md:pb-8">
         Proudly delivered digital products with

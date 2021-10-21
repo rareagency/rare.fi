@@ -1,14 +1,12 @@
-import React from "react";
 import Link from "next/link";
-import JourneyCircle from "./JourneyCircle";
-import Button from "./Button";
+import React from "react";
 import { c } from "../utils/classnames";
+import Button from "./Button";
+import JourneyCircle from "./JourneyCircle";
 
 const textBoxClass = c(`
   text-off-white
-  w-3/5
   inline-block
-  w-64
   md:text-lg
   md:text-center
 `);
@@ -31,6 +29,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-1.svg"
             className="transform translate-x-8 translate-y-8 xl:translate-x-6 xl:translate-y-6 xl:scale-90"
+            alt="Swift person with a Rare -paper in it's hand"
           />
         </JourneyCircle>
       </div>
@@ -46,6 +45,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-2.svg"
             className="transform scale-135 translate-y-4"
+            alt="Person running to a futuristic car with a paper in it's hand"
           />
         </JourneyCircle>
       </div>
@@ -62,6 +62,7 @@ const ContactUs = () => {
           <img
             src="/static/journey-3.svg"
             className="transform translate-y-2"
+            alt="Flying hero with a lemon in it's hand"
           />
         </JourneyCircle>
       </div>
@@ -75,10 +76,10 @@ const ContactUs = () => {
         Let&apos;s explore yours
       </h4>
 
-      <div className="col-all text-center">
-        <Link href="/about">
+      <div className="col-all flex items-center justify-center text-center">
+        <Link href="/contact-us">
           <a>
-            <Button className="m-10 px-12" kind="primary-light" xl>
+            <Button className="m-10 px-12" kind="secondary-light" xl>
               Book our first no-obligation chat
             </Button>
           </a>

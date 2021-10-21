@@ -35,7 +35,7 @@
   /* From Figma style guide */
   h1,
   .h1 {
-    @apply font-header text-dark-blue;
+    @apply block font-header text-dark-blue;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -65,7 +65,7 @@
 
   h2,
   .h2 {
-    @apply font-header-mono;
+    @apply block font-header-mono;
     font-size: 64px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
@@ -95,7 +95,7 @@
 
   h2.h2-small,
   .h2.h2-small {
-    @apply leading-relaxed;
+    @apply block leading-relaxed;
     font-size: 36px;
 
     @media screen and (max-width: theme("screens.lg.max")) {
@@ -117,8 +117,9 @@
 
   h3,
   .h3 {
-    @apply font-default text-dark-blue;
-    font-weight: 32px;
+    @apply block font-default text-dark-blue;
+    font-size: 32px;
+    font-weight: bold;
     line-height: 161.5%;
     letter-spacing: 0.085em;
 
@@ -129,7 +130,7 @@
 
   h4,
   .h4 {
-    @apply font-default text-dark-blue;
+    @apply block font-default text-dark-blue;
     font-size: 28px;
     line-height: 148%;
     font-weight: 500;
@@ -145,21 +146,36 @@
 
   h5,
   .h5 {
-    @apply font-default text-dark-blue;
+    @apply block font-default text-dark-blue;
     font-size: 22px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
     text-transform: uppercase;
     font-weight: bold;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
   }
 
   h6,
   .h6 {
-    @apply font-header-mono text-mid-blue;
+    @apply block font-header-mono text-mid-blue;
     font-size: 20px;
     line-height: 141%;
     letter-spacing: 0.085em;
     text-transform: uppercase;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 16px;
+    }
   }
 
   .ingress {
@@ -181,6 +197,20 @@
     font-size: 24px;
     line-height: 161.5%;
     letter-spacing: 0.085em;
+
+    @media screen and (max-width: theme("screens.md.max")) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: theme("screens.sm.max")) {
+      font-size: 18px;
+    }
+  }
+
+  .paragraph-sm {
+    @apply font-default text-dark-blue;
+    font-size: 22px;
+    line-height: 160%;
+    letter-spacing: 0.08em;
   }
 
   .caption {
@@ -190,6 +220,7 @@
 
   .tag {
     @apply font-header-mono;
+    display: inline-block;
     font-size: 20px;
     letter-spacing: 0.06em;
     line-height: 141.5%;
@@ -200,7 +231,7 @@
       font-size: 16px;
     }
     @media screen and (max-width: theme("screens.sm.max")) {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   .tag.font-bold {
@@ -214,6 +245,10 @@
 
   a:hover .tag {
     @apply text-light-action-purple;
+  }
+
+  a:hover .icon {
+    filter: brightness(1.5);
   }
 
   .description {

@@ -12,12 +12,12 @@ type StoryProps = {
 
 const BlogPostCard = ({ title, header, image, imageAlt, href }: StoryProps) => (
   <Link href={href}>
-    <a className="group block">
-      <img src={image} alt={imageAlt} className="mb-6" />
+    <a className="group block" target="_blank">
+      <img src={image} alt={imageAlt} className="mb-6 md:mb-3" />
       <span className="tag text-mid-blue">{title}</span>
-      <h4 className="md:text-sm text-dark-blue mt-6 group-hover:text-action-purple">
+      <span className="h4 mt-6 sm:mt-3 sm:text-[15px] group-hover:text-action-purple">
         {header}
-      </h4>
+      </span>
     </a>
   </Link>
 );
