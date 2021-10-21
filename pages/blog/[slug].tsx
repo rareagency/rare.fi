@@ -20,7 +20,7 @@ const Article = ({ article }: ArticleProps) => {
     <Layout title={article.title}>
       <BlogHeader
         title={article.title}
-        imgUrl={article.cover_image}
+        imgUrl={article.cover_image || "/static/featured-article.png"}
         imgAlt="cover image"
         category="Practical guide"
         readLength={article.reading_time_minutes}

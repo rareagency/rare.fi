@@ -28,15 +28,13 @@ const FeaturedStory = (props: { post: Post }) => (
         </p>
 
         <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
-          {props.post.cover_image && (
-            <Image
-              src={props.post.cover_image}
-              alt=""
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
-          )}
+          <Image
+            src={props.post.cover_image || "/static/featured-article.png"}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
         </div>
       </a>
     </Link>
