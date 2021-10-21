@@ -9,6 +9,7 @@ import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
 import { fetchArticles, fetchDevto } from "../../utils/api";
+import { combineSlug, extractId } from "../../utils/slug";
 
 interface ArticleProps {
   article: Post;
@@ -56,13 +57,14 @@ const Article = ({ article }: ArticleProps) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles: Post[] = await fetchArticles();
 
+  articles.forEach((article: Post) =>
+    console.log("PATH: ", combineSlug(article.slug, article.id))
+  );
+
   return {
     paths: articles.map((article: Post) => ({
       params: {
-        slug: [
-          article.organization?.username || article.user.username,
-          article.slug,
-        ],
+        slug: combineSlug(article.slug, article.id),
       },
     })),
     fallback: false,
@@ -70,15 +72,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params || !params.slug) {
+  if (!params?.slug) {
     return {
       notFound: true,
     };
   }
 
-  const article = await fetchDevto(
-    `/articles/${params.slug[0]}/${params.slug[1]}`
-  );
+  const id =
+    params.slug instanceof Array
+      ? extractId(params.slug[0])
+      : extractId(params.slug);
+
+  console.log("ID: ", id);
+  const article = await fetchDevto(`/articles/${id}`);
 
   if (!article?.slug) {
     return {
