@@ -1,9 +1,10 @@
 import React from "react";
+import BottomFooter from "../components/Footer/BottomFooter";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/StoriesHeader";
 import Base from "./Base";
-import Footer from "../components/Footer/Footer";
-import BottomFooter from "../components/Footer/BottomFooter";
-import Floater from "../components/Floater";
+// TODO: Enable this when Subscribe to Rare actually does something.
+// import Floater from "../components/Floater";
 
 const Page: React.FC<{ title: string }> = ({ children, title }) => (
   <Base title={title}>
@@ -11,7 +12,7 @@ const Page: React.FC<{ title: string }> = ({ children, title }) => (
     {children}
     <Footer />
     <BottomFooter />
-    <Floater />
+    {/* <Floater /> */}
   </Base>
 );
 

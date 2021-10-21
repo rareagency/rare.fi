@@ -15,7 +15,7 @@ const Stories = (props: Props) => {
     <Layout title="Stories - Rare Tampere">
       <FeaturedStory post={props.posts[0]} />
       <BlogPosts posts={props.posts.slice(1, 5)} />
-      <SkaterBlock buttonUrl="/" buttonTxt="Dare to join Rare">
+      <SkaterBlock buttonUrl="/contact-us" buttonTxt="Dare to join Rare">
         Rare family welcomes people of any shape and form
       </SkaterBlock>
       <MoreStories posts={props.posts.slice(5)} />
