@@ -23,11 +23,10 @@ const Article = ({ article }: ArticleProps) => {
         title={article.title}
         imgUrl={article.cover_image || "/static/featured-article.png"}
         imgAlt="cover image"
-        category="Practical guide"
+        tags={article.tags}
+        publishedAt={article.readable_publish_date}
         readLength={article.reading_time_minutes}
-      >
-        {article.description}
-      </BlogHeader>
+      />
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
         <BlogAuthorSection

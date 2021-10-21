@@ -21,8 +21,8 @@ export interface Post {
   published_at: string;
   last_comment_at: string;
   reading_time_minutes: number;
-  tag_list: string[];
-  tags: string;
+  tag_list: string;
+  tags: string[];
   body_markdown: string;
   user: User;
   organization: Organization;

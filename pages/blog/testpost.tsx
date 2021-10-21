@@ -16,14 +16,10 @@ const BlogDetail = () => {
         title="What I learned from"
         imgUrl="https://via.placeholder.com/1980x960.jpg"
         imgAlt="placeholder"
-        category="Practical guide"
+        tags={["github", "azure"]}
+        publishedAt="Jan 1"
         readLength={2}
-      >
-        The future is now! Get yourself a cool sticker T-Shirt without never
-        leaving Telegram. I wanted to try out Telegram Bot AP&lsquo;s Payments
-        feature so I built @StickerShirtsBot. It also comes with a frontend app
-        stickershirts.com.
-      </BlogHeader>
+      />
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
         <BlogAuthorSection
