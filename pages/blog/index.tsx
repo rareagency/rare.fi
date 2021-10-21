@@ -5,34 +5,14 @@ import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
+import { fetchArticles } from "../../utils/api";
 
 export async function getStaticProps() {
-  const writers = [
-    { name: "Riku Rouvila", username: "rikurouvila" },
-    { name: "Hannes Aaltonen", username: "haalto" },
-    { name: "Kalle Hirvola", username: "eioo" },
-    { name: "Cihan Bebek", username: "keksike" },
-  ];
-
-  const res = await fetch("https://dev.to/api/articles?username=rare");
-  let posts: Post[] = await res.json();
-
-  for (const writer of writers) {
-    const res = await fetch(
-      `https://dev.to/api/articles?username=${writer.username}`
-    );
-    let newPosts: Post[] = await res.json();
-    newPosts = newPosts.filter((p) => {
-      return !posts.find((post) => {
-        return post.id === p.id;
-      });
-    });
-    posts = posts.concat(newPosts);
-  }
+  const articles = await fetchArticles();
 
   return {
     props: {
-      posts: posts.sort(
+      posts: articles.sort(
         (a, b) =>
           new Date(b.published_at).valueOf() -
           new Date(a.published_at).valueOf()
