@@ -59,18 +59,23 @@ const Article = ({ article }: ArticleProps) => {
                 </a>
               ),
               h2: ({ children }) => (
-                <h3 className="sm:text-[20px]">{children}</h3>
+                <h3 className="sm:text-[20px] mt-6">{children}</h3>
               ),
+              h3: ({ children }) => (
+                <h3 className="sm:text-[18px] mt-6">{children}</h3>
+              ),
+              h4: ({ children }) => <h4 className="mt-6">{children}</h4>,
               p: BlogParagraph,
               ul: BlogList,
               ol: ({ children }) => <BlogList ordered>{children}</BlogList>,
-
+              hr: () => <hr className="my-6" />,
               code: ({ inline, className, children }) => (
                 <BlogCode className={className} inline={inline}>
                   {children}
                 </BlogCode>
               ),
               img: ({ ...props }) => <BlogImage {...props} />,
+              pre: React.Fragment,
             }}
             rehypePlugins={[rehypeRaw, rehypeSanitize]}
           >

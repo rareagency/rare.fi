@@ -10,7 +10,7 @@ const container = c(`
   h-auto
   px-8
   pt-8
-  pb-6
+  pb-8
   xl:pl-8
   items-center
 `);
