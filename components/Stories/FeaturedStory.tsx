@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Post } from "../../types/Post";
+import { combineSlug } from "../../utils/slug";
 
 const FeaturedStory = (props: { post: Post }) => (
   <article
     id="featured-story"
     className="col-start-2 col-span-6 mt-64 md:mt-32"
   >
-    <Link href={props.post.url}>
+    <Link href={`/blog/${combineSlug(props.post.slug, props.post.id)}`}>
       <a>
         <h2 className="h2-small text-dark-blue pb-6">{props.post.title}</h2>
 

@@ -7,20 +7,6 @@ import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
 import { fetchArticles } from "../../utils/api";
 
-export async function getStaticProps() {
-  const articles = await fetchArticles();
-
-  return {
-    props: {
-      posts: articles.sort(
-        (a, b) =>
-          new Date(b.published_at).valueOf() -
-          new Date(a.published_at).valueOf()
-      ),
-    },
-  };
-}
-
 interface Props {
   posts: Post[];
 }
@@ -36,5 +22,19 @@ const Stories = (props: Props) => {
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const articles = await fetchArticles();
+
+  return {
+    props: {
+      posts: articles.sort(
+        (a, b) =>
+          new Date(b.published_at).valueOf() -
+          new Date(a.published_at).valueOf()
+      ),
+    },
+  };
+}
 
 export default Stories;
