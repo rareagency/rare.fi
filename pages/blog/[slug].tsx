@@ -54,6 +54,7 @@ const Article = ({ article }: ArticleProps) => {
                 <a
                   href={href}
                   className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
+                  style={{ overflowWrap: "anywhere" }}
                 >
                   {children}
                 </a>
