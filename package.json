@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "emoji-dictionary": "^1.0.11",
+    "markdown-linkify": "^1.0.3",
     "next": "latest",
     "react": "^17.0.2",
     "react-calendly": "^2.2.2",

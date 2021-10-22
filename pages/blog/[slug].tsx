@@ -15,6 +15,7 @@ import { Post } from "../../types/Post";
 import { fetchArticles, fetchDevto } from "../../utils/api";
 import { combineSlug, extractId } from "../../utils/slug";
 import emoji from "emoji-dictionary";
+import linkify from "markdown-linkify";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags
@@ -79,7 +80,7 @@ const Article = ({ article }: ArticleProps) => {
             }}
             rehypePlugins={[rehypeRaw, rehypeSanitize]}
           >
-            {cleanUpMarkdown(emojiSupport(article.body_markdown))}
+            {cleanUpMarkdown(emojiSupport(linkify(article.body_markdown)))}
           </Markdown>
         </div>
       </section>
