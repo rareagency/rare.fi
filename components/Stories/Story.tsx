@@ -30,10 +30,13 @@ const Story = ({
     />
 
     <div
-      className={c("col-span-3 pl-32 pr-32 md:col-span-full md:p-8", {
-        "col-start-5": orientation === "left",
-        "col-start-2 text-right md:text-left": orientation === "right",
-      })}
+      className={c(
+        "col-span-3 pl-32 pr-32 md:col-span-full md:p-8 lg:pl-16 lg:pr-16",
+        {
+          "col-start-5": orientation === "left",
+          "col-start-2 text-right md:text-left": orientation === "right",
+        }
+      )}
     >
       <span className="tag text-mid-blue">{title}</span>
       <h4 className="text-dark-blue pt-6">{header}</h4>
