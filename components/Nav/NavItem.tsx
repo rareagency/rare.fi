@@ -19,7 +19,9 @@ const NavItem = ({
   size,
 }: Props) => {
   const router = useRouter();
-  const isLinkActive = router.asPath === url;
+  const isLinkActive =
+    (url === "/" && router.asPath === url) || // Handle index "/" separately, as every path starts with "/"
+    (url !== "/" && router.asPath.startsWith(url));
 
   const linkClasses = c(
     "lg:px-4 py-1 uppercase font-default font-bold transition-size duration-300",
