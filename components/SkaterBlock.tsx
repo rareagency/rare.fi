@@ -20,7 +20,6 @@ const SkaterBlock = ({ buttonTxt, buttonUrl, children }: Props) => (
       href={buttonUrl}
       kind="secondary"
       className="col-start-2 col-span-2 lg:col-all mt-8"
-      xl
     >
       {buttonTxt}
     </Button>

@@ -68,7 +68,6 @@ const Floater = () => {
         Psst… Don&lsquo;t miss out!
       </p>
       <Button
-        xl
         className="flex-1 max-w-lg sm:whitespace-normal whitespace-nowrap"
         kind="secondary-light"
       >
