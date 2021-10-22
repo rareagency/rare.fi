@@ -4,7 +4,7 @@ export const links = [
     text: "Why us?",
   },
   {
-    url: "/stories",
+    url: "/blog",
     text: "Stories",
   },
   {
