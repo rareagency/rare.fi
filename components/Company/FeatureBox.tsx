@@ -57,7 +57,7 @@ const FeatureBox = () => {
       </div>
 
       <div className="mt-16 flex col-all justify-center">
-        <Button href="#" kind="secondary">
+        <Button href="/contact-us" kind="secondary">
           Learn how we apply it
         </Button>
       </div>
