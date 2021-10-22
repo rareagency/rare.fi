@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 import emoji from "emoji-dictionary";
-import linkify from "markdown-linkify";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogCode from "../../components/Blog/BlogCode";
@@ -77,9 +77,9 @@ const Article = ({ article }: ArticleProps) => {
               img: ({ ...props }) => <BlogImage {...props} />,
               pre: React.Fragment,
             }}
-            rehypePlugins={[rehypeRaw]}
+            rehypePlugins={[rehypeRaw, remarkGfm]}
           >
-            {cleanUpMarkdown(emojiSupport(linkify(article.body_markdown)))}
+            {cleanUpMarkdown(emojiSupport(article.body_markdown))}
           </Markdown>
         </div>
       </section>
