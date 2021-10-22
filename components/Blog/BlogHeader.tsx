@@ -31,13 +31,13 @@ const BlogHeader = ({
         className={c(
           "col-all layout-grid bg-light-yellow",
           "mx-auto py-16 px-8 -mt-64",
-          "md:-mt-4 2xl:w-full 2xl:-mt-24"
+          "md:-mt-4 2xl:w-full 2xl:-mt-24 sm:py-8"
         )}
         style={{ maxWidth: "1535px" }}
       >
         <section className="col-start-2 col-span-6">
           <h2
-            className="mb-10"
+            className="mb-10 sm:text-xl sm:mb-3"
             style={{ lineHeight: "120%", letterSpacing: "0.2rem" }}
           >
             {title}
@@ -49,7 +49,7 @@ const BlogHeader = ({
             })}
           </div>
 
-          <footer className="mt-8 uppercase tag flex items-center">
+          <footer className="mt-8 uppercase tag flex items-center sm:mt-3">
             <img
               src="/static/icons/fresh.svg"
               className="w-24 mr-4"
