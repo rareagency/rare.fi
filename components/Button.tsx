@@ -18,7 +18,6 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({
   children,
   kind = "primary",
-  xl = false,
   className,
   onClick,
   href,
@@ -27,13 +26,10 @@ const Button: React.FC<ButtonProps> = ({
     <>
       {href ? (
         <Link href={href}>
-          <a className={c("button", { xl }, kind, className)}>{children}</a>
+          <a className={c("button", kind, className)}>{children}</a>
         </Link>
       ) : (
-        <button
-          className={c("button", { xl }, kind, className)}
-          onClick={onClick}
-        >
+        <button className={c("button", kind, className)} onClick={onClick}>
           {children}
         </button>
       )}
@@ -42,7 +38,7 @@ const Button: React.FC<ButtonProps> = ({
         .button {
           @apply flex items-center justify-center text-center font-default font-bold text-lg border-solid border-action-purple;
           @apply border-[4px] rounded-full px-8 pb-2 pt-3 min-h-[60px] uppercase tracking-wider;
-          @apply text-[22px] sm:text-[20px];
+          @apply text-[22px] sm:text-[16px] sm:px-6;
           @apply transition;
         }
 
@@ -84,9 +80,6 @@ const Button: React.FC<ButtonProps> = ({
         }
         .button:focus:not(:focus-visible) {
           outline: none;
-        }
-        .xl {
-          @apply text-xl sm:text-sm md:text-base md:px-4;
         }
       `}</style>
     </>
