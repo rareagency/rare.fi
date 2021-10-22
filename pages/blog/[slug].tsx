@@ -1,21 +1,20 @@
 /* eslint-disable react/display-name */
+import emoji from "emoji-dictionary";
+import linkify from "markdown-linkify";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import rehypeSanitize from "rehype-sanitize";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogCode from "../../components/Blog/BlogCode";
 import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogImage from "../../components/Blog/BlogImage";
 import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
-import BlogImage from "../../components/Blog/BlogImage";
 import Layout from "../../layouts/Page";
 import { Post } from "../../types/Post";
 import { fetchArticles, fetchDevto } from "../../utils/api";
 import { combineSlug, extractId } from "../../utils/slug";
-import emoji from "emoji-dictionary";
-import linkify from "markdown-linkify";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags
@@ -78,7 +77,7 @@ const Article = ({ article }: ArticleProps) => {
               img: ({ ...props }) => <BlogImage {...props} />,
               pre: React.Fragment,
             }}
-            rehypePlugins={[rehypeRaw, rehypeSanitize]}
+            rehypePlugins={[rehypeRaw]}
           >
             {cleanUpMarkdown(emojiSupport(linkify(article.body_markdown)))}
           </Markdown>
