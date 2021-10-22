@@ -42,7 +42,9 @@ const Stories = () => {
         </Button>
       </div>
       <div className="col-all text-center justify-center pt-0 hidden md:block">
-        <TextLink className="link-text">See all stories</TextLink>
+        <TextLink href="/blog" className="link-text">
+          See all stories
+        </TextLink>
       </div>
 
       <style jsx>{`
