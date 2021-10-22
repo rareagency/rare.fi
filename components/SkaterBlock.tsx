@@ -25,9 +25,10 @@ const SkaterBlock = ({ buttonTxt, buttonUrl, children }: Props) => (
     </Button>
 
     <img
+      style={{ zIndex: -1 }}
       src="/static/skateramp.png"
       alt="Person skating in a pool ramp"
-      className="object-cover w-1/2 h-full absolute right-0 top-0 opacity-100 lg:w-full lg:opacity-50"
+      className="object-cove  w-1/2 h-full absolute right-0 top-0 opacity-100 lg:w-full lg:opacity-50"
     />
   </section>
 );
