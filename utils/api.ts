@@ -1,7 +1,13 @@
 import { Post } from "../types/Post";
 import writers from "../writers.json";
 
+function sleep(ms = 1000) {
+  return new Promise((res) => setTimeout(res, ms));
+}
+
 export async function fetchDevto(path: string) {
+  // Avoid hitting dev.to's ratelimits
+  await sleep();
   try {
     const resp = await fetch(`https://dev.to/api${path}`);
     const data = await resp.json();
