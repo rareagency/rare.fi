@@ -6,6 +6,8 @@ const nextConfig = {
     domains: ["res.cloudinary.com"],
   },
   target: "serverless",
+  locales: ["en-US"],
+  defaultLocale: "en-US",
 };
 
 module.exports = nextConfig;
