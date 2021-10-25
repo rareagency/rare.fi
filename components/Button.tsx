@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { CSSProperties } from "react";
 import { c } from "../utils/classnames";
 
 type ButtonProps = {
@@ -13,6 +13,7 @@ type ButtonProps = {
   xl?: boolean;
   onClick?: () => void;
   href?: string;
+  style?: CSSProperties;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,15 +22,22 @@ const Button: React.FC<ButtonProps> = ({
   className,
   onClick,
   href,
+  style,
 }) => {
   return (
     <>
       {href ? (
         <Link href={href}>
-          <a className={c("button", kind, className)}>{children}</a>
+          <a style={style} className={c("button", kind, className)}>
+            {children}
+          </a>
         </Link>
       ) : (
-        <button className={c("button", kind, className)} onClick={onClick}>
+        <button
+          style={style}
+          className={c("button", kind, className)}
+          onClick={onClick}
+        >
           {children}
         </button>
       )}
