@@ -6,8 +6,10 @@ function sleep(ms = 1000) {
 }
 
 export async function fetchDevto(path: string) {
-  // Avoid hitting dev.to's ratelimits
-  await sleep();
+  // Avoid hitting dev.to's ratelimits when on production.
+  if (process.env.NODE_ENV === "production") {
+    await sleep();
+  }
   try {
     const resp = await fetch(`https://dev.to/api${path}`);
     const data = await resp.json();
