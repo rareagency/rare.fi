@@ -5,7 +5,8 @@ interface Props {
   imgUrl: string;
   imgAlt: string;
   title: string;
-  tags: string[];
+  intro?: string;
+  tags?: string[];
   publishedAt: string;
   readLength?: number;
 }
@@ -15,6 +16,7 @@ const BlogHeader = ({
   imgAlt,
   title,
   tags,
+  intro,
   publishedAt,
   readLength,
 }: Props) => {
@@ -43,11 +45,15 @@ const BlogHeader = ({
             {title}
           </h2>
 
-          <div className="text-[20px] sm:text-[14px]">
-            {tags.map((tag) => {
-              return `#${tag} `;
-            })}
-          </div>
+          {intro && <div>{intro}</div>}
+
+          {tags && (
+            <div className="mt-4 text-[20px] sm:text-[14px]">
+              {tags.map((tag) => {
+                return `#${tag} `;
+              })}
+            </div>
+          )}
 
           <footer className="mt-8 uppercase tag flex items-center sm:mt-3">
             <img
