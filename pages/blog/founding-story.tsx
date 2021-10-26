@@ -103,7 +103,6 @@ const BlogDetail = () => {
             Koodiklinikka.
           </BlogParagraph>
 
-          {/* TODO: make this img half or third width */}
           <BlogImageRow
             images={[
               {
