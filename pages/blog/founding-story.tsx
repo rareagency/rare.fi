@@ -4,7 +4,6 @@ import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogImageRow from "../../components/Blog/BlogImageRow";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
-import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 
 const BlogDetail = () => {
@@ -22,8 +21,8 @@ const BlogDetail = () => {
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
         <BlogAuthorSection
-          name="Teppo Testaaja"
-          avatarUrl="https://via.placeholder.com/128.jpg"
+          name="Rare"
+          avatarUrl="/static/icons/rare-icon-192.png"
           githubUrl="https://github.com/rareagency"
         />
 
@@ -107,6 +106,7 @@ const BlogDetail = () => {
               },
             ]}
             captionTitle="Cihan replying to Koodiklinikka peeps"
+            half
           />
 
           <BlogQuote source="Riku" color="green">
@@ -168,9 +168,9 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      <SkaterBlock buttonUrl="/" buttonTxt="TODO">
-        TODO
-      </SkaterBlock>
+      {/* <SkaterBlock buttonUrl="/" buttonTxt="TODO">
+        TODO: Add Skater text
+      </SkaterBlock> */}
     </Layout>
   );
 };
