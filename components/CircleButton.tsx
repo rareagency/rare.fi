@@ -14,10 +14,10 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   children = "Click me!",
   onClick,
 }) => {
-  if (!link) link = "";
   return (
     <Button
       kind="arrow"
+      href={link}
       onClick={onClick}
       className={c(
         `
@@ -51,7 +51,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
 
       group-hover:inline-block
       group-hover:opacity-100
-      
+
       md:opacity-100
       md:inline-block`)}
       >
