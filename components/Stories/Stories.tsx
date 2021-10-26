@@ -13,14 +13,11 @@ const Stories = () => {
       />
 
       <Story
-        image="/static/pictures/stock1.svg"
+        image="/static/blog/founding-story/header.jpg"
         imageAlt="Stock photo"
-        title={
-          <>
-            <span className="tag font-bold">Case study</span> / Tieto
-          </>
-        }
-        header="Applying the right tech from the start"
+        link="/blog/founding-story"
+        title="Story"
+        header="The Founding Story of Rare"
         orientation="left"
       />
       <Story
