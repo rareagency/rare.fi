@@ -92,7 +92,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const articles: Article[] = await fetchArticles();
 
   return {
-    paths: articles.map((article: Article) => ({
+    paths: articles.map((article) => ({
       params: {
         slug: combineSlug(article.slug, article.id),
       },
