@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
-import { chooseSlug } from "../../utils/slug";
+import { chooseSlug } from "../../utils/blog";
 
 interface Props {
   post: Article | Post;

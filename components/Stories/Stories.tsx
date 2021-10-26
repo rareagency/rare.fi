@@ -1,9 +1,12 @@
 import React from "react";
+import { getStaticMetaData } from "../../utils/blog";
 import Button from "../Button";
 import TextLink from "../TextLink";
 import Story from "./Story";
 
 const Stories = () => {
+  const foundingStory = getStaticMetaData("founding-story");
+
   return (
     <section id="stories" className="layout-grid col-all relative">
       <img
@@ -13,11 +16,11 @@ const Stories = () => {
       />
 
       <Story
-        image="/static/blog/founding-story/header.jpg"
-        imageAlt="Stock photo"
-        link="/blog/founding-story"
+        image={foundingStory.cover_image}
+        imageAlt={foundingStory.cover_image_alt}
+        link={`/blog/${foundingStory.slug}`}
         title="Story"
-        header="The Founding Story of Rare"
+        header={foundingStory.title}
         orientation="left"
       />
       <Story

@@ -14,7 +14,7 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Article } from "../../types/Devto";
 import { fetchArticles, fetchDevto } from "../../utils/api";
-import { combineSlug, extractId } from "../../utils/slug";
+import { combineSlug, extractId } from "../../utils/blog";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags

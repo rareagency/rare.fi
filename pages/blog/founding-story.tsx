@@ -5,13 +5,10 @@ import BlogImageRow from "../../components/Blog/BlogImageRow";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
 import Layout from "../../layouts/Page";
-import posts from "../../posts.json";
-import { Post } from "../../types/Blog";
+import { getStaticMetaData } from "../../utils/blog";
 
 const BlogDetail = () => {
-  const metaData: Post = posts.filter(
-    (post) => post.slug === "founding-story"
-  )[0];
+  const metaData = getStaticMetaData("founding-story");
 
   return (
     <Layout title={metaData.title}>

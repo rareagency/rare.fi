@@ -1,3 +1,4 @@
+import posts from "../posts.json";
 import { Post } from "../types/Blog";
 import { Article } from "../types/Devto";
 
@@ -26,4 +27,9 @@ export const chooseSlug = (blogPost: Post | Article) => {
   }
 
   return blogPost.slug;
+};
+
+export const getStaticMetaData = (slug: string) => {
+  const foundPosts: Post[] = posts.filter((post: Post) => post.slug === slug);
+  return foundPosts[0];
 };

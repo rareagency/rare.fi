@@ -1,8 +1,8 @@
 import React from "react";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
+import { chooseSlug } from "../../utils/blog";
 import { c } from "../../utils/classnames";
-import { chooseSlug } from "../../utils/slug";
 import BlogPostCard from "./BlogPostCard";
 
 interface Props {
