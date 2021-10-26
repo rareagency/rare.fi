@@ -21,7 +21,7 @@ const MoreStories = (props: { posts: Post[] }) => {
   return (
     <section
       id="more-stories"
-      className="col-all layout-grid pt-16 pb-16 md:px-8"
+      className="col-all layout-grid pl-8 pt-16 pb-16 md:px-8"
     >
       {props.posts.slice(0, maxPosts).map((post, i) => (
         <article
