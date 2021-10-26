@@ -8,8 +8,8 @@
     "cover_image": "/static/blog/founding-story/header.jpg",
     "cover_image_alt": "Lightbulbs and sky",
     "reading_time_minutes": 3,
-    "tag_list": "",
-    "tags": [],
+    "tag_list": "rare",
+    "tags": ["rare"],
     "user": {
       "name": "Rare",
       "github_username": "rareagency",

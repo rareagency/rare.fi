@@ -13,7 +13,12 @@ type StoryProps = {
 const BlogPostCard = ({ title, header, image, imageAlt, href }: StoryProps) => (
   <Link href={href}>
     <a className="group block">
-      <img src={image} alt={imageAlt} className="mb-6 md:mb-3" />
+      <div
+        className="mb-4 md:mb-2"
+        style={{ aspectRatio: "42/17", overflow: "hidden" }}
+      >
+        <img src={image} alt={imageAlt} />
+      </div>
       <span className="tag text-mid-blue">{title}</span>
       <span className="h4 mt-6 sm:mt-3 sm:text-[14px] group-hover:text-action-purple break-words">
         {header}
