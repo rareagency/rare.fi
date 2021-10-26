@@ -4,21 +4,22 @@ import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Page";
-import { Post } from "../../types/Post";
+import { Article } from "../../types/Devto";
 import { fetchArticles } from "../../utils/api";
 
 interface Props {
-  posts: Post[];
+  posts: Article[];
 }
-const Stories = (props: Props) => {
+
+const Blog = ({ posts }: Props) => {
   return (
     <Layout title="Stories - Rare Tampere">
-      <FeaturedStory post={props.posts[0]} />
-      <BlogPosts posts={props.posts.slice(1, 5)} />
+      <FeaturedStory post={posts[0]} />
+      <BlogPosts posts={posts.slice(1, 5)} />
       <SkaterBlock buttonUrl="/contact-us" buttonTxt="Dare to join Rare">
         Rare family welcomes people of any shape and form
       </SkaterBlock>
-      <MoreStories posts={props.posts.slice(5)} />
+      <MoreStories posts={posts.slice(5)} />
     </Layout>
   );
 };
@@ -37,4 +38,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Stories;
+export default Blog;

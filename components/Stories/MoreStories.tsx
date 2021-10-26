@@ -1,16 +1,21 @@
 import React from "react";
-import { Post } from "../../types/Post";
+import { Post } from "../../types/Blog";
+import { Article } from "../../types/Devto";
 import { c } from "../../utils/classnames";
-import { combineSlug } from "../../utils/slug";
+import { chooseSlug } from "../../utils/slug";
 import CircleButton from "../CircleButton";
 import BlogPostCard from "./BlogPostCard";
 
 const INITIAL_AMOUNT_OF_POSTS = 4;
 
-const MoreStories = (props: { posts: Post[] }) => {
+interface Props {
+  posts: Article[] | Post[];
+}
+
+const MoreStories = ({ posts }: Props) => {
   const [maxPosts, setMaxPosts] = React.useState(INITIAL_AMOUNT_OF_POSTS);
   const handlePosts = () => {
-    setMaxPosts(props.posts.length);
+    setMaxPosts(posts.length);
 
     // setTimeout to wait for the posts to render and then scroll
     setTimeout(() => {
@@ -23,9 +28,9 @@ const MoreStories = (props: { posts: Post[] }) => {
       id="more-stories"
       className="col-all layout-grid pl-8 pt-16 pb-16 md:px-8"
     >
-      {props.posts.slice(0, maxPosts).map((post, i) => (
+      {posts.slice(0, maxPosts).map((post, i) => (
         <article
-          key={post.id}
+          key={i}
           id={`post_${i}`}
           className={c(
             `col-start-${i % 2 === 0 ? "2" : "4"} col-span-2 pt-16 pb-16 pr-8`,
@@ -43,7 +48,7 @@ const MoreStories = (props: { posts: Post[] }) => {
                 <span className="tag font-bold">{post.tags}</span>
               </>
             }
-            href={`/blog/${combineSlug(post.slug, post.id)}`}
+            href={`/blog/${chooseSlug(post)}`}
             header={post.title}
           />
         </article>

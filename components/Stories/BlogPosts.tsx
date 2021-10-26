@@ -1,10 +1,15 @@
 import React from "react";
-import { Post } from "../../types/Post";
+import { Post } from "../../types/Blog";
+import { Article } from "../../types/Devto";
 import { c } from "../../utils/classnames";
-import { combineSlug } from "../../utils/slug";
+import { chooseSlug } from "../../utils/slug";
 import BlogPostCard from "./BlogPostCard";
 
-const BlogPosts = (props: { posts: Post[] }) => {
+interface Props {
+  posts: Article[] | Post[];
+}
+
+const BlogPosts = ({ posts }: Props) => {
   return (
     <section
       id="blog-posts"
@@ -29,9 +34,9 @@ const BlogPosts = (props: { posts: Post[] }) => {
         </ul>
   </div>*/}
 
-      {props.posts.map((post, i) => (
+      {posts.map((post, i) => (
         <article
-          key={post.id}
+          key={i}
           className={c(
             `col-start-${i % 2 === 0 ? "2" : "4"}`,
             "col-span-2 pt-16 pb-16 pr-8",
@@ -48,7 +53,7 @@ const BlogPosts = (props: { posts: Post[] }) => {
                 <span className="tag font-bold">{post.tags}</span>
               </>
             }
-            href={`/blog/${combineSlug(post.slug, post.id)}`}
+            href={`/blog/${chooseSlug(post)}`}
             header={post.title}
           />
         </article>

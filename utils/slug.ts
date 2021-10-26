@@ -1,3 +1,6 @@
+import { Post } from "../types/Blog";
+import { Article } from "../types/Devto";
+
 /**
  * Combines article's slug and id while removing the redundant identifier from the slug.
  */
@@ -15,4 +18,12 @@ export const extractId = (slug: string) => {
   }
 
   return id[1];
+};
+
+export const chooseSlug = (blogPost: Post | Article) => {
+  if ("id" in blogPost) {
+    return combineSlug(blogPost.slug, blogPost.id);
+  }
+
+  return blogPost.slug;
 };

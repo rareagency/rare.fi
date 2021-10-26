@@ -3,8 +3,8 @@ import emoji from "emoji-dictionary";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogCode from "../../components/Blog/BlogCode";
 import BlogHeader from "../../components/Blog/BlogHeader";
@@ -12,7 +12,7 @@ import BlogImage from "../../components/Blog/BlogImage";
 import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
-import { Post } from "../../types/Post";
+import { Article } from "../../types/Devto";
 import { fetchArticles, fetchDevto } from "../../utils/api";
 import { combineSlug, extractId } from "../../utils/slug";
 
@@ -23,11 +23,11 @@ function emojiSupport(text: string) {
   return text.replace(/:\w+:/gi, (name) => emoji.getUnicode(name));
 }
 
-interface ArticleProps {
-  article: Post;
+interface Props {
+  article: Article;
 }
 
-const Article = ({ article }: ArticleProps) => {
+const Post = ({ article }: Props) => {
   return (
     <Layout title={article.title}>
       <BlogHeader
@@ -89,10 +89,10 @@ const Article = ({ article }: ArticleProps) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const articles: Post[] = await fetchArticles();
+  const articles: Article[] = await fetchArticles();
 
   return {
-    paths: articles.map((article: Post) => ({
+    paths: articles.map((article: Article) => ({
       params: {
         slug: combineSlug(article.slug, article.id),
       },
@@ -127,4 +127,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default Article;
+export default Post;

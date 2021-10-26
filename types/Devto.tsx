@@ -1,4 +1,4 @@
-export interface Post {
+export interface Article {
   type_of: string;
   id: number;
   title: string;
@@ -27,6 +27,7 @@ export interface Post {
   user: User;
   organization: Organization;
 }
+
 interface Organization {
   name: string;
   username: string;
@@ -34,6 +35,7 @@ interface Organization {
   profile_image: string;
   profile_image_90: string;
 }
+
 interface User {
   name: string;
   username: string;
