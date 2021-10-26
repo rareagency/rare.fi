@@ -5,25 +5,31 @@ import BlogImageRow from "../../components/Blog/BlogImageRow";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
 import Layout from "../../layouts/Page";
+import posts from "../../posts.json";
+import { Post } from "../../types/Blog";
 
 const BlogDetail = () => {
+  const metaData: Post = posts.filter(
+    (post) => post.slug === "founding-story"
+  )[0];
+
   return (
-    <Layout title="The Founding Story of Rare">
+    <Layout title={metaData.title}>
       <BlogHeader
-        title="The Founding Story of Rare"
-        imgUrl="/static/blog/founding-story/header.jpg"
-        imgAlt="Lightbulbs and sky"
-        tags={[]}
-        intro="“Is there anybody who can code?” Not every company starts its existence from this question, but Rare Agency story resembles something from a classical anecdote. So, there we go."
-        publishedAt="Oct 25"
-        readLength={3}
+        title={metaData.title}
+        imgUrl={metaData.cover_image}
+        imgAlt={metaData.cover_image_alt || ""}
+        tags={metaData.tags}
+        intro={metaData.description}
+        publishedAt={metaData.readable_publish_date}
+        readLength={metaData.reading_time_minutes}
       />
 
       <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
         <BlogAuthorSection
-          name="Rare"
-          avatarUrl="/static/icons/rare-icon-192.png"
-          githubUrl="https://github.com/rareagency"
+          name={metaData.user.name}
+          avatarUrl={metaData.user.profile_image}
+          githubUrl={`https://github.com/${metaData.user.github_username}`}
         />
 
         <div className="col-span-5 xl:col-all">

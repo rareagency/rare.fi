@@ -9,7 +9,7 @@ import BlogPostCard from "./BlogPostCard";
 const INITIAL_AMOUNT_OF_POSTS = 4;
 
 interface Props {
-  posts: Article[] | Post[];
+  posts: (Article | Post)[];
 }
 
 const MoreStories = ({ posts }: Props) => {

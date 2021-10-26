@@ -6,7 +6,7 @@ import { chooseSlug } from "../../utils/slug";
 import BlogPostCard from "./BlogPostCard";
 
 interface Props {
-  posts: Article[] | Post[];
+  posts: (Article | Post)[];
 }
 
 const BlogPosts = ({ posts }: Props) => {
