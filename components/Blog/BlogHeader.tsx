@@ -45,7 +45,7 @@ const BlogHeader = ({
             {title}
           </h2>
 
-          {intro && <div>{intro}</div>}
+          {intro && <div className="sm:text-sm">{intro}</div>}
 
           {tags && (
             <div className="mt-4 text-[20px] sm:text-[14px]">

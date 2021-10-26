@@ -1,6 +1,5 @@
 import React from "react";
 import { c } from "../../utils/classnames";
-
 interface BlogImage {
   url: string;
   alt: string;
@@ -28,7 +27,7 @@ const BlogImageRow = ({ images, captionTitle, captionContent }: Props) => (
       </aside>
     )}
 
-    <div className="col-start-2 col-span-4 pr-16 md:col-all">
+    <div className="col-start-2 col-span-4 pr-16 md:pr-0 md:col-all">
       <figure className={`grid gap-8 grid-cols-${images.length}`}>
         {images.map((img, i) => (
           <a href={img.url} className="col-span-1" key={i}>
