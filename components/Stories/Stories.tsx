@@ -4,9 +4,9 @@ import Button from "../Button";
 import TextLink from "../TextLink";
 import Story from "./Story";
 
-const Stories = () => {
-  const foundingStory = getStaticMetaData("founding-story");
+const foundingStory = getStaticMetaData("founding-story");
 
+const Stories = () => {
   return (
     <section id="stories" className="layout-grid col-all relative">
       <img

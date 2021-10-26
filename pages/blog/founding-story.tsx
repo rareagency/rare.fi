@@ -7,9 +7,9 @@ import BlogQuote from "../../components/Blog/BlogQuote";
 import Layout from "../../layouts/Page";
 import { getStaticMetaData } from "../../utils/blog";
 
-const BlogDetail = () => {
-  const metaData = getStaticMetaData("founding-story");
+const metaData = getStaticMetaData("founding-story");
 
+const BlogDetail = () => {
   return (
     <Layout title={metaData.title}>
       <BlogHeader
