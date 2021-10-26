@@ -1,7 +1,10 @@
 import React from "react";
+import { getStaticMetaData } from "../../utils/blog";
 import Button from "../Button";
 import TextLink from "../TextLink";
 import Story from "./Story";
+
+const foundingStory = getStaticMetaData("founding-story");
 
 const Stories = () => {
   return (
@@ -13,14 +16,11 @@ const Stories = () => {
       />
 
       <Story
-        image="/static/pictures/stock1.svg"
-        imageAlt="Stock photo"
-        title={
-          <>
-            <span className="tag font-bold">Case study</span> / Tieto
-          </>
-        }
-        header="Applying the right tech from the start"
+        image={foundingStory.cover_image}
+        imageAlt={foundingStory.cover_image_alt}
+        link={`/blog/${foundingStory.slug}`}
+        title="Story"
+        header={foundingStory.title}
         orientation="left"
       />
       <Story

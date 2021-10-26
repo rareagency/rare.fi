@@ -1,4 +1,4 @@
-import { Post } from "../types/Post";
+import { Article } from "../types/Devto";
 import writers from "../writers.json";
 
 function sleep(ms = 1000) {
@@ -21,17 +21,17 @@ export async function fetchDevto(path: string) {
 }
 
 export async function fetchArticles() {
-  let articles: Post[] = [];
+  let articles: Article[] = [];
 
   for (const writer of writers.organizations) {
-    const response: Post[] = await fetchDevto(
+    const response: Article[] = await fetchDevto(
       `/articles?username=${writer.username}`
     );
     articles = articles.concat(response);
   }
 
   for (const writer of writers.users) {
-    const response: Post[] = await fetchDevto(
+    const response: Article[] = await fetchDevto(
       `/articles?username=${writer.username}`
     );
 

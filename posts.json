@@ -1,0 +1,20 @@
+[
+  {
+    "title": "The Founding Story of Rare",
+    "description":
+      "“Is there anybody who can code?” Not every company starts its existence from this question, but Rare Agency story resembles something from a classical anecdote. So, there we go.",
+    "readable_publish_date": "Oct 25",
+    "slug": "founding-story",
+    "cover_image": "/static/blog/founding-story/header.jpg",
+    "cover_image_alt": "Lightbulbs and sky",
+    "reading_time_minutes": 3,
+    "tag_list": "rare",
+    "tags": ["rare"],
+    "user": {
+      "name": "Rare",
+      "github_username": "rareagency",
+      "website_url": "https://rare.fi",
+      "profile_image": "/static/icons/rare-icon-192.png"
+    }
+  }
+]
