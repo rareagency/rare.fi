@@ -4,17 +4,28 @@ import CookieConsent from "../components/CookieConsent";
 import { c } from "../utils/classnames";
 
 const TITLE = "Rare Tampere - Software made collaborative";
+const DESCRIPTION =
+  "Everyday contribution to envision a better digital world of tomorrow";
 
-const Base: React.FC<{ title?: string; kind?: "dark" | "light" }> = ({
+interface Props {
+  title?: string;
+  description?: string;
+  kind?: "dark" | "light";
+}
+
+const Base: React.FC<Props> = ({
   title,
+  description,
   children,
   kind = "light",
 }) => {
   return (
     <>
+      <html lang="en" />
       <Head>
         <title>{title ?? TITLE}</title>
         <meta charSet="utf-8" />
+        <meta name="description" content={description || DESCRIPTION} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <link rel="shortcut icon" href="/favicon.ico" />
