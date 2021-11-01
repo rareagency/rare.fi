@@ -15,7 +15,7 @@ const References = () => {
   return (
     <section
       id="references"
-      className="layout-grid col-all justify-items-center pt-48 pb-48 p-8 lg:gap-y-16 md:gap-y-8"
+      className="layout-grid col-all justify-items-center py-48 px-8 sm:py-16 md:py-24 lg:gap-y-16 md:gap-y-8"
     >
       <h5 className="col-start-2 col-span-6 pb-16 text-center md:pb-8">
         Proudly delivered digital products with
