@@ -26,6 +26,7 @@ const Stories = () => {
       <Story
         image="/static/pictures/stock2.svg"
         imageAlt="Stock photo"
+        link={`/#`}
         title="Career story"
         header={
           <>
