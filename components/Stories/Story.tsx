@@ -39,15 +39,15 @@ const Story = ({
         }
       )}
     >
-      <span className="tag text-mid-blue">
-        <Link href={link}>{title}</Link>
-      </span>
-      <h4 className="text-dark-blue pt-6">
-        <Link href={link}>{header}</Link>
-      </h4>
-      <div className="pt-8 inline-flex items-center md:w-full">
-        <CircleButton link={link}>Read article</CircleButton>
-      </div>
+      <Link href={link}>
+        <a>
+          <span className="tag text-mid-blue">{title}</span>
+          <h4 className="text-dark-blue pt-6">{header}</h4>
+          <div className="pt-8 inline-flex items-center md:w-full">
+            <CircleButton>Read article</CircleButton>
+          </div>
+        </a>
+      </Link>
     </div>
   </article>
 );
