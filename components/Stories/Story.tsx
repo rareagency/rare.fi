@@ -39,7 +39,7 @@ const Story = ({
         }
       )}
     >
-      <Link href={link}>
+      <Link href={link} aria-label={`Read ${header}`}>
         <a>
           <span className="tag text-mid-blue">{title}</span>
           <h4 className="text-dark-blue pt-6">{header}</h4>

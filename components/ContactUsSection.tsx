@@ -79,7 +79,11 @@ const ContactUs = () => {
       <div className="col-all flex items-center justify-center text-center">
         <Link href="/contact-us">
           <a>
-            <Button className="mt-10" kind="secondary-light">
+            <Button
+              label="Book our first no-obligation chat"
+              className="mt-10"
+              kind="secondary-light"
+            >
               Book our first no&#8209;obligation chat
             </Button>
           </a>

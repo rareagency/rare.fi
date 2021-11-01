@@ -46,6 +46,7 @@ const MoreStories = ({ posts }: Props) => {
         >
           <BlogPostCard
             image={post.cover_image || "/static/featured-article.png"}
+            imageAlt={`Cover image of ${post.title}`}
             title={
               <>
                 <span className="tag font-bold">{post.tags}</span>
