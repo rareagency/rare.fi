@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
 import { chooseSlug } from "../../utils/blog";
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const MoreStories = ({ posts }: Props) => {
-  const [maxPosts, setMaxPosts] = React.useState(INITIAL_AMOUNT_OF_POSTS);
+  const [maxPosts, setMaxPosts] = useState(INITIAL_AMOUNT_OF_POSTS);
   const handlePosts = () => {
     setMaxPosts(posts.length);
 
@@ -43,6 +43,7 @@ const MoreStories = ({ posts }: Props) => {
         >
           <BlogPostCard
             image={post.cover_image || "/static/featured-article.png"}
+            imageAlt={`Cover image of ${post.title}`}
             title={
               <>
                 <span className="tag font-bold">{post.tags}</span>
