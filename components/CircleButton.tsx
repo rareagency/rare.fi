@@ -6,6 +6,7 @@ type CircleButtonProps = {
   link?: string;
   className?: string;
   onClick?: () => void;
+  label?: string;
 };
 
 const CircleButton: React.FC<CircleButtonProps> = ({
@@ -13,9 +14,11 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   className,
   children = "Click me!",
   onClick,
+  label,
 }) => {
   return (
     <Button
+      label={label}
       kind="arrow"
       href={link}
       onClick={onClick}

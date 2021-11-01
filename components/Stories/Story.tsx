@@ -7,7 +7,7 @@ type StoryProps = {
   header?: React.ReactNode;
   image?: string;
   imageAlt?: string;
-  link?: string;
+  link: string;
   orientation?: "left" | "right";
 };
 
@@ -41,7 +41,9 @@ const Story = ({
       <span className="tag text-mid-blue">{title}</span>
       <h4 className="text-dark-blue pt-6">{header}</h4>
       <div className="pt-8 inline-flex items-center md:w-full">
-        <CircleButton link={link}>Read article</CircleButton>
+        <CircleButton label={`Read ${header}`} link={link}>
+          Read article
+        </CircleButton>
       </div>
     </div>
   </article>

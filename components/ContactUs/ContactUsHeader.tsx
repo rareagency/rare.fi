@@ -11,6 +11,7 @@ export const ContactUsHeader = () => (
       You have a higher chance to succeed if we work together.
     </h2>
     <Button
+      label="Book our first no-obligation chat"
       onClick={() => openPopupWidget({ url: "https://calendly.com/riku-rare" })}
       className="mt-10 mb-10 px-12 col-start-2 col-span-3 lg:col-start-1 lg:col-span-5 md:col-span-6 sm:col-span-7"
     >

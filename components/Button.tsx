@@ -14,6 +14,7 @@ type ButtonProps = {
   onClick?: () => void;
   href?: string;
   style?: CSSProperties;
+  label?: string;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -23,17 +24,19 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   href,
   style,
+  label,
 }) => {
   return (
     <>
       {href ? (
-        <Link href={href}>
+        <Link aria-label={label} href={href}>
           <a style={style} className={c("button", kind, className)}>
             {children}
           </a>
         </Link>
       ) : (
         <button
+          aria-label={label}
           style={style}
           className={c("button", kind, className)}
           onClick={onClick}
