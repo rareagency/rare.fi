@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Lottie from "react-lottie";
+import Lottie from "react-lottie-player";
 import { useThresholdScroller } from "../../utils/threshold-scroller";
 import Logo from "../Logo";
-import NavItem from "./NavItem";
 import * as menuAnimationBlack from "./lottie-menu-icon-black.json";
 import * as menuAnimationWhite from "./lottie-menu-icon.json";
+import NavItem from "./NavItem";
 import { links } from "./pagelinks";
 
 const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
@@ -69,27 +69,19 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
           ))}
         </section>
 
-        {/* The onClick is passed o the Lottie -instance, so it shouldn't matter if its div and not button which is clickable */}
+        {/* The onClick is passed to the Lottie instance, so it being a clickable div, not a button, shouldn't matter */}
         {/* eslint-disable jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
         <div className="hidden lg:inline-flex z-30" onClick={toggleMenu}>
           <Lottie
-            options={{
-              animationData:
-                !userIsScrolled && theme === "light" && !menuIsOpen
-                  ? menuAnimationBlack
-                  : menuAnimationWhite,
-              autoplay: false,
-              loop: false,
-            }}
-            height={30}
-            width={30}
-            isPaused={animationPaused}
-            eventListeners={[
-              {
-                eventName: "complete",
-                callback: () => setAnimationPaused(true),
-              },
-            ]}
+            animationData={
+              !userIsScrolled && theme === "light" && !menuIsOpen
+                ? menuAnimationBlack
+                : menuAnimationWhite
+            }
+            play={!animationPaused}
+            loop={false}
+            onComplete={() => setAnimationPaused(true)}
+            style={{ width: 30, height: 30 }}
             direction={menuIsOpen ? 1 : -1}
             speed={4}
           />
