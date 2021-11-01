@@ -59,9 +59,8 @@ const MoreStories = ({ posts }: Props) => {
 
       <div
         className={c(
-          `${
-            seeMoreClick ? "md:hidden" : ""
-          } col-start-6 row-start-1 col-span-2 pt-16 pb-16 ml-12 md:row-start-auto md:col-start-2 md:col-end-8 md:m-0 md:p-0`
+          { "md:hidden": seeMoreClick },
+          "col-start-6 row-start-1 col-span-2 pt-16 pb-16 ml-12 md:row-start-auto md:col-start-2 md:col-end-8 md:m-0 md:p-0"
         )}
       >
         <CircleButton onClick={handlePosts}>See more</CircleButton>
