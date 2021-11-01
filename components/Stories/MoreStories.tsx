@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
 import { chooseSlug } from "../../utils/blog";
@@ -13,8 +13,11 @@ interface Props {
 }
 
 const MoreStories = ({ posts }: Props) => {
-  const [maxPosts, setMaxPosts] = React.useState(INITIAL_AMOUNT_OF_POSTS);
+  const [maxPosts, setMaxPosts] = useState(INITIAL_AMOUNT_OF_POSTS);
+  const [seeMoreClick, setSeeMoreClick] = useState(false);
+
   const handlePosts = () => {
+    setSeeMoreClick(true);
     setMaxPosts(posts.length);
 
     // setTimeout to wait for the posts to render and then scroll
@@ -56,7 +59,9 @@ const MoreStories = ({ posts }: Props) => {
 
       <div
         className={c(
-          `col-start-6 row-start-1 col-span-2 pt-16 pb-16 ml-12 md:row-start-auto md:col-start-2 md:col-end-8 md:m-0 md:p-0`
+          `${
+            seeMoreClick ? "md:hidden" : ""
+          } col-start-6 row-start-1 col-span-2 pt-16 pb-16 ml-12 md:row-start-auto md:col-start-2 md:col-end-8 md:m-0 md:p-0`
         )}
       >
         <CircleButton onClick={handlePosts}>See more</CircleButton>
