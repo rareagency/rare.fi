@@ -1,6 +1,4 @@
 import { getPlaiceholder } from "plaiceholder";
-import posts from "../posts.json";
-import { Post } from "../types/Blog";
 import { Article, RawArticle } from "../types/Devto";
 import writers from "../writers.json";
 
@@ -64,17 +62,4 @@ async function validateArticle(article: RawArticle) {
     cover_image,
     cover_image_placeholder: base64,
   } as Article;
-}
-
-export async function staticPosts() {
-  return Promise.all(
-    posts.map(async (post: Post) => {
-      const { base64 } = await getPlaiceholder(post.cover_image);
-
-      return {
-        ...post,
-        cover_image_placeholder: base64,
-      } as Post;
-    })
-  );
 }
