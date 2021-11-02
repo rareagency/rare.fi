@@ -35,7 +35,7 @@ const FeaturedStory = ({ post }: Props) => (
           style={{ aspectRatio: "42/17", overflow: "hidden" }}
         >
           <img
-            src={post.cover_image || "/static/featured-article.png"}
+            src={post.cover_image}
             alt="Featured story"
             className="object-cover"
           />
