@@ -48,7 +48,7 @@ const FeatureBox = () => {
             Strong co-creation and collaboration mindset
           </Illustration>
           <Illustration icon={<Wow title="Zig-zag character dancing" />}>
-            Transparent ways of working & next level comms
+            Transparent ways of working &amp; next level comms
           </Illustration>
           <Illustration icon={<Problem title="Fingers snapping" />}>
             Proudly building high usability products to resolve painful needs

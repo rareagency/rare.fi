@@ -29,7 +29,7 @@ const Footer = () => {
         <TickerText />
       </section>
 
-      <ol className="col-start-6 col-span-2 row-start-1 justify-self-end lg:w-full md:mt-20 md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-full md:pt-8">
+      <ol className="col-start-6 col-span-2 row-start-1 justify-self-end lg:w-full md:mt-20 sm:mt-10 md:justify-self-start md:row-start-2 md:col-start-1 md:col-span-full md:pt-8 sm:pt-0">
         {links.map((link, index) => (
           <li
             className="py-2 text-right lg:-mx-4 md:text-left w-48 lg:w-full"
@@ -40,8 +40,8 @@ const Footer = () => {
         ))}
       </ol>
 
-      <div className="h6 text-off-white space-y-6 col-start-2 row-start-2 col-span-3 pb-20 pt-20 md:row-start-3 md:col-start-1 md:col-span-6">
-        <ol className="pt-16">
+      <div className="h6 text-off-white space-y-6 col-start-2 row-start-2 col-span-3 py-20 sm:pt-0 sm:pb-10 md:row-start-3 md:col-start-1 md:col-span-6">
+        <ol className="pt-16 sm:pt-12">
           <li className="pb-6">
             <b className="h5 text-off-white">Tampere</b>
           </li>
@@ -72,9 +72,9 @@ const Footer = () => {
           />{" "}
           Made in Finland
         </div>
-        <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left md:py-1">
-          <TextLink href="/privacy" kind="light">
-            Cookie & Privacy policy
+        <div className="col-span-2 text-right md:row-start-3 md:col-span-6 md:text-left md:py-1 sm:pt-4">
+          <TextLink href="/privacy" kind="light" className="sm:text-sm">
+            Cookie &amp; Privacy policy
           </TextLink>
         </div>
       </div>

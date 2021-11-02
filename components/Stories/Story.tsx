@@ -1,10 +1,11 @@
-import React from "react";
+import Link from "next/link";
+import React, { ReactNode } from "react";
 import { c } from "../../utils/classnames";
 import CircleButton from "../CircleButton";
 
 type StoryProps = {
-  title?: React.ReactNode;
-  header?: React.ReactNode;
+  title?: ReactNode;
+  header?: ReactNode;
   image?: string;
   imageAlt?: string;
   link: string;
@@ -38,13 +39,15 @@ const Story = ({
         }
       )}
     >
-      <span className="tag text-mid-blue">{title}</span>
-      <h4 className="text-dark-blue pt-6">{header}</h4>
-      <div className="pt-8 inline-flex items-center md:w-full">
-        <CircleButton label={`Read ${header}`} link={link}>
-          Read article
-        </CircleButton>
-      </div>
+      <Link href={link} aria-label={`Read ${header}`}>
+        <a>
+          <span className="tag text-mid-blue">{title}</span>
+          <h4 className="text-dark-blue pt-6">{header}</h4>
+          <div className="pt-8 inline-flex items-center md:w-full">
+            <CircleButton>Read article</CircleButton>
+          </div>
+        </a>
+      </Link>
     </div>
   </article>
 );
