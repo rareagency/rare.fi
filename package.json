@@ -32,6 +32,7 @@
     "@types/react-dom": "^17.0.5",
     "@types/react-syntax-highlighter": "^13.5.2",
     "@types/react-typing-effect": "^2.0.1",
+    "@types/sharp": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "autoprefixer": "^10.2.6",

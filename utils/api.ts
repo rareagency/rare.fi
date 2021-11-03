@@ -1,4 +1,3 @@
-import { getPlaiceholder } from "plaiceholder";
 import { Article, RawArticle } from "../types/Devto";
 import writers from "../writers.json";
 
@@ -56,10 +55,9 @@ export async function fetchArticle(id: string) {
 
 async function validateArticle(article: RawArticle) {
   const cover_image = article.cover_image || "/static/cover-placeholder.png";
-  const { base64 } = await getPlaiceholder(cover_image);
+
   return {
     ...article,
     cover_image,
-    cover_image_placeholder: base64,
   } as Article;
 }
