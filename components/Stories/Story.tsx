@@ -46,7 +46,7 @@ const Story = ({
     >
       <Link href={link} aria-label={`Read ${header}`}>
         <a>
-          <span className="tag text-mid-blue font-bold">{title}</span>
+          <span className="tag md-tag text-mid-blue font-bold">{title}</span>
           <h4 className="text-dark-blue pt-6">{header}</h4>
           <div className="pt-8 inline-flex items-center md:w-full md:hidden">
             <CircleButton>Read article</CircleButton>
