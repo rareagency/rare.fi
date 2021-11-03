@@ -26,7 +26,7 @@ const BlogHeader = ({
         src={imgUrl}
         alt={imgAlt}
         className="col-all object-cover w-full"
-        style={{ minHeight: "20rem" }}
+        style={{ minHeight: "20rem", maxHeight: "35rem" }}
       />
 
       <article
