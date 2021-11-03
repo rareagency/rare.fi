@@ -11,21 +11,22 @@ interface IllustrationProps {
 const Illustration = ({ icon, children }: IllustrationProps) => (
   <div className="flex items-center justify-center h-32">
     <figure>{icon}</figure>
-    <p className="description leading-6 p-8 w-full">{children}</p>
+    <p className="description leading-6 p-8 w-full sm:pr-0">{children}</p>
   </div>
 );
 
 const FeatureBox = () => {
   return (
     <section className="layout-grid col-all pt-32 md:pt-8">
-      <h5 className="col-start-2 col-span-1 md:col-span-full">
+      <h5 className="col-all text-center md:text-left">
         Exceptional tech side
       </h5>
-      <p className="paragraph col-start-4 col-span-4 md:col-span-full">
-        We fight mediocrity in development practices and insert ourselves to the
-        product teams to tackle projects with confidence, together.
+      <p className="paragraph col-start-2 col-span-6 text-center pt-8 md:text-left">
+        We fight mediocrity in development practices and insert ourselves to
+        <br className="md:hidden" />
+        the product teams to tackle projects with confidence, together.
       </p>
-      <div className="row-start-2 col-start-2 col-span-6 pt-16 md:row-start-3">
+      <div className="row-start-3 col-start-2 col-span-6 pt-8 md:row-start-3">
         <div className="grid grid-cols-3 grid-rows-auto gap-16 md:gap-8 md:grid-cols-1 xl:grid-cols-2">
           <Illustration
             icon={<Nailing title="Smiling person showing OK-sign" />}
