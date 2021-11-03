@@ -14,7 +14,11 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Article } from "../../types/Devto";
 import { fetchArticles, fetchDevto } from "../../utils/api";
-import { combineSlug, extractId } from "../../utils/blog";
+import {
+  combineSlug,
+  extractId,
+  parseCloudinarySrcImg,
+} from "../../utils/blog";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags
@@ -113,7 +117,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       ? extractId(params.slug[0])
       : extractId(params.slug);
 
-  const article = await fetchDevto(`/articles/${id}`);
+  const article: Article = await fetchDevto(`/articles/${id}`);
 
   if (!article?.slug) {
     return {
@@ -122,7 +126,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   return {
-    props: { article: article },
+    props: {
+      article: {
+        ...article,
+        cover_image: parseCloudinarySrcImg(article.cover_image),
+      },
+    },
     revalidate: false,
   };
 };
