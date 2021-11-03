@@ -15,9 +15,9 @@ const ContactUs = () => {
   return (
     <section
       id="contact-us"
-      className="layout-grid col-all bg-action-purple h-auto w-full py-32 p-8"
+      className="layout-grid col-all bg-action-purple h-auto w-full py-32 p-8 md:py-16"
     >
-      <div className="text-left col-start-2 col-span-2 lg:text-center lg:row-start-1 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
+      <div className="text-left col-start-2 col-span-2 lg:text-center lg:row-start-1 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16 md:mb-8">
         <span className={textBoxClass + " tag"}>
           Join for a journey
           <br />
@@ -34,7 +34,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
+      <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16 md:mb-8">
         <span className={textBoxClass + " tag"}>
           Bring modern tech &<br />
           practices to give a<br />
@@ -50,7 +50,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <div className="text-right col-start-6 col-span-2 lg:text-center lg:row-start-3 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16">
+      <div className="text-right col-start-6 col-span-2 lg:text-center lg:row-start-3 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16 md:mb-8">
         <span className={textBoxClass + " tag"}>
           Inject a missing
           <br />
@@ -67,7 +67,7 @@ const ContactUs = () => {
         </JourneyCircle>
       </div>
 
-      <h2 className="h2-small col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold">
+      <h2 className="h2-small col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold md:pt-0">
         We adapt to our client&apos;s
         <br />
         environment & needs
