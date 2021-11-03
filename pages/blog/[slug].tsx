@@ -1,7 +1,6 @@
 /* eslint-disable react/display-name */
 import emoji from "emoji-dictionary";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getPlaiceholder } from "plaiceholder";
 import React from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -128,7 +127,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  const { base64 } = await getPlaiceholder(article.cover_image);
+  // TODO: enable dynamic generation of placeholders
+  // const { base64 } = await getPlaiceholder(article.cover_image);
+  const base64 =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0CaxbCgADbgGqEkkGJQAAAABJRU5ErkJggg==";
 
   return {
     props: { article: { ...article, cover_image_placeholder: base64 } },

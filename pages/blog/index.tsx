@@ -1,4 +1,3 @@
-import { getPlaiceholder } from "plaiceholder";
 import React from "react";
 import SkaterBlock from "../../components/SkaterBlock";
 import BlogPosts from "../../components/Stories/BlogPosts";
@@ -31,7 +30,10 @@ export const getStaticProps = async () => {
   const articles = await fetchArticles();
   const withPlaceholders = await Promise.all(
     [...articles, ...staticPosts].map(async (article: Article | Post) => {
-      const { base64 } = await getPlaiceholder(article.cover_image);
+      // TODO: enable dynamic generation of placeholders
+      // const { base64 } = await getPlaiceholder(article.cover_image);
+      const base64 =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0CaxbCgADbgGqEkkGJQAAAABJRU5ErkJggg==";
       return { ...article, cover_image_placeholder: base64 };
     })
   );
