@@ -30,6 +30,10 @@ export const chooseSlug = (blogPost: Post | Article) => {
 };
 
 export const getStaticMetaData = (slug: string) => {
-  const foundPosts: Post[] = posts.filter((post: Post) => post.slug === slug);
+  const foundPosts: Post[] = posts.filter((post) => post.slug === slug);
   return foundPosts[0];
 };
+
+// Generated with https://png-pixel.com/
+export const staticPlaceholder =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcvBQAAdEBOulIO2MAAAAASUVORK5CYII=";
