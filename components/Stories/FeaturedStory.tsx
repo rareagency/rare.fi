@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Post } from "../../types/Blog";
@@ -34,11 +35,25 @@ const FeaturedStory = ({ post }: Props) => (
           className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12"
           style={{ aspectRatio: "42/17", overflow: "hidden" }}
         >
-          <img
-            src={post.cover_image}
-            alt="Featured story"
-            className="object-cover"
-          />
+          {post.cover_image_placeholder ? (
+            <Image
+              src={post.cover_image}
+              alt="Featured story"
+              width={1075}
+              height={425}
+              placeholder="blur"
+              blurDataURL={post.cover_image_placeholder}
+              className="object-cover"
+            />
+          ) : (
+            <Image
+              src={post.cover_image}
+              alt="Featured story"
+              width={1075}
+              height={425}
+              className="object-cover"
+            />
+          )}
         </div>
       </a>
     </Link>
