@@ -14,7 +14,7 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Article } from "../../types/Devto";
 import { fetchArticle, fetchArticles } from "../../utils/api";
-import { combineSlug, extractId } from "../../utils/blog";
+import { combineSlug, extractId, staticPlaceholder } from "../../utils/blog";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags
@@ -129,8 +129,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   // TODO: enable dynamic generation of placeholders
   // const { base64 } = await getPlaiceholder(article.cover_image);
-  const base64 =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0CaxbCgADbgGqEkkGJQAAAABJRU5ErkJggg==";
+  const base64 = staticPlaceholder;
 
   return {
     props: { article: { ...article, cover_image_placeholder: base64 } },

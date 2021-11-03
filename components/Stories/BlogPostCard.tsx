@@ -38,8 +38,6 @@ const BlogPostCard = ({
         ) : (
           <Image src={image} alt={imageAlt} width={1075} height={425} />
         )}
-
-        {/* <img src={image} alt={imageAlt} /> */}
       </div>
       <span className="tag text-mid-blue">{title}</span>
       <span className="h4 mt-6 sm:mt-3 sm:text-[14px] group-hover:text-action-purple break-words">

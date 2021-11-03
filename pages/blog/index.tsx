@@ -8,6 +8,7 @@ import staticPosts from "../../posts.json";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
 import { fetchArticles } from "../../utils/api";
+import { staticPlaceholder } from "../../utils/blog";
 
 interface Props {
   posts: (Article | Post)[];
@@ -32,8 +33,7 @@ export const getStaticProps = async () => {
     [...articles, ...staticPosts].map(async (article: Article | Post) => {
       // TODO: enable dynamic generation of placeholders
       // const { base64 } = await getPlaiceholder(article.cover_image);
-      const base64 =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mM0CaxbCgADbgGqEkkGJQAAAABJRU5ErkJggg==";
+      const base64 = staticPlaceholder;
       return { ...article, cover_image_placeholder: base64 };
     })
   );
