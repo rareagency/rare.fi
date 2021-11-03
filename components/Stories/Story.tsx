@@ -20,7 +20,7 @@ const Story = ({
   link,
   orientation,
 }: StoryProps) => (
-  <article className="pt-24 col-all layout-grid md:pt-0 md:pb-2">
+    <Link href={link} aria-label={`Read ${header}`} passHref>
     <img
       src={image}
       alt={imageAlt}
@@ -29,6 +29,7 @@ const Story = ({
         "col-start-5": orientation === "right",
       })}
     />
+    </Link>
 
     <div
       className={c(
