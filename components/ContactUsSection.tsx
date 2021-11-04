@@ -54,7 +54,7 @@ const ContactUs = () => {
         <span className={textBoxClass + " tag"}>
           Inject a missing
           <br />
-          capability & skill
+          capability &amp; skill
           <br />
           to your team
         </span>
@@ -70,7 +70,7 @@ const ContactUs = () => {
       <h2 className="h2-small col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold md:pt-0">
         We adapt to our client&apos;s
         <br />
-        environment & needs
+        environment &amp; needs
       </h2>
       <h4 className="col-all text-off-white pt-8 text-center sm:text-[18px]">
         Let&apos;s explore yours

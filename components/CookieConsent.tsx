@@ -49,7 +49,7 @@ const CookieConsent = () => {
                 target="_blank"
                 className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
               >
-                Cookie & Privacy policy
+                Cookie &amp; Privacy policy
               </a>
             </Link>
           </p>
