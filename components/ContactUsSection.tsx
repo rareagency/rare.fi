@@ -7,6 +7,7 @@ import JourneyCircle from "./JourneyCircle";
 const textBoxClass = c(`
   text-off-white
   inline-block
+  md-tag
   md:text-lg
   md:text-center
 `);
@@ -36,8 +37,10 @@ const ContactUs = () => {
 
       <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16 md:mb-8">
         <span className={textBoxClass + " tag"}>
-          Bring modern tech &<br />
-          practices to give a<br />
+          Bring modern tech &amp;
+          <br />
+          practices to give a
+          <br />
           headstart
         </span>
 
