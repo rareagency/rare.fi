@@ -30,7 +30,7 @@ export const chooseSlug = (blogPost: Post | Article) => {
 };
 
 export const getStaticMetaData = (slug: string) => {
-  const foundPosts: Post[] = posts.filter((post: Post) => post.slug === slug);
+  const foundPosts: Post[] = posts.filter((post) => post.slug === slug);
   return foundPosts[0];
 };
 
@@ -49,3 +49,7 @@ export const parseCloudinarySrcImg = (url: string | null) => {
   const srcUrl = url.match(srcRegex);
   return srcUrl && srcUrl[1] ? srcUrl[1] : url;
 };
+
+// Generated with https://png-pixel.com/
+export const staticPlaceholder =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcvBQAAdEBOulIO2MAAAAASUVORK5CYII=";

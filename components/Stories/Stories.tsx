@@ -8,11 +8,14 @@ const foundingStory = getStaticMetaData("founding-story");
 
 const Stories = () => {
   return (
-    <section id="stories" className="layout-grid col-all relative">
+    <section
+      id="stories"
+      className="layout-grid col-all relative md:pt-12 md:px-8"
+    >
       <img
         src="/static/rare_est.svg"
         alt="Rare Est. 2019"
-        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2"
+        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2 pointer-events-none"
       />
 
       <Story
@@ -42,7 +45,7 @@ const Stories = () => {
           See all stories
         </Button>
       </div>
-      <div className="col-all text-center justify-center pt-0 hidden md:block">
+      <div className="col-all pt-0 hidden md:block md:pt-8">
         <TextLink href="/blog" className="link-text">
           See all stories
         </TextLink>

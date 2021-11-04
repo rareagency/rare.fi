@@ -13,11 +13,12 @@ import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Article } from "../../types/Devto";
-import { fetchArticles, fetchDevto } from "../../utils/api";
+import { fetchArticle, fetchArticles } from "../../utils/api";
 import {
   combineSlug,
   extractId,
   parseCloudinarySrcImg,
+  staticPlaceholder,
 } from "../../utils/blog";
 
 function cleanUpMarkdown(markdown: string) {
@@ -36,7 +37,7 @@ const Post = ({ article }: Props) => {
     <Layout title={article.title}>
       <BlogHeader
         title={article.title}
-        imgUrl={article.cover_image || "/static/featured-article.png"}
+        imgUrl={article.cover_image}
         imgAlt="cover image"
         tags={article.tags}
         publishedAt={article.readable_publish_date}
@@ -117,7 +118,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       ? extractId(params.slug[0])
       : extractId(params.slug);
 
-  const article: Article = await fetchDevto(`/articles/${id}`);
+  if (!id) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const article = await fetchArticle(id);
 
   if (!article?.slug) {
     return {
@@ -125,11 +132,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
+  // TODO: enable dynamic generation of placeholders
+  // const { base64 } = await getPlaiceholder(article.cover_image);
+  const base64 = staticPlaceholder;
+
   return {
     props: {
       article: {
         ...article,
         cover_image: parseCloudinarySrcImg(article.cover_image),
+        cover_image_placeholder: base64,
       },
     },
     revalidate: false,

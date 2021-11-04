@@ -31,14 +31,29 @@ const FeaturedStory = ({ post }: Props) => (
           </span>
         </p>
 
-        <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
-          <Image
-            src={post.cover_image || "/static/featured-article.png"}
-            height={425}
-            width={1000}
-            alt="Featured story"
-            className="object-cover"
-          />
+        <div
+          className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12 max-w-full sm:h-auto"
+          style={{ aspectRatio: "42/17", overflow: "hidden" }}
+        >
+          {post.cover_image_placeholder ? (
+            <Image
+              src={post.cover_image}
+              alt="Featured story"
+              width={1075}
+              height={425}
+              placeholder="blur"
+              blurDataURL={post.cover_image_placeholder}
+              className="object-cover"
+            />
+          ) : (
+            <Image
+              src={post.cover_image}
+              alt="Featured story"
+              width={1075}
+              height={425}
+              className="object-cover"
+            />
+          )}
         </div>
       </a>
     </Link>

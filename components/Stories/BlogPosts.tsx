@@ -47,8 +47,9 @@ const BlogPosts = ({ posts }: Props) => {
           )}
         >
           <BlogPostCard
-            image={post.cover_image || "/static/featured-article.png"}
+            image={post.cover_image}
             imageAlt={`Cover image of ${post.title}`}
+            imagePlaceholder={post.cover_image_placeholder}
             title={
               <>
                 <span className="tag font-bold">{post.tags}</span>

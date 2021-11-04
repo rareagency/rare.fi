@@ -20,19 +20,24 @@ const Story = ({
   link,
   orientation,
 }: StoryProps) => (
-  <article className="pt-24 col-all layout-grid md:pt-0 md:pb-2">
-    <img
-      src={image}
-      alt={imageAlt}
-      className={c("col-span-3 md:col-span-full md:w-full", {
-        "col-start-2": orientation === "left",
-        "col-start-5": orientation === "right",
-      })}
-    />
+  <article className="pt-24 col-all layout-grid md:pt-4 md:pb-2">
+    <Link href={link} aria-label={`Read ${header}`} passHref>
+      <img
+        src={image}
+        alt={imageAlt}
+        className={c(
+          "col-span-3 md:col-span-full md:w-full md:px-0 lg:order-2 cursor-pointer",
+          {
+            "col-start-2": orientation === "left",
+            "col-start-5": orientation === "right",
+          }
+        )}
+      />
+    </Link>
 
     <div
       className={c(
-        "col-span-3 pl-32 pr-32 md:col-span-full md:p-8 lg:pl-16 lg:pr-16",
+        "col-span-3 pl-32 pr-32 md:col-span-full lg:px-16 md:py-8 md:px-0 lg:order-1",
         {
           "col-start-5": orientation === "left",
           "col-start-2 text-right md:text-left": orientation === "right",
@@ -41,9 +46,9 @@ const Story = ({
     >
       <Link href={link} aria-label={`Read ${header}`}>
         <a>
-          <span className="tag text-mid-blue">{title}</span>
+          <span className="tag md-tag text-mid-blue font-bold">{title}</span>
           <h4 className="text-dark-blue pt-6">{header}</h4>
-          <div className="pt-8 inline-flex items-center md:w-full">
+          <div className="pt-8 inline-flex items-center md:w-full md:hidden">
             <CircleButton>Read article</CircleButton>
           </div>
         </a>
