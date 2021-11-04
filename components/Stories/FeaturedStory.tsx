@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Post } from "../../types/Blog";
@@ -31,8 +32,10 @@ const FeaturedStory = ({ post }: Props) => (
         </p>
 
         <div className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12">
-          <img
+          <Image
             src={post.cover_image || "/static/featured-article.png"}
+            height={425}
+            width={1000}
             alt="Featured story"
             className="object-cover"
           />

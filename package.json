@@ -21,7 +21,8 @@
     "react-syntax-highlighter": "^15.4.4",
     "react-typing-effect": "^2.0.5",
     "rehype-raw": "^6.1.0",
-    "remark-gfm": "^3.0.0"
+    "remark-gfm": "^3.0.0",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
     "@types/node": "^16.11.6",

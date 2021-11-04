@@ -38,7 +38,11 @@ export const getStaticMetaData = (slug: string) => {
  * Extracts the AWS img source URL from Cloudinary's img proxy.
  * Returns the original URL if the extraction was unsuccessful,
  */
-export const parseCloudinarySrcImg = (url: string) => {
+export const parseCloudinarySrcImg = (url: string | null) => {
+  if (!url) {
+    return null;
+  }
+
   const srcRegex =
     /https?:\/\/res\.cloudinary\.com\/.+\/(https?:\/\/dev-to-uploads\.s3\.amazonaws\.com\/.+\/\w+\.\w{2,4})/i;
 

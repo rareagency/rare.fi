@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { c } from "../../utils/classnames";
 
@@ -22,12 +23,30 @@ const BlogHeader = ({
 }: Props) => {
   return (
     <header className="col-all layout-grid mt-48 sm:mt-24">
-      <img
+      {/* <img
         src={imgUrl}
         alt={imgAlt}
         className="col-all object-cover w-full"
         style={{ minHeight: "20rem", maxHeight: "35rem" }}
-      />
+      /> */}
+
+      <div
+        className="col-all w-full object-cover overflow-hidden"
+        style={{
+          minHeight: "20rem",
+          maxHeight: "25rem",
+          objectPosition: "50% 5%",
+        }}
+      >
+        <Image
+          src={imgUrl}
+          alt={imgAlt}
+          className="object-cover"
+          layout="responsive"
+          width={1000}
+          height={200}
+        />
+      </div>
 
       <article
         className={c(
