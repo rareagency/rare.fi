@@ -11,6 +11,7 @@
   "dependencies": {
     "emoji-dictionary": "^1.0.11",
     "next": "^12.0.2",
+    "plaiceholder": "^2.2.0",
     "react": "^17.0.2",
     "react-calendly": "^2.2.2",
     "react-dom": "^17.0.2",

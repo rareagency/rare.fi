@@ -1,3 +1,4 @@
+import { getPlaiceholder } from "plaiceholder";
 import React from "react";
 import SkaterBlock from "../../components/SkaterBlock";
 import BlogPosts from "../../components/Stories/BlogPosts";
@@ -8,7 +9,6 @@ import staticPosts from "../../posts.json";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
 import { fetchArticles } from "../../utils/api";
-import { staticPlaceholder } from "../../utils/blog";
 
 interface Props {
   posts: (Article | Post)[];
@@ -31,9 +31,7 @@ export const getStaticProps = async () => {
   const articles = await fetchArticles();
   const withPlaceholders = await Promise.all(
     [...articles, ...staticPosts].map(async (article: Article | Post) => {
-      // TODO: enable dynamic generation of placeholders
-      // const { base64 } = await getPlaiceholder(article.cover_image);
-      const base64 = staticPlaceholder;
+      const { base64 } = await getPlaiceholder(article.cover_image);
       return { ...article, cover_image_placeholder: base64 };
     })
   );
