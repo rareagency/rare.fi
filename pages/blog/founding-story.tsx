@@ -16,6 +16,7 @@ const BlogDetail = () => {
         title={metaData.title}
         imgUrl={metaData.cover_image}
         imgAlt={metaData.cover_image_alt || ""}
+        imgPlaceholder={metaData.cover_image_placeholder}
         tags={metaData.tags}
         intro={metaData.description}
         publishedAt={metaData.readable_publish_date}

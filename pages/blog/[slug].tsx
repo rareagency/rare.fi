@@ -38,7 +38,8 @@ const Post = ({ article }: Props) => {
       <BlogHeader
         title={article.title}
         imgUrl={article.cover_image}
-        imgAlt="cover image"
+        imgAlt="Cover image"
+        imgPlaceholder={article.cover_image_placeholder}
         tags={article.tags}
         publishedAt={article.readable_publish_date}
         readLength={article.reading_time_minutes}

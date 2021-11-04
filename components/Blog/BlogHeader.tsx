@@ -5,6 +5,7 @@ import { c } from "../../utils/classnames";
 interface Props {
   imgUrl: string;
   imgAlt: string;
+  imgPlaceholder?: string;
   title: string;
   intro?: string;
   tags?: string[];
@@ -15,6 +16,7 @@ interface Props {
 const BlogHeader = ({
   imgUrl,
   imgAlt,
+  imgPlaceholder,
   title,
   tags,
   intro,
@@ -30,13 +32,25 @@ const BlogHeader = ({
           minHeight: "20rem",
         }}
       >
-        <Image
-          src={imgUrl}
-          alt={imgAlt}
-          className="object-cover"
-          layout="fill"
-          priority
-        />
+        {imgPlaceholder ? (
+          <Image
+            src={imgUrl}
+            alt={imgAlt}
+            className="object-cover"
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={imgPlaceholder}
+            priority
+          />
+        ) : (
+          <Image
+            src={imgUrl}
+            alt={imgAlt}
+            className="object-cover"
+            layout="fill"
+            priority
+          />
+        )}
       </div>
 
       <article
