@@ -1,4 +1,5 @@
 import React from "react";
+import { daysPassed } from "../../utils/blog";
 import { c } from "../../utils/classnames";
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
   intro?: string;
   tags?: string[];
   publishedAt: string;
+  publishedAtReadable: string;
   readLength?: number;
 }
 
@@ -17,6 +19,7 @@ const BlogHeader = ({
   title,
   tags,
   intro,
+  publishedAtReadable,
   publishedAt,
   readLength,
 }: Props) => {
@@ -51,12 +54,15 @@ const BlogHeader = ({
           )}
 
           <footer className="mt-8 uppercase tag flex items-center sm:mt-3">
-            <img
-              src="/static/icons/fresh.svg"
-              className="w-24 mr-4"
-              alt="Fresh"
-            />
-            {`${publishedAt} `}
+            {!daysPassed(publishedAt, 30) && (
+              <img
+                src="/static/icons/fresh.svg"
+                className="w-24 mr-4"
+                alt="Fresh"
+              />
+            )}
+
+            {`${publishedAtReadable} `}
             {readLength && `/ ${readLength} min read`}
           </footer>
         </section>

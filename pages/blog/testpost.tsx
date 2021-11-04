@@ -17,7 +17,8 @@ const BlogDetail = () => {
         imgUrl="https://via.placeholder.com/1980x960.jpg"
         imgAlt="placeholder"
         tags={["github", "azure"]}
-        publishedAt="Jan 1"
+        publishedAtReadable="Jan 1"
+        publishedAt="2021-01-01T12:00:00Z"
         readLength={2}
       />
 
