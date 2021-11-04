@@ -11,7 +11,8 @@ export const ContactRiku = () => (
 
     <p className="paragraph col-start-6 col-span-2 self-center lg:col-all lg:px-8 lg:mt-20">
       Hi, I&apos;m Riku –<br />
-      Lead Developer &<br /> Co-Founder of Rare.
+      Lead Developer &amp;
+      <br /> Co-Founder of Rare.
       <br />
       <br />
       I&apos;m also your best pal to explore your unique needs, strengths and

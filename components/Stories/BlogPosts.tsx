@@ -13,7 +13,7 @@ const BlogPosts = ({ posts }: Props) => {
   return (
     <section
       id="blog-posts"
-      className="layout-grid col-start-2 col-span-6 pt-16"
+      className="layout-grid col-start-2 col-span-6 pt-12"
     >
       {/*<div className="col-start-6 col-span-2 pt-16 flex justify-center">
         <ul className="table-of-contents">
@@ -50,11 +50,7 @@ const BlogPosts = ({ posts }: Props) => {
             image={post.cover_image}
             imageAlt={`Cover image of ${post.title}`}
             imagePlaceholder={post.cover_image_placeholder}
-            title={
-              <>
-                <span className="tag font-bold">{post.tags}</span>
-              </>
-            }
+            title={<span className="tag font-bold">{post.tags}</span>}
             href={`/blog/${chooseSlug(post)}`}
             header={post.title}
           />
