@@ -48,9 +48,9 @@ const MoreStories = ({ posts }: Props) => {
             image={post.cover_image}
             imageAlt={`Cover image of ${post.title}`}
             title={
-              <>
+              post.tags.length > 0 && (
                 <span className="tag font-bold">{post.tags}</span>
-              </>
+              )
             }
             href={`/blog/${chooseSlug(post)}`}
             header={post.title}

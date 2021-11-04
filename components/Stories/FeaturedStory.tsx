@@ -32,7 +32,7 @@ const FeaturedStory = ({ post }: Props) => (
         </p>
 
         <div
-          className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12"
+          className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12 max-w-full sm:h-auto"
           style={{ aspectRatio: "42/17", overflow: "hidden" }}
         >
           {post.cover_image_placeholder ? (

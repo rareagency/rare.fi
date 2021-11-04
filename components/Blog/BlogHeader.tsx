@@ -38,12 +38,7 @@ const BlogHeader = ({
         style={{ maxWidth: "1535px" }}
       >
         <section className="col-start-2 col-span-6">
-          <h2
-            className="mb-10 sm:text-xl sm:mb-3"
-            style={{ lineHeight: "120%", letterSpacing: "0.2rem" }}
-          >
-            {title}
-          </h2>
+          <h2 className="mb-10 sm:text-xl sm:mb-3 tracking-wider">{title}</h2>
 
           {intro && <div className="sm:text-sm">{intro}</div>}
 

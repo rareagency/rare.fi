@@ -18,7 +18,7 @@ const BlogAuthorSection = ({
   instagramUrl,
 }: Props) => {
   return (
-    <aside className="col-start-6 col-span-2 flex flex-col items-center xl:col-all xl:mb-12">
+    <aside className="col-start-6 col-span-2 flex flex-col items-center xl:col-all xl:mb-12 sm:mb-8">
       <img
         className="mb-4"
         src={avatarUrl}
