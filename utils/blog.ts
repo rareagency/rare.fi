@@ -35,10 +35,13 @@ export const getStaticMetaData = (slug: string) => {
 };
 
 /**
- * Extracts the AWS img source URL from Cloudinary's img proxy.
+ * Sets custom Cloudinary image parameters.
  * Returns the original URL if the extraction was unsuccessful,
  */
-export const parseCloudinarySrcImg = (url: string | null) => {
+export const parseCloudinarySrcImg = (
+  url: string | null,
+  parameters?: string
+) => {
   if (!url) {
     return null;
   }
@@ -47,7 +50,11 @@ export const parseCloudinarySrcImg = (url: string | null) => {
     /https?:\/\/res\.cloudinary\.com\/.+\/(https?:\/\/dev-to-uploads\.s3\.amazonaws\.com\/.+\/\w+\.\w{2,4})/i;
 
   const srcUrl = url.match(srcRegex);
-  return srcUrl && srcUrl[1] ? srcUrl[1] : url;
+  return srcUrl && srcUrl[1]
+    ? `https://res.cloudinary.com/practicaldev/image/fetch/${
+        parameters || "c_scale,f_auto,h_1200,q_auto"
+      }/${srcUrl[1]}`
+    : url;
 };
 
 // Generated with https://png-pixel.com/
