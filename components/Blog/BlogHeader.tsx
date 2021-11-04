@@ -23,28 +23,19 @@ const BlogHeader = ({
 }: Props) => {
   return (
     <header className="col-all layout-grid mt-48 sm:mt-24">
-      {/* <img
-        src={imgUrl}
-        alt={imgAlt}
-        className="col-all object-cover w-full"
-        style={{ minHeight: "20rem", maxHeight: "35rem" }}
-      /> */}
-
       <div
-        className="col-all w-full object-cover overflow-hidden"
+        className="col-all w-full relative z-0"
         style={{
+          height: "35rem",
           minHeight: "20rem",
-          maxHeight: "25rem",
-          objectPosition: "50% 5%",
         }}
       >
         <Image
           src={imgUrl}
           alt={imgAlt}
           className="object-cover"
-          layout="responsive"
-          width={1000}
-          height={200}
+          layout="fill"
+          priority
         />
       </div>
 
@@ -52,7 +43,7 @@ const BlogHeader = ({
         className={c(
           "col-all layout-grid bg-light-yellow",
           "mx-auto py-16 px-8 -mt-64",
-          "md:-mt-4 2xl:w-full 2xl:-mt-24 sm:py-8"
+          "md:-mt-4 2xl:w-full 2xl:-mt-24 sm:py-8 z-10"
         )}
         style={{ maxWidth: "1535px" }}
       >
