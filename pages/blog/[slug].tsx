@@ -35,7 +35,8 @@ const Post = ({ article }: Props) => {
         imgUrl={article.cover_image}
         imgAlt="cover image"
         tags={article.tags}
-        publishedAt={article.readable_publish_date}
+        publishedAtReadable={article.readable_publish_date}
+        publishedAt={article.published_at}
         readLength={article.reading_time_minutes}
       />
 

@@ -18,7 +18,8 @@ const BlogDetail = () => {
         imgAlt={metaData.cover_image_alt || ""}
         tags={metaData.tags}
         intro={metaData.description}
-        publishedAt={metaData.readable_publish_date}
+        publishedAtReadable={metaData.readable_publish_date}
+        publishedAt={metaData.published_at}
         readLength={metaData.reading_time_minutes}
       />
 

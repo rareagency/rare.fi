@@ -34,6 +34,14 @@ export const getStaticMetaData = (slug: string) => {
   return foundPosts[0];
 };
 
+/**
+ * Returns if more than n days has passed since given time
+ */
+export const daysPassed = (time: string, days: number) => {
+  const daysAgo = new Date(time).valueOf() + days * 24 * 60 * 60 * 1000;
+  return Date.now() > daysAgo;
+};
+
 // Generated with https://png-pixel.com/
 export const staticPlaceholder =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcvBQAAdEBOulIO2MAAAAASUVORK5CYII=";
