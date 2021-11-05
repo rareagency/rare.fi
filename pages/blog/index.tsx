@@ -21,11 +21,14 @@ const Blog = ({ posts }: Props) => {
   const nonfeaturedPosts = posts.filter(
     (post) => chooseSlug(post) !== staticBlog.featured_post_slug
   );
+  const shiftSlice = featuredPost ? 0 : 1;
 
   return (
     <Layout title="Stories - Rare Tampere">
       <FeaturedStory post={featuredPost || nonfeaturedPosts[0]} />
-      <BlogPosts posts={nonfeaturedPosts.slice(featuredPost ? 0 : 1, 5)} />
+      <BlogPosts
+        posts={nonfeaturedPosts.slice(0 + shiftSlice, 4 + shiftSlice)}
+      />
       <SkaterBlock buttonUrl="/contact-us" buttonTxt="Dare to join Rare">
         Rare family welcomes people of any shape and form
       </SkaterBlock>
