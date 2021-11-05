@@ -15,18 +15,17 @@ interface Props {
 }
 
 const Blog = ({ posts }: Props) => {
-  let featuredPost = null;
-  posts.forEach((post, i) => {
-    if (chooseSlug(post) === staticBlog.featured_post_slug) {
-      featuredPost = post;
-      posts.splice(i, 1);
-    }
-  });
+  const featuredPost = posts.find(
+    (post) => chooseSlug(post) === staticBlog.featured_post_slug
+  );
+  const nonfeaturedPosts = posts.filter(
+    (post) => chooseSlug(post) !== staticBlog.featured_post_slug
+  );
 
   return (
     <Layout title="Stories - Rare Tampere">
-      <FeaturedStory post={featuredPost || posts[0]} />
-      <BlogPosts posts={posts.slice(featuredPost ? 0 : 1, 5)} />
+      <FeaturedStory post={featuredPost || nonfeaturedPosts[0]} />
+      <BlogPosts posts={nonfeaturedPosts.slice(featuredPost ? 0 : 1, 5)} />
       <SkaterBlock buttonUrl="/contact-us" buttonTxt="Dare to join Rare">
         Rare family welcomes people of any shape and form
       </SkaterBlock>
