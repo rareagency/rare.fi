@@ -22,10 +22,7 @@ const BlogPostCard = ({
 }: StoryProps) => (
   <Link href={href}>
     <a className="group block">
-      <div
-        className="mb-4 md:mb-2"
-        style={{ aspectRatio: "42/17", overflow: "hidden" }}
-      >
+      <div className="mb-2">
         {imagePlaceholder ? (
           <Image
             src={image}
@@ -34,9 +31,16 @@ const BlogPostCard = ({
             height={425}
             placeholder="blur"
             blurDataURL={imagePlaceholder}
+            className="object-cover"
           />
         ) : (
-          <Image src={image} alt={imageAlt} width={1075} height={425} />
+          <Image
+            src={image}
+            alt={imageAlt}
+            width={1075}
+            height={425}
+            className="object-cover"
+          />
         )}
       </div>
       {title && <span className="tag text-mid-blue">{title}</span>}
