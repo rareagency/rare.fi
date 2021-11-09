@@ -8,14 +8,15 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
 import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
+import headerImg from "../../public/static/blog/founding-story/header.jpg";
 
 const BlogDetail = () => {
   return (
     <Layout title="Test blog post">
       <BlogHeader
         title="What I learned from"
-        imgUrl="https://via.placeholder.com/1980x960.jpg"
-        imgAlt="placeholder"
+        image={headerImg}
+        imageAlt="placeholder"
         tags={["github", "azure"]}
         publishedAtReadable="Jan 1"
         publishedAt="2021-01-01T12:00:00Z"

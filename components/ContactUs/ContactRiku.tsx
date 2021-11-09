@@ -1,18 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import { staticPlaceholder } from "../../utils/blog";
+import rikuImg from "../../public/static/pictures/riku-rouvila.jpg";
 import TextLink from "../TextLink";
 
 export const ContactRiku = () => (
   <section id="contact-riku" className="col-all layout-grid p-0 mt-48 md:mt-16">
     <div className="col-start-2 col-span-4 md:col-span-6 lg:col-start-1 lg:col-span-6 lg:px-8">
       <Image
-        src="/static/pictures/riku-rouvila.jpg"
+        src={rikuImg}
         alt="Riku Rouvila - Lead developer and Co-Founder of the company"
-        width={626}
-        height={415}
         placeholder="blur"
-        blurDataURL={staticPlaceholder}
         className="object-cover"
       />
     </div>

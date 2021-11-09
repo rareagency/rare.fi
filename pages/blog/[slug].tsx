@@ -32,8 +32,9 @@ const Post = ({ article }: Props) => {
     <Layout title={article.title}>
       <BlogHeader
         title={article.title}
-        imgUrl={article.cover_image}
-        imgAlt="cover image"
+        image={article.cover_image}
+        imageAlt="cover image"
+        imagePlaceholder={article.cover_image_placeholder}
         tags={article.tags}
         publishedAtReadable={article.readable_publish_date}
         publishedAt={article.published_at}
