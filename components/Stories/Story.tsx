@@ -42,7 +42,7 @@ const Story = ({
             placeholder="blur"
             blurDataURL={staticPlaceholder}
             className="object-cover"
-            unoptimized={isStaticImage(image)}
+            unoptimized={!isStaticImage(image)}
           />
         ) : (
           <Image
