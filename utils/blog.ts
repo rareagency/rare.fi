@@ -45,6 +45,13 @@ export const daysPassed = (time: string, days: number) => {
   return Date.now() > daysAgo;
 };
 
+/**
+ * Returns true if the given image is a static local image.
+ */
+export const isStaticImage = (path: string) => {
+  return path.startsWith("/static/");
+};
+
 // Generated with https://png-pixel.com/
 export const staticPlaceholder =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOcvBQAAdEBOulIO2MAAAAASUVORK5CYII=";
