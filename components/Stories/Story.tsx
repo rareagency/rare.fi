@@ -8,7 +8,7 @@ import CircleButton from "../CircleButton";
 type StoryProps = {
   title?: ReactNode;
   header?: ReactNode;
-  image: string;
+  image: string | StaticImageData;
   imageAlt?: string;
   link: string;
   orientation?: "left" | "right";
@@ -33,16 +33,25 @@ const Story = ({
           }
         )}
       >
-        <Image
-          src={image}
-          alt={imageAlt}
-          height={450}
-          width={600}
-          placeholder="blur"
-          blurDataURL={staticPlaceholder}
-          className="object-cover"
-          unoptimized={isStaticImage(image)}
-        />
+        {typeof image === "string" ? (
+          <Image
+            src={image}
+            alt={imageAlt}
+            height={450}
+            width={600}
+            placeholder="blur"
+            blurDataURL={staticPlaceholder}
+            className="object-cover"
+            unoptimized={isStaticImage(image)}
+          />
+        ) : (
+          <Image
+            src={image}
+            alt={imageAlt}
+            placeholder="blur"
+            layout="responsive"
+          />
+        )}
       </div>
     </Link>
 

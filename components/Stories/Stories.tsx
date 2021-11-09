@@ -1,4 +1,6 @@
 import React from "react";
+import firstStoryImg from "../../public/static/blog/founding-story/header.jpg";
+import secondStoryImg from "../../public/static/pictures/stock2.jpg";
 import { getStaticMetaData } from "../../utils/blog";
 import Button from "../Button";
 import TextLink from "../TextLink";
@@ -19,7 +21,7 @@ const Stories = () => {
       />
 
       <Story
-        image={foundingStory.cover_image}
+        image={firstStoryImg}
         imageAlt={foundingStory.cover_image_alt}
         link={`/blog/${foundingStory.slug}`}
         title="Story"
@@ -27,7 +29,7 @@ const Stories = () => {
         orientation="left"
       />
       <Story
-        image="/static/pictures/stock2.svg"
+        image={secondStoryImg}
         imageAlt="Stock photo"
         link={`/#`}
         title="Career story"
