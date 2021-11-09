@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { isStaticImage } from "../../utils/blog";
 
 type StoryProps = {
   title?: React.ReactNode;
@@ -32,6 +33,7 @@ const BlogPostCard = ({
             placeholder="blur"
             blurDataURL={imagePlaceholder}
             className="object-cover"
+            unoptimized={isStaticImage(image)}
           />
         ) : (
           <Image
@@ -40,6 +42,7 @@ const BlogPostCard = ({
             width={1075}
             height={425}
             className="object-cover"
+            unoptimized={isStaticImage(image)}
           />
         )}
       </div>
