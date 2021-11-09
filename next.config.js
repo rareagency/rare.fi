@@ -9,4 +9,5 @@ const nextConfig = {
   defaultLocale: "en-US",
 };
 
+require("sharp");
 module.exports = nextConfig;
