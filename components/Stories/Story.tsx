@@ -1,12 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
+import { isStaticImage, staticPlaceholder } from "../../utils/blog";
 import { c } from "../../utils/classnames";
 import CircleButton from "../CircleButton";
 
 type StoryProps = {
   title?: ReactNode;
   header?: ReactNode;
-  image?: string;
+  image: string;
   imageAlt?: string;
   link: string;
   orientation?: "left" | "right";
@@ -22,9 +24,7 @@ const Story = ({
 }: StoryProps) => (
   <article className="pt-24 col-all layout-grid md:pt-4 md:pb-2">
     <Link href={link} aria-label={`Read ${header}`} passHref>
-      <img
-        src={image}
-        alt={imageAlt}
+      <div
         className={c(
           "col-span-3 md:col-span-full md:w-full md:px-0 lg:order-2 cursor-pointer",
           {
@@ -32,7 +32,18 @@ const Story = ({
             "col-start-5": orientation === "right",
           }
         )}
-      />
+      >
+        <Image
+          src={image}
+          alt={imageAlt}
+          height={450}
+          width={600}
+          placeholder="blur"
+          blurDataURL={staticPlaceholder}
+          className="object-cover"
+          unoptimized={isStaticImage(image)}
+        />
+      </div>
     </Link>
 
     <div

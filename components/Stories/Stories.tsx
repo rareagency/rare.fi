@@ -15,7 +15,7 @@ const Stories = () => {
       <img
         src="/static/rare_est.svg"
         alt="Rare Est. 2019"
-        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2 pointer-events-none"
+        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2 pointer-events-none z-10"
       />
 
       <Story
