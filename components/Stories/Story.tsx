@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import { isStaticImage, staticPlaceholder } from "../../utils/blog";
+import { staticPlaceholder } from "../../utils/blog";
 import { c } from "../../utils/classnames";
 import CircleButton from "../CircleButton";
 
@@ -42,7 +42,7 @@ const Story = ({
             placeholder="blur"
             blurDataURL={staticPlaceholder}
             className="object-cover"
-            unoptimized={!isStaticImage(image)}
+            unoptimized
           />
         ) : (
           <Image
@@ -50,6 +50,7 @@ const Story = ({
             alt={imageAlt}
             placeholder="blur"
             layout="responsive"
+            unoptimized
           />
         )}
       </div>
