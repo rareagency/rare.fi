@@ -7,6 +7,7 @@ import JourneyCircle from "./JourneyCircle";
 const textBoxClass = c(`
   text-off-white
   inline-block
+  md-tag
   md:text-lg
   md:text-center
 `);
@@ -36,8 +37,10 @@ const ContactUs = () => {
 
       <div className="text-center col-start-4 col-span-2 lg:row-start-2 lg:col-span-full lg:justify-self-center lg:flex lg:flex-col lg:items-center lg:mb-16 md:mb-8">
         <span className={textBoxClass + " tag"}>
-          Bring modern tech &<br />
-          practices to give a<br />
+          Bring modern tech &amp;
+          <br />
+          practices to give a
+          <br />
           headstart
         </span>
 
@@ -54,7 +57,7 @@ const ContactUs = () => {
         <span className={textBoxClass + " tag"}>
           Inject a missing
           <br />
-          capability & skill
+          capability &amp; skill
           <br />
           to your team
         </span>
@@ -70,7 +73,7 @@ const ContactUs = () => {
       <h2 className="h2-small col-all text-off-white pt-8 text-center md:w-128 uppercase font-bold md:pt-0">
         We adapt to our client&apos;s
         <br />
-        environment & needs
+        environment &amp; needs
       </h2>
       <h4 className="col-all text-off-white pt-8 text-center sm:text-[18px]">
         Let&apos;s explore yours

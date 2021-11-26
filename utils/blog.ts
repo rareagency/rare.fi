@@ -1,4 +1,4 @@
-import posts from "../posts.json";
+import staticBlog from "../blog.json";
 import { Post } from "../types/Blog";
 import { Article } from "../types/Devto";
 
@@ -30,8 +30,19 @@ export const chooseSlug = (blogPost: Post | Article) => {
 };
 
 export const getStaticMetaData = (slug: string) => {
-  const foundPosts: Post[] = posts.filter((post) => post.slug === slug);
+  const foundPosts: Post[] = staticBlog.posts.filter(
+    (post) => post.slug === slug
+  );
+
   return foundPosts[0];
+};
+
+/**
+ * Returns if more than n days has passed since given time
+ */
+export const daysPassed = (time: string, days: number) => {
+  const daysAgo = new Date(time).valueOf() + days * 24 * 60 * 60 * 1000;
+  return Date.now() > daysAgo;
 };
 
 // Generated with https://png-pixel.com/

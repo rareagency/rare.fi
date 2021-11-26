@@ -5,8 +5,8 @@ import BlogImageRow from "../../components/Blog/BlogImageRow";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
 import Layout from "../../layouts/Page";
+import headerImg from "../../public/static/blog/founding-story/header.jpg";
 import { getStaticMetaData } from "../../utils/blog";
-
 const metaData = getStaticMetaData("founding-story");
 
 const BlogDetail = () => {
@@ -14,11 +14,12 @@ const BlogDetail = () => {
     <Layout title={metaData.title}>
       <BlogHeader
         title={metaData.title}
-        imgUrl={metaData.cover_image}
-        imgAlt={metaData.cover_image_alt || ""}
+        image={headerImg}
+        imageAlt={metaData.cover_image_alt || ""}
         tags={metaData.tags}
         intro={metaData.description}
-        publishedAt={metaData.readable_publish_date}
+        publishedAtReadable={metaData.readable_publish_date}
+        publishedAt={metaData.published_at}
         readLength={metaData.reading_time_minutes}
       />
 

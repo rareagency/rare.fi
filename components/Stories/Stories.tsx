@@ -1,4 +1,6 @@
 import React from "react";
+import firstStoryImg from "../../public/static/blog/founding-story/header.jpg";
+import secondStoryImg from "../../public/static/pictures/stock2.jpg";
 import { getStaticMetaData } from "../../utils/blog";
 import Button from "../Button";
 import TextLink from "../TextLink";
@@ -15,11 +17,11 @@ const Stories = () => {
       <img
         src="/static/rare_est.svg"
         alt="Rare Est. 2019"
-        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2 pointer-events-none"
+        className="rare-est col-start-2 absolute transform -translate-y-1/3 md:w-1/2 md:-translate-y-1/2 pointer-events-none z-10"
       />
 
       <Story
-        image={foundingStory.cover_image}
+        image={firstStoryImg}
         imageAlt={foundingStory.cover_image_alt}
         link={`/blog/${foundingStory.slug}`}
         title="Story"
@@ -27,7 +29,7 @@ const Stories = () => {
         orientation="left"
       />
       <Story
-        image="/static/pictures/stock2.svg"
+        image={secondStoryImg}
         imageAlt="Stock photo"
         link={`/#`}
         title="Career story"

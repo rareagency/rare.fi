@@ -31,10 +31,7 @@ const FeaturedStory = ({ post }: Props) => (
           </span>
         </p>
 
-        <div
-          className="relative md:h-[200px] lg:h-[350px] h-[425px] mt-12 max-w-full sm:h-auto"
-          style={{ aspectRatio: "42/17", overflow: "hidden" }}
-        >
+        <div className="relative mt-12">
           {post.cover_image_placeholder ? (
             <Image
               src={post.cover_image}
@@ -44,6 +41,7 @@ const FeaturedStory = ({ post }: Props) => (
               placeholder="blur"
               blurDataURL={post.cover_image_placeholder}
               className="object-cover"
+              unoptimized
             />
           ) : (
             <Image
@@ -52,6 +50,7 @@ const FeaturedStory = ({ post }: Props) => (
               width={1075}
               height={425}
               className="object-cover"
+              unoptimized
             />
           )}
         </div>

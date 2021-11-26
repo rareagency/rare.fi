@@ -1,17 +1,24 @@
+import Image from "next/image";
 import React from "react";
+import rikuImg from "../../public/static/pictures/riku-rouvila.jpg";
 import TextLink from "../TextLink";
 
 export const ContactRiku = () => (
   <section id="contact-riku" className="col-all layout-grid p-0 mt-48 md:mt-16">
-    <img
-      src="/static/pictures/riku-rouvila.jpg"
-      alt="Riku Rouvila - Lead developer and Co-Founder of the company"
-      className="col-start-2 col-span-4 md:col-span-6 lg:col-start-1 lg:col-span-6 lg:px-8"
-    />
+    <div className="col-start-2 col-span-4 md:col-span-6 lg:col-start-1 lg:col-span-6 lg:px-8">
+      <Image
+        src={rikuImg}
+        alt="Riku Rouvila - Lead developer and Co-Founder of the company"
+        placeholder="blur"
+        className="object-cover"
+        unoptimized
+      />
+    </div>
 
     <p className="paragraph col-start-6 col-span-2 self-center lg:col-all lg:px-8 lg:mt-20">
       Hi, I&apos;m Riku –<br />
-      Lead Developer &<br /> Co-Founder of Rare.
+      Lead Developer &amp;
+      <br /> Co-Founder of Rare.
       <br />
       <br />
       I&apos;m also your best pal to explore your unique needs, strengths and

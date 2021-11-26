@@ -1,24 +1,35 @@
 import { getPlaiceholder } from "plaiceholder";
 import React from "react";
+import staticBlog from "../../blog.json";
 import SkaterBlock from "../../components/SkaterBlock";
 import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Page";
-import staticPosts from "../../posts.json";
 import { Post } from "../../types/Blog";
 import { Article } from "../../types/Devto";
 import { fetchArticles } from "../../utils/api";
+import { chooseSlug } from "../../utils/blog";
 
 interface Props {
   posts: (Article | Post)[];
 }
 
 const Blog = ({ posts }: Props) => {
+  const featuredPost = posts.find(
+    (post) => chooseSlug(post) === staticBlog.featured_post_slug
+  );
+  const nonfeaturedPosts = posts.filter(
+    (post) => chooseSlug(post) !== staticBlog.featured_post_slug
+  );
+  const shiftSlice = featuredPost ? 0 : 1;
+
   return (
     <Layout title="Stories - Rare Tampere">
-      <FeaturedStory post={posts[0]} />
-      <BlogPosts posts={posts.slice(1, 5)} />
+      <FeaturedStory post={featuredPost || nonfeaturedPosts[0]} />
+      <BlogPosts
+        posts={nonfeaturedPosts.slice(0 + shiftSlice, 4 + shiftSlice)}
+      />
       <SkaterBlock buttonUrl="/contact-us" buttonTxt="Dare to join Rare">
         Rare family welcomes people of any shape and form
       </SkaterBlock>
@@ -30,7 +41,7 @@ const Blog = ({ posts }: Props) => {
 export const getStaticProps = async () => {
   const articles = await fetchArticles();
   const withPlaceholders = await Promise.all(
-    [...articles, ...staticPosts].map(async (article: Article | Post) => {
+    [...articles, ...staticBlog.posts].map(async (article: Article | Post) => {
       const { base64 } = await getPlaiceholder(article.cover_image);
       return { ...article, cover_image_placeholder: base64 };
     })
