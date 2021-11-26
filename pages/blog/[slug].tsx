@@ -1,6 +1,7 @@
 /* eslint-disable react/display-name */
 import emoji from "emoji-dictionary";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { getPlaiceholder } from "plaiceholder";
 import React from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -14,7 +15,7 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
 import { Article } from "../../types/Devto";
 import { fetchArticle, fetchArticles } from "../../utils/api";
-import { combineSlug, extractId, staticPlaceholder } from "../../utils/blog";
+import { combineSlug, extractId } from "../../utils/blog";
 
 function cleanUpMarkdown(markdown: string) {
   return markdown.replace(/{%.+%}/g, ""); // Remove Liquid tags
@@ -129,9 +130,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  // TODO: enable dynamic generation of placeholders
-  // const { base64 } = await getPlaiceholder(article.cover_image);
-  const base64 = staticPlaceholder;
+  const { base64 } = await getPlaiceholder(article.cover_image);
 
   return {
     props: { article: { ...article, cover_image_placeholder: base64 } },
