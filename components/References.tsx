@@ -17,7 +17,7 @@ const References = () => {
       id="references"
       className="layout-grid col-all justify-items-center py-32 px-8 sm:py-16 md:py-24 lg:gap-y-16 md:gap-y-8"
     >
-      <h5 className="col-start-2 col-span-6 pb-16 text-center md:pb-8">
+      <h5 className="text-center col-start-2 col-span-6 pb-16 lg:pb-8">
         Proudly delivered digital products with
       </h5>
       <div className={c(logoRow)}>
