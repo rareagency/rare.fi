@@ -5,13 +5,13 @@ import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
 import Layout from "../../layouts/Page";
 import imageTwo from "../../public/static/blog/founding-story/cihan-replying.jpg";
+import headerImg from "../../public/static/blog/founding-story/header.jpg";
 import imageOne from "../../public/static/blog/founding-story/janne-feeling-fabulous.jpg";
 import imageThree from "../../public/static/blog/founding-story/riku-after-solving-a-problem.jpg";
-import headerImg from "../../public/static/blog/founding-story/riku-solving-problem.jpg";
 import { getStaticMetaData } from "../../utils/blog";
 const metaData = getStaticMetaData("founding-story");
 
-const BlogDetail = () => {
+const FoundingStory = () => {
   return (
     <Layout title={metaData.title}>
       <BlogHeader
@@ -165,4 +165,4 @@ const BlogDetail = () => {
   );
 };
 
-export default BlogDetail;
+export default FoundingStory;
