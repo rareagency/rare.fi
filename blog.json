@@ -20,6 +20,26 @@
         "website_url": "https://rare.fi",
         "profile_image": "/static/icons/rare-icon-192.png"
       }
+    },
+    {
+      "title": "Meet Pyry, Full-Stack Software Developer",
+      "description":
+        "Like many others, Pyry's initial fascination with development came from the wild possibilities of the internet. As Pyry puts it himself, \"Culture grows so fast online, I've always enjoyed being online and connecting people\". There are a lot of things that people can achieve together once connected digitally as a single collective mind. It's a no-brainer that Pyry would ultimately choose the digital realm & software building as his profession.",
+      "readable_publish_date": "Jan 3",
+      "published_at": "2022-01-03T17:00:00Z",
+      "slug": "pyry-career-story",
+      "cover_image": "/static/blog/pyry-career-story/header.jpg",
+      "cover_image_alt": "Pyry and Oskari",
+      "cover_image_placeholder": "TODO: possibly pre-calculate these",
+      "reading_time_minutes": 2,
+      "tag_list": "rare",
+      "tags": ["rare"],
+      "user": {
+        "name": "Rare",
+        "github_username": "rareagency",
+        "website_url": "https://rare.fi",
+        "profile_image": "/static/icons/rare-icon-192.png"
+      }
     }
   ]
 }
