@@ -17,14 +17,7 @@ const Illustration = ({ icon, children }: IllustrationProps) => (
 
 const FeatureBox = () => {
   return (
-    <section className="layout-grid col-all pt-32 md:pt-8">
-      <h5 className="col-start-2 col-span-1 md:col-span-full">
-        Exceptional tech side
-      </h5>
-      <p className="paragraph col-start-4 col-span-4 md:col-span-full">
-        We fight mediocrity in development practices and insert ourselves to the
-        product teams to tackle projects with confidence, together.
-      </p>
+    <section className="pt-16 md:pt-8">
       <div className="row-start-2 col-start-2 col-span-6 pt-8 md:row-start-3">
         <div className="grid grid-cols-3 grid-rows-auto gap-16 md:gap-8 md:grid-cols-1 xl:grid-cols-2">
           <Illustration
