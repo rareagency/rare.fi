@@ -33,10 +33,10 @@ const PyryCareerStory = () => {
         <div className="col-span-5 xl:col-all">
           <BlogParagraph title="A dream of the modern consultancy">
             In many ways, being a part of Rare was meant to be. In a
-            conversation with Pyry&#39;s brother, Riku, who is a co-founder
+            conversation with Pyry&apos;s brother, Riku, who is a co-founder
             &amp; acting CEO of Rare, he noted how, being merely teenagers,
-            they&#39;ve been circulating an idea about starting their own agency
-            one day. It&#39;s important to experience how such software
+            they&apos;ve been circulating an idea about starting their own
+            agency one day. It&apos;s important to experience how such software
             consultancies are operated from the inside, which both Pyry &amp;
             Riku both did successfully.
           </BlogParagraph>
@@ -44,9 +44,9 @@ const PyryCareerStory = () => {
           <BlogParagraph>
             As a result, during his Computer Science studies Pyry was already
             successfully building software for the leading Finnish retail chain
-            &amp; culture venue platform in in Futurice, a known Finnish
-            software consultancy agency, and later opened his own freelancing
-            company.
+            &amp; culture venue platform in Futurice, a known Finnish software
+            consultancy agency, and practiced software development as a
+            freelancer.
           </BlogParagraph>
 
           <BlogStaticImage src={imageOne} alt="Wooden model hand" />
