@@ -44,9 +44,10 @@ const PyryCareerStory = () => {
 
           <BlogParagraph>
             As a result, during his Computer Science studies Pyry was already
-            successfully building software for [NAME COMPANIES] in Futurice, a
-            known Finnish software consultancy agency, and later opened his own
-            freelancing company.
+            successfully building software for the leading Finnish retail chain
+            &amp; culture venue platform in in Futurice, a known Finnish
+            software consultancy agency, and later opened his own freelancing
+            company.
           </BlogParagraph>
 
           <Image src={imageOne} alt="Wooden model hand" />
