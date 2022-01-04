@@ -2,7 +2,6 @@ import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogStaticImage from "../../components/Blog/BlogStaticImage";
-import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 import imageOne from "../../public/static/blog/pyry-career-story/hand.jpg";
 import headerImg from "../../public/static/blog/pyry-career-story/header.jpg";
@@ -74,9 +73,10 @@ const PyryCareerStory = () => {
         </div>
       </section>
 
-      <SkaterBlock buttonUrl="/" buttonTxt="Check open positions">
+      {/* TODO: When Careers page is finished */}
+      {/* <SkaterBlock buttonUrl="/" buttonTxt="Check open positions">
         Work with Pyry. Join Rare.
-      </SkaterBlock>
+      </SkaterBlock> */}
     </Layout>
   );
 };
