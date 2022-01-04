@@ -1,8 +1,8 @@
-import Image from "next/image";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import BlogQuote from "../../components/Blog/BlogQuote";
+import BlogStaticImage from "../../components/Blog/BlogStaticImage";
 import Layout from "../../layouts/Page";
 import imageTwo from "../../public/static/blog/founding-story/cihan-replying.jpg";
 import headerImg from "../../public/static/blog/founding-story/header.jpg";
@@ -62,12 +62,11 @@ const FoundingStory = () => {
             ourselves
           </BlogQuote>
 
-          <div style={{ width: 400 }}>
-            <Image
-              src={imageOne}
-              alt="Janne feeling fabulous on a Friday night"
-            />
-          </div>
+          <BlogStaticImage
+            src={imageOne}
+            alt="Janne feeling fabulous on a Friday night"
+            outerWidth={400}
+          />
 
           <BlogParagraph title="If you can think it, you can do it">
             Over the past decades, the digitalisation really took off. For the
@@ -100,9 +99,11 @@ const FoundingStory = () => {
             way to Rare through Koodiklinikka.
           </BlogParagraph>
 
-          <div style={{ width: 400 }}>
-            <Image src={imageTwo} alt="Cihan replying to Koodiklinikka peeps" />
-          </div>
+          <BlogStaticImage
+            src={imageTwo}
+            alt="Cihan replying to Koodiklinikka peeps"
+            outerWidth={400}
+          />
 
           <BlogQuote source="Riku" color="green">
             It&apos;s always that I see a problem and want to fix a problem of
@@ -137,7 +138,7 @@ const FoundingStory = () => {
             the cycle of learning
           </BlogQuote>
 
-          <Image
+          <BlogStaticImage
             src={imageThree}
             alt="Riku after solving a really challenging problem"
           />
