@@ -1,7 +1,7 @@
-import Image from "next/image";
 import BlogAuthorSection from "../../components/Blog/BlogAuthorSection";
 import BlogHeader from "../../components/Blog/BlogHeader";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
+import BlogStaticImage from "../../components/Blog/BlogStaticImage";
 import SkaterBlock from "../../components/SkaterBlock";
 import Layout from "../../layouts/Page";
 import imageOne from "../../public/static/blog/pyry-career-story/hand.jpg";
@@ -50,7 +50,7 @@ const PyryCareerStory = () => {
             company.
           </BlogParagraph>
 
-          <Image src={imageOne} alt="Wooden model hand" />
+          <BlogStaticImage src={imageOne} alt="Wooden model hand" />
 
           <BlogParagraph title="Pyry's journey with Rare">
             In 2019, Rare Agency found its place on the map of Tampere, and Pyry
@@ -62,7 +62,7 @@ const PyryCareerStory = () => {
             roles become.
           </BlogParagraph>
 
-          <Image src={imageTwo} alt="Pyry on phone" />
+          <BlogStaticImage src={imageTwo} alt="Pyry on phone" />
 
           <BlogParagraph title="What does Pyry like about Rare Agency?">
             Flexibility. It&apos;s a company full of autonomy and ownership,
