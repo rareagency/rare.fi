@@ -41,7 +41,6 @@ const FeaturedStory = ({ post }: Props) => (
               placeholder="blur"
               blurDataURL={post.cover_image_placeholder}
               className="object-cover"
-              unoptimized
             />
           ) : (
             <Image
@@ -50,7 +49,6 @@ const FeaturedStory = ({ post }: Props) => (
               width={1075}
               height={425}
               className="object-cover"
-              unoptimized
             />
           )}
         </div>

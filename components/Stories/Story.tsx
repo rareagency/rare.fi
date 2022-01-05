@@ -42,7 +42,6 @@ const Story = ({
             placeholder="blur"
             blurDataURL={staticPlaceholder}
             className="object-cover"
-            unoptimized
           />
         ) : (
           <Image
@@ -50,7 +49,6 @@ const Story = ({
             alt={imageAlt}
             placeholder="blur"
             layout="responsive"
-            unoptimized
           />
         )}
       </div>
