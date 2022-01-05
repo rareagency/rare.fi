@@ -1,12 +1,13 @@
 import React from "react";
 import firstStoryImg from "../../public/static/blog/founding-story/header.jpg";
-import secondStoryImg from "../../public/static/pictures/stock2.jpg";
+import secondStoryImg from "../../public/static/blog/pyry-career-story/header.jpg";
 import { getStaticMetaData } from "../../utils/blog";
 import Button from "../Button";
 import TextLink from "../TextLink";
 import Story from "./Story";
 
 const foundingStory = getStaticMetaData("founding-story");
+const pyryCareerStory = getStaticMetaData("pyry-career-story");
 
 const Stories = () => {
   return (
@@ -30,16 +31,10 @@ const Stories = () => {
       />
       <Story
         image={secondStoryImg}
-        imageAlt="Stock photo"
-        link={`/#`}
+        imageAlt={pyryCareerStory.cover_image_alt}
+        link={`/blog/${pyryCareerStory.slug}`}
         title="Career story"
-        header={
-          <>
-            Pyry&apos;s journey
-            <br />
-            with Rare
-          </>
-        }
+        header={pyryCareerStory.title}
         orientation="right"
       />
       <div className="pt-16 flex col-all justify-center md:hidden">
