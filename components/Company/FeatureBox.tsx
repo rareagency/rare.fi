@@ -47,12 +47,12 @@ const FeatureBox = () => {
             Proudly building high usability products to resolve painful needs
           </Illustration>
         </div>
-      </div>
 
-      <div className="mt-16 flex col-all justify-center">
-        <Button href="/contact-us" kind="secondary">
-          Learn how we apply it
-        </Button>
+        <div className="mt-16 flex justify-center">
+          <Button href="/contact-us" kind="secondary">
+            Learn how we apply it
+          </Button>
+        </div>
       </div>
     </section>
   );
