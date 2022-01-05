@@ -42,7 +42,6 @@ const BlogHeader = ({
             width={1075}
             height={425}
             className="object-cover"
-            unoptimized
           />
         ) : (
           <Image
@@ -50,7 +49,6 @@ const BlogHeader = ({
             alt={imageAlt}
             placeholder="blur"
             layout="responsive"
-            unoptimized
           />
         )}
       </div>

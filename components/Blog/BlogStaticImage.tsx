@@ -10,12 +10,12 @@ const BlogStaticImage = ({ src, alt, outerWidth }: Props) => {
   if (outerWidth) {
     return (
       <div style={{ width: outerWidth }}>
-        <Image src={src} alt={alt} placeholder="blur" unoptimized />
+        <Image src={src} alt={alt} placeholder="blur" />
       </div>
     );
   }
 
-  return <Image src={src} alt={alt} placeholder="blur" unoptimized />;
+  return <Image src={src} alt={alt} placeholder="blur" />;
 };
 
 export default BlogStaticImage;

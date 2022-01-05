@@ -32,7 +32,6 @@ const BlogPostCard = ({
             placeholder="blur"
             blurDataURL={imagePlaceholder}
             className="object-cover"
-            unoptimized
           />
         ) : (
           <Image
@@ -41,7 +40,6 @@ const BlogPostCard = ({
             width={1075}
             height={425}
             className="object-cover"
-            unoptimized
           />
         )}
       </div>

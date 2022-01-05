@@ -11,7 +11,6 @@ export const ContactRiku = () => (
         alt="Riku Rouvila - Lead developer and Co-Founder of the company"
         placeholder="blur"
         className="object-cover"
-        unoptimized
       />
     </div>
 
