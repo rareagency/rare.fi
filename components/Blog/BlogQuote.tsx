@@ -11,7 +11,7 @@ const BlogQuote = ({ source, color, children }: Props) => {
   return (
     <div
       className={c(
-        "my-12 text-3xl font-header-mono sm:text-[18px] md:text-[26px]",
+        "my-12 text-2xl font-header-mono sm:text-[18px] md:text-[26px]",
         color === "orange" ? "text-notification-red" : undefined,
         color === "green" ? "text-notification-green" : undefined
       )}

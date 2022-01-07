@@ -18,7 +18,7 @@ const BlogParagraph = ({ title, titleSize, children }: Props) => {
           {title}
         </header>
       )}
-      <div className="sm:text-base sm:tracking-normal">{children}</div>
+      <div className="text-xl sm:text-base sm:tracking-normal">{children}</div>
     </article>
   );
 };
