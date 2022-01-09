@@ -13,7 +13,7 @@ import BlogImage from "../../components/Blog/BlogImage";
 import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
-import { Article } from "../../types/Devto";
+import { Article } from "../../types/dev-to";
 import { fetchArticle, fetchArticles } from "../../utils/api";
 import { combineSlug, extractId } from "../../utils/blog";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Post } from "../../types/Blog";
-import { Article } from "../../types/Devto";
+import { Post } from "../../types/blog";
+import { Article } from "../../types/dev-to";
 import { chooseSlug } from "../../utils/blog";
 import { c } from "../../utils/classnames";
 import CircleButton from "../CircleButton";

@@ -1,4 +1,4 @@
-import { Article, RawArticle } from "../types/Devto";
+import { Article, RawArticle } from "../types/dev-to";
 import writers from "../writers.json";
 
 function sleep(ms = 1000) {
