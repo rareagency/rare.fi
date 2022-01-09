@@ -23,7 +23,7 @@ const BlogDetail = () => {
         readLength={2}
       />
 
-      <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
+      <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16 md:px-0">
         <BlogAuthorSection
           name="Teppo Testaaja"
           avatarUrl="https://via.placeholder.com/128.jpg"

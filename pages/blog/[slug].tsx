@@ -42,7 +42,7 @@ const Post = ({ article }: Props) => {
         readLength={article.reading_time_minutes}
       />
 
-      <section className="layout-grid col-span-6 col-start-2 sm:px-0 pb-32 px-8 mt-16">
+      <section className="layout-grid col-span-6 col-start-2 sm:px-0 pb-32 px-8 mt-16 md:px-0">
         <BlogAuthorSection
           name={article.user.name}
           avatarUrl={article.user.profile_image}

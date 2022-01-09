@@ -25,7 +25,7 @@ const FoundingStory = () => {
         readLength={metaData.reading_time_minutes}
       />
 
-      <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16">
+      <section className="layout-grid col-span-6 col-start-2 pb-32 px-8 mt-16 md:px-0">
         <BlogAuthorSection
           name={metaData.user.name}
           avatarUrl={metaData.user.profile_image}
