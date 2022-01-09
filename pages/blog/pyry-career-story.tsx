@@ -68,7 +68,7 @@ const PyryCareerStory = () => {
             competitive compensation, trust, and transparent communication.
             It&apos;s a place where you get to learn daily while making the best
             of your toolset and adapting to the stack of others. But above all,
-            Rare feels like working with friends.
+            at Rare I&apos;m working with my friends.
           </BlogParagraph>
         </div>
       </section>

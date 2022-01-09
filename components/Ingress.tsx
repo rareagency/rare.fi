@@ -11,7 +11,7 @@ const Ingress: React.FC<{ textColor?: "dark" | "light" }> = ({
         { "text-light": textColor === "light" }
       )}
     >
-      We insert sustainable digital development practives to enable product team
+      We insert sustainable digital development practices to enable product team
       excellence and technological growth that brings you ahead of the curve
     </span>
   </section>
