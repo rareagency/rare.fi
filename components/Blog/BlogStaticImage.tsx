@@ -9,7 +9,7 @@ interface Props {
 const BlogStaticImage = ({ src, alt, outerWidth }: Props) => {
   if (outerWidth) {
     return (
-      <div style={{ width: outerWidth }}>
+      <div style={{ width: outerWidth, maxWidth: "100%" }}>
         <Image src={src} alt={alt} placeholder="blur" />
       </div>
     );
