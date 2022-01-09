@@ -17,9 +17,10 @@ const CookieConsent = () => {
   useEffect(() => {
     if (consent === true) {
       hotjar.initialize(2110726, 6);
-      // TODO: Add production GA tracking code to the 2nd string
       ReactGA.initialize(
-        process.env.NODE_ENV !== "production" ? "G-GJYBBWVBDL" : "G-GJYBBWVBDL"
+        process.env.NODE_ENV !== "production"
+          ? "G-GJYBBWVBDL"
+          : "UA-153430933-1"
       );
       ReactGA.pageview(window.location.pathname + window.location.search);
     }
