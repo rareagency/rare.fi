@@ -26,7 +26,7 @@ const BlogCode = ({ className, inline, children }: Props) => {
     return (
       <code
         className={c(
-          "bg-gray-200 px-2 rounded-lg mt-6 block max-w-max overflow-x-auto whitespace-pre",
+          "bg-gray-200 px-2 rounded-lg mt-6 block max-w-max overflow-x-auto whitespace-pre md:text-base",
           className
         )}
       >
@@ -36,7 +36,12 @@ const BlogCode = ({ className, inline, children }: Props) => {
   }
 
   return (
-    <code className={c("bg-gray-200 px-2 rounded-lg inline-block", className)}>
+    <code
+      className={c(
+        "bg-gray-200 px-2 rounded-lg inline-block md:text-base",
+        className
+      )}
+    >
       {children}
     </code>
   );
