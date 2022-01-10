@@ -66,17 +66,9 @@
   h2,
   .h2 {
     @apply block font-header-mono;
-    font-size: 64px;
+    font-size: 40px;
     letter-spacing: 0.085em;
     line-height: 161.5%;
-
-    @media screen and (max-width: theme("screens.xl.max")) {
-      font-size: 50px;
-    }
-
-    @media screen and (max-width: theme("screens.lg.max")) {
-      font-size: 42px;
-    }
 
     @media screen and (max-width: theme("screens.md.max")) {
       font-size: 35px;
@@ -122,6 +114,8 @@
     font-weight: bold;
     line-height: 161.5%;
     letter-spacing: 0.085em;
+    margin-bottom: 32px;
+    margin-top: 32px;
 
     @media screen and (max-width: theme("screens.md.max")) {
       font-size: 30px;
