@@ -61,21 +61,11 @@ const BlogHeader = ({
         style={{ maxWidth: "1535px", zIndex: 1 }}
       >
         <section className="col-start-2 col-span-6">
-          <h2 className="h2-small mb-10 sm:text-xl sm:mb-3 tracking-wider">
-            {title}
-          </h2>
+          <h2 className="h2-small mb-10 sm:text-xl sm:mb-3">{title}</h2>
 
           {intro && (
             <div className="sm:text-sm text-xl tracking-wider">{intro}</div>
           )}
-
-          {/*tags && (
-            <div className="mt-4 text-[20px] sm:text-[14px]">
-              {tags.map((tag) => {
-                return `#${tag} `;
-              })}
-            </div>
-            )*/}
 
           <footer className="mt-8 uppercase tag flex items-center sm:mt-3 tracking-normal">
             {!daysPassed(publishedAt, 30) && (
