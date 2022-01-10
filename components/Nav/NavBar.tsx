@@ -34,9 +34,9 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
     <nav
       className={`${
         userIsScrolled && !menuIsOpen
-          ? "bg-action-purple"
-          : `${theme === "light" ? "bg-white" : "bg-black"}`
-      } w-full layout-grid col-all transition-all duration-300 z-20 fixed px-8`}
+          ? "bg-action-purple duration-300"
+          : `${theme === "light" ? "bg-white" : "bg-black"} duration-150`
+      } w-full layout-grid col-all transition-all z-20 fixed px-8`}
     >
       <div
         className={`${

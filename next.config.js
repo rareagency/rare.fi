@@ -7,8 +7,10 @@ const nextConfig = {
     formats: ["image/webp"],
     minimumCacheTTL: 2592000,
   },
-  locales: ["en-US"],
-  defaultLocale: "en-US",
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };
 
 require("sharp");

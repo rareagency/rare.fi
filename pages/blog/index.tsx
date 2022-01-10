@@ -6,8 +6,8 @@ import BlogPosts from "../../components/Stories/BlogPosts";
 import FeaturedStory from "../../components/Stories/FeaturedStory";
 import MoreStories from "../../components/Stories/MoreStories";
 import Layout from "../../layouts/Page";
-import { Post } from "../../types/Blog";
-import { Article } from "../../types/Devto";
+import { Post } from "../../types/blog";
+import { Article } from "../../types/dev-to";
 import { fetchArticles } from "../../utils/api";
 import { chooseSlug } from "../../utils/blog";
 

@@ -1,6 +1,6 @@
 import staticBlog from "../blog.json";
-import { Post } from "../types/Blog";
-import { Article } from "../types/Devto";
+import { Post } from "../types/blog";
+import { Article } from "../types/dev-to";
 
 /**
  * Combines article's slug and id while removing the redundant identifier from the slug.

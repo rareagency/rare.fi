@@ -13,7 +13,7 @@ import BlogImage from "../../components/Blog/BlogImage";
 import BlogList from "../../components/Blog/BlogList";
 import BlogParagraph from "../../components/Blog/BlogParagraph";
 import Layout from "../../layouts/Page";
-import { Article } from "../../types/Devto";
+import { Article } from "../../types/dev-to";
 import { fetchArticle, fetchArticles } from "../../utils/api";
 import { combineSlug, extractId } from "../../utils/blog";
 
@@ -42,7 +42,7 @@ const Post = ({ article }: Props) => {
         readLength={article.reading_time_minutes}
       />
 
-      <section className="layout-grid col-span-6 col-start-2 sm:px-0 pb-32 px-8 mt-16 md:px-0">
+      <section className="layout-grid col-span-6 col-start-2 sm:px-0 pb-16 px-8 mt-16 md:px-0">
         <BlogAuthorSection
           name={article.user.name}
           avatarUrl={article.user.profile_image}

@@ -21,7 +21,6 @@ const Base: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <html lang="en" />
       <Head>
         <title>{title ?? TITLE}</title>
         <meta charSet="utf-8" />
