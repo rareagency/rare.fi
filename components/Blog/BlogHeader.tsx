@@ -20,7 +20,6 @@ const BlogHeader = ({
   imageAlt,
   imagePlaceholder,
   title,
-  tags,
   intro,
   publishedAtReadable,
   publishedAt,
