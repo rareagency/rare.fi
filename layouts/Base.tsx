@@ -43,7 +43,7 @@ const Base: React.FC<Props> = ({
         />
       </Head>
 
-      <main className={c("layout-grid", kind)}>{children}</main>
+      <main className={c("layout-grid-base", kind)}>{children}</main>
 
       <CookieConsent />
 
