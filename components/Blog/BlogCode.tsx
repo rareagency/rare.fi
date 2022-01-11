@@ -15,7 +15,6 @@ const BlogCode = ({ className, inline, children }: Props) => {
       <SyntaxHighlighter
         customStyle={{ fontSize: 16, maxWidth: "85vw" }}
         language={match && match[1] ? match[1] : ""}
-        gpl
       >
         {/* Removes empty last line */}
         {String(children).replace(/\n$/, "")}
