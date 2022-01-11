@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Post } from "../../types/blog";
 import { Article } from "../../types/dev-to";
 import { chooseSlug } from "../../utils/blog";
+import AnimatedImage from "../AnimatedImage";
 
 interface Props {
   post: Article | Post;
@@ -33,7 +33,7 @@ const FeaturedStory = ({ post }: Props) => (
 
         <div className="relative mt-12">
           {post.cover_image_placeholder ? (
-            <Image
+            <AnimatedImage
               src={post.cover_image}
               alt="Featured story"
               width={1075}
@@ -43,7 +43,7 @@ const FeaturedStory = ({ post }: Props) => (
               className="object-cover"
             />
           ) : (
-            <Image
+            <AnimatedImage
               src={post.cover_image}
               alt="Featured story"
               width={1075}

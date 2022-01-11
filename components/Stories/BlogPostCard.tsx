@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import AnimatedImage from "../AnimatedImage";
 
 type StoryProps = {
   title?: React.ReactNode;
@@ -24,7 +24,7 @@ const BlogPostCard = ({
     <a className="group block">
       <div className="mb-2">
         {imagePlaceholder ? (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             width={1075}
@@ -34,7 +34,7 @@ const BlogPostCard = ({
             className="object-cover"
           />
         ) : (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             width={1075}
