@@ -62,11 +62,14 @@ const Post = ({ article }: Props) => {
                   {children}
                 </a>
               ),
+              h1: ({ children }) => (
+                <h2 className="sm:text-[22px] text-[30px]">{children}</h2>
+              ),
               h2: ({ children }) => (
-                <h3 className="sm:text-[20px] mt-6">{children}</h3>
+                <h3 className="sm:text-[20px] mt-12">{children}</h3>
               ),
               h3: ({ children }) => (
-                <h3 className="sm:text-[18px] mt-6">{children}</h3>
+                <h3 className="sm:text-[18px] text-[24px] mt-6">{children}</h3>
               ),
               h4: ({ children }) => <h4 className="mt-6">{children}</h4>,
               p: BlogParagraph,
