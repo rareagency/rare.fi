@@ -16,6 +16,18 @@
     grid-auto-flow: dense;
     width: 100%;
   }
+
+  .layout-grid-base {
+    display: grid;
+    grid-template-columns:
+      minmax(5%, 1fr) minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) minmax(0, var(--col-width))
+      minmax(0, var(--col-width)) minmax(5%, 1fr);
+    grid-auto-flow: dense;
+    width: 100%;
+  }
+
   .button-underline {
     border-bottom-width: 3px;
     border-style: solid;
