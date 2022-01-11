@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { staticPlaceholder } from "../../utils/blog";
 import { c } from "../../utils/classnames";
+import AnimatedImage from "../AnimatedImage";
 import CircleButton from "../CircleButton";
 
 type StoryProps = {
@@ -34,7 +34,7 @@ const Story = ({
         )}
       >
         {typeof image === "string" ? (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             height={450}
@@ -44,7 +44,7 @@ const Story = ({
             className="object-cover"
           />
         ) : (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             placeholder="blur"

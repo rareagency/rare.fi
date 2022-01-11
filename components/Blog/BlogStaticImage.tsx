@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AnimatedImage from "../AnimatedImage";
 
 interface Props {
   src: StaticImageData;
@@ -10,12 +10,12 @@ const BlogStaticImage = ({ src, alt, outerWidth }: Props) => {
   if (outerWidth) {
     return (
       <div style={{ width: outerWidth, maxWidth: "100%" }}>
-        <Image src={src} alt={alt} placeholder="blur" />
+        <AnimatedImage src={src} alt={alt} placeholder="blur" />
       </div>
     );
   }
 
-  return <Image src={src} alt={alt} placeholder="blur" />;
+  return <AnimatedImage src={src} alt={alt} placeholder="blur" />;
 };
 
 export default BlogStaticImage;

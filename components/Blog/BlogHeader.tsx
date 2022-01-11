@@ -1,7 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import { daysPassed } from "../../utils/blog";
 import { c } from "../../utils/classnames";
+import AnimatedImage from "../AnimatedImage";
 
 interface Props {
   image: string | StaticImageData;
@@ -32,7 +32,7 @@ const BlogHeader = ({
         style={{ maxHeight: "40rem" }}
       >
         {typeof image === "string" ? (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             placeholder="blur"
@@ -43,7 +43,7 @@ const BlogHeader = ({
             className="object-cover"
           />
         ) : (
-          <Image
+          <AnimatedImage
             src={image}
             alt={imageAlt}
             placeholder="blur"
