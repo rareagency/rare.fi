@@ -39,7 +39,7 @@ const ContactUs = () => {
         <span className={textBoxClass + " tag"}>
           Bring modern tech &amp;
           <br />
-          practices to give a
+          practices for a
           <br />
           headstart
         </span>
