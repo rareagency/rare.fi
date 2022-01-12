@@ -68,9 +68,17 @@ const References = () => {
           rel="noreferrer"
           className={logo}
         >
-          <img src="/static/references/plan.svg" alt="Plan International" />
+          <img
+            src="/static/references/plan.svg"
+            alt="Plan International"
+            className="w-[160px]"
+          />
           <div className={logoHover}>
-            <img src="/static/references/plan.svg" alt="Plan International" />
+            <img
+              src="/static/references/plan.svg"
+              alt="Plan International"
+              className="w-[160px]"
+            />
           </div>
         </a>
       </div>
@@ -81,9 +89,17 @@ const References = () => {
           rel="noreferrer"
           className={logo}
         >
-          <img src="/static/references/linnunrata.svg" alt="Linnunrata" />
+          <img
+            src="/static/references/linnunrata.svg"
+            alt="Linnunrata"
+            className="w-[170px]"
+          />
           <div className={logoHover}>
-            <img src="/static/references/linnunrata.svg" alt="Linnunrata" />
+            <img
+              src="/static/references/linnunrata.svg"
+              alt="Linnunrata"
+              className="w-[170px]"
+            />
           </div>
         </a>
         <a
@@ -93,14 +109,14 @@ const References = () => {
           className={logo}
         >
           <img
-            src="/static/references/cult-black.png"
-            className="w-[150px]"
+            src="/static/references/cult.svg"
+            className="w-[140px]"
             alt="Cult Security"
           />
           <div className={logoHover}>
             <img
-              src="/static/references/cult-black.png"
-              className="w-[150px]"
+              src="/static/references/cult.svg"
+              className="w-[140px]"
               alt="Cult Security"
             />
           </div>
@@ -111,11 +127,16 @@ const References = () => {
           rel="noreferrer"
           className={logo}
         >
-          <img src="/static/references/sharper-shape.svg" alt="Sharper Shape" />
+          <img
+            src="/static/references/sharper-shape.svg"
+            alt="Sharper Shape"
+            className="w-[180px]"
+          />
           <div className={logoHover}>
             <img
               src="/static/references/sharper-shape.svg"
               alt="Sharper Shape"
+              className="w-[180px]"
             />
           </div>
         </a>
@@ -125,9 +146,17 @@ const References = () => {
           rel="noreferrer"
           className={logo}
         >
-          <img src="/static/references/veracell.svg" alt="Veracell" />
+          <img
+            src="/static/references/veracell.svg"
+            alt="Veracell"
+            className="w-[150px]"
+          />
           <div className={logoHover}>
-            <img src="/static/references/veracell.svg" alt="Veracell" />
+            <img
+              src="/static/references/veracell.svg"
+              alt="Veracell"
+              className="w-[150px]"
+            />
           </div>
         </a>
       </div>
