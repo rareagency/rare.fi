@@ -23,7 +23,7 @@ const Story = ({
   orientation,
 }: StoryProps) => (
   <Link href={link} aria-label={`Read ${header}`} passHref>
-    <article className="group mt-24 col-all layout-grid md:mt-4 md:pb-2">
+    <a className="group mt-24 col-all layout-grid md:mt-4 md:pb-2">
       <div
         className={c(
           "col-span-3 md:col-span-full md:w-full md:px-0 lg:order-2 cursor-pointer",
@@ -68,7 +68,7 @@ const Story = ({
           <CircleButton>Read article</CircleButton>
         </div>
       </div>
-    </article>
+    </a>
   </Link>
 );
 
