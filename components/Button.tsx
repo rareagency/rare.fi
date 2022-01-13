@@ -38,7 +38,12 @@ const Button: React.FC<ButtonProps> = ({
         <button
           aria-label={label}
           style={style}
-          className={c("button", kind, className)}
+          className={c(
+            "button",
+            kind,
+            className,
+            "group-hover:w-[275px] md:group-hover:w-full"
+          )}
           onClick={onClick}
         >
           {children}

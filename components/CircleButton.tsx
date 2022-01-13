@@ -23,12 +23,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
       href={link}
       onClick={onClick}
       className={c(
-        `
-      group
-      relative
-      whitespace-nowrap
-      overflow-hidden
-      `,
+        `group relative whitespace-nowrap overflow-hidden`,
         className
       )}
     >
