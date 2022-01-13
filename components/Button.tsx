@@ -38,7 +38,12 @@ const Button: React.FC<ButtonProps> = ({
         <button
           aria-label={label}
           style={style}
-          className={c("button", kind, className)}
+          className={c(
+            "button",
+            kind,
+            className,
+            "group-hover:w-[275px] md:group-hover:w-full"
+          )}
           onClick={onClick}
         >
           {children}
@@ -83,7 +88,7 @@ const Button: React.FC<ButtonProps> = ({
 
         .arrow {
           @apply text-action-purple px-0 w-16 hover:w-[275px] md:w-full md:hover:w-full;
-          transition: width 200ms ease-in-out;
+          transition: width 250ms ease-in-out;
         }
 
         .button:active {
