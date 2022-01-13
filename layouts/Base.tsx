@@ -48,7 +48,7 @@ const Base: React.FC<Props> = ({
       <CookieConsent />
 
       <style jsx>{`
-        .layout-grid {
+        .layout-grid-base {
           transition: background-color 150ms ease-in-out;
         }
         .light {
