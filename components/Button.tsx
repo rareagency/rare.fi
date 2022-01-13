@@ -88,7 +88,7 @@ const Button: React.FC<ButtonProps> = ({
 
         .arrow {
           @apply text-action-purple px-0 w-16 hover:w-[275px] md:w-full md:hover:w-full;
-          transition: width 250ms ease-in-out;
+          transition: width 200ms ease-in-out;
         }
 
         .button:active {
