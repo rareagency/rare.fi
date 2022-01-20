@@ -41,6 +41,19 @@ const Base: React.FC<Props> = ({
           sizes="192x192"
           href="/static/icons/rare-icon-192.png"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rare.fi/" />
+        <meta property="og:title" content={title ?? TITLE} />
+        <meta property="og:description" content={description || DESCRIPTION} />
+        <meta property="og:image" content="/static/meta-image.jpg" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://rare.fi/" />
+        <meta property="twitter:title" content={title ?? TITLE} />
+        <meta
+          property="twitter:description"
+          content={description || DESCRIPTION}
+        />
+        <meta property="twitter:image" content="/static/meta-image.jpg" />
       </Head>
 
       <main className={c("layout-grid-base", kind)}>{children}</main>
