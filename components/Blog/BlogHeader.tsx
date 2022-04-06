@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import React from "react";
 import { daysPassed } from "../../utils/blog";
 import { c } from "../../utils/classnames";
