@@ -159,6 +159,25 @@ const References = () => {
             />
           </div>
         </a>
+        <a
+          href="https://www.tecnotree.com/"
+          target="_blank"
+          rel="noreferrer"
+          className={logo}
+        >
+          <img
+            src="/static/references/tecnotree.svg"
+            alt="Veracell"
+            className="w-[170px]"
+          />
+          <div className={logoHover}>
+            <img
+              src="/static/references/tecnotree.svg"
+              alt="Veracell"
+              className="w-[170px]"
+            />
+          </div>
+        </a>
       </div>
     </section>
   );
