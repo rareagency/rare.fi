@@ -8,7 +8,7 @@ function sleep(ms = 1500) {
 export async function fetchDevto(path: string) {
   // Avoid hitting dev.to's ratelimits when on production.
   if (process.env.NODE_ENV === "production") {
-    await sleep();
+    await sleep(3000);
   }
 
   try {
