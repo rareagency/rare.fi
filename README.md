@@ -1,19 +1,21 @@
 # rare.fi
 
+Blog posts are being fetched from dev.to. [API documentation](https://developers.forem.com/api/v1).
+
 ## Requirements
 
-- node.js v18.x.x <=
-- nvm v9.x.x <=
+- node.js >=18.x.x
+- nvm >=9.x.x
 
-## Dev
+## Development
 
 ```
 nvm use
-npm install
+npm i
 npm run dev
 ```
 
-## Build
+## Production build
 
 - `npm run build`
 - `npm start`
