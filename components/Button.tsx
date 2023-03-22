@@ -15,6 +15,7 @@ type ButtonProps = {
   href?: string;
   style?: CSSProperties;
   label?: string;
+  children?: React.ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -29,10 +30,13 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <>
       {href ? (
-        <Link aria-label={label} href={href}>
-          <a style={style} className={c("button", kind, className)}>
-            {children}
-          </a>
+        <Link
+          aria-label={label}
+          href={href}
+          style={style}
+          className={c("button", kind, className)}
+        >
+          {children}
         </Link>
       ) : (
         <button

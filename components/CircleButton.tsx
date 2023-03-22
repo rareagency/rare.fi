@@ -7,6 +7,7 @@ type CircleButtonProps = {
   className?: string;
   onClick?: () => void;
   label?: string;
+  children: React.ReactNode | string;
 };
 
 const CircleButton: React.FC<CircleButtonProps> = ({

@@ -20,34 +20,32 @@ const BlogPostCard = ({
   imagePlaceholder,
   href,
 }: StoryProps) => (
-  <Link href={href}>
-    <a className="group block">
-      <div className="mb-2">
-        {imagePlaceholder ? (
-          <AnimatedImage
-            src={image}
-            alt={imageAlt}
-            width={1075}
-            height={425}
-            placeholder="blur"
-            blurDataURL={imagePlaceholder}
-            className="object-cover"
-          />
-        ) : (
-          <AnimatedImage
-            src={image}
-            alt={imageAlt}
-            width={1075}
-            height={425}
-            className="object-cover"
-          />
-        )}
-      </div>
-      {title && <span className="tag text-mid-blue">{title}</span>}
-      <span className="h4 mt-6 sm:mt-3 sm:text-[14px] group-hover:text-action-purple break-words">
-        {header}
-      </span>
-    </a>
+  <Link href={href} className="group block">
+    <div className="mb-2">
+      {imagePlaceholder ? (
+        <AnimatedImage
+          src={image}
+          alt={imageAlt ?? ""}
+          width={1075}
+          height={425}
+          placeholder="blur"
+          blurDataURL={imagePlaceholder}
+          className="object-cover"
+        />
+      ) : (
+        <AnimatedImage
+          src={image}
+          alt={imageAlt ?? ""}
+          width={1075}
+          height={425}
+          className="object-cover"
+        />
+      )}
+    </div>
+    {title && <span className="tag text-mid-blue">{title}</span>}
+    <span className="h4 mt-6 sm:mt-3 sm:text-[14px] group-hover:text-action-purple break-words">
+      {header}
+    </span>
   </Link>
 );
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import { hotjar } from "react-hotjar";
 import { getItem, setItem } from "../utils/local-storage";
@@ -45,13 +45,12 @@ const CookieConsent = () => {
           experience of our users.
           <p className="mt-0 md:mt-4">
             Find out more about the cookies we use:{" "}
-            <Link href="/privacy">
-              <a
-                target="_blank"
-                className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
-              >
-                Cookie &amp; Privacy policy
-              </a>
+            <Link
+              href="/privacy"
+              target="_blank"
+              className="text-[#34517E] border-b-2 border-gray-500 hover:text-dark-blue"
+            >
+              Cookie &amp; Privacy policy
             </Link>
           </p>
         </div>
