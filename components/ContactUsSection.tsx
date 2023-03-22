@@ -28,7 +28,7 @@ const ContactUs = () => {
         <JourneyCircle className="-ml-6 lg:ml-0">
           <img
             src="/static/journey-1.svg"
-            className="transform translate-x-8 translate-y-8 xl:translate-x-6 xl:translate-y-6 xl:scale-90"
+            className="translate-x-8 translate-y-8 xl:translate-x-6 xl:translate-y-6 xl:scale-90"
             alt="Swift person with a Rare -paper in it's hand"
           />
         </JourneyCircle>
@@ -46,7 +46,7 @@ const ContactUs = () => {
         <JourneyCircle className="inline-flex ">
           <img
             src="/static/journey-2.svg"
-            className="transform scale-135 translate-y-4"
+            className="scale-135 translate-y-4"
             alt="Person running to a futuristic car with a paper in it's hand"
           />
         </JourneyCircle>
@@ -63,7 +63,7 @@ const ContactUs = () => {
         <JourneyCircle className="-mr-6 lg:mr-0">
           <img
             src="/static/journey-3.svg"
-            className="transform translate-y-2"
+            className="translate-y-2"
             alt="Flying hero with a lemon in it's hand"
           />
         </JourneyCircle>
