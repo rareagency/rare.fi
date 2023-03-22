@@ -37,7 +37,7 @@ const Story = ({
         {typeof image === "string" ? (
           <AnimatedImage
             src={image}
-            alt={imageAlt}
+          alt={imageAlt ?? ""}
             height={450}
             width={600}
             placeholder="blur"
@@ -47,7 +47,7 @@ const Story = ({
         ) : (
           <AnimatedImage
             src={image}
-            alt={imageAlt}
+          alt={imageAlt ?? ""}
             placeholder="blur"
             layout="responsive"
           />

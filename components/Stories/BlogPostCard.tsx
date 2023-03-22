@@ -26,7 +26,7 @@ const BlogPostCard = ({
         {imagePlaceholder ? (
           <AnimatedImage
             src={image}
-            alt={imageAlt}
+          alt={imageAlt ?? ""}
             width={1075}
             height={425}
             placeholder="blur"
@@ -36,7 +36,7 @@ const BlogPostCard = ({
         ) : (
           <AnimatedImage
             src={image}
-            alt={imageAlt}
+          alt={imageAlt ?? ""}
             width={1075}
             height={425}
             className="object-cover"
