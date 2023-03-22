@@ -3,6 +3,7 @@ import { c } from "../utils/classnames";
 
 type CircleProps = {
   className?: string;
+  children?: React.ReactNode | string;
 };
 
 const JourneyCircle: React.FC<CircleProps> = ({ className, children }) => {

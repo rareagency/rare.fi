@@ -15,6 +15,7 @@ type ButtonProps = {
   href?: string;
   style?: CSSProperties;
   label?: string;
+  children?: React.ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = ({

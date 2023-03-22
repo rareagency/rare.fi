@@ -11,6 +11,7 @@ interface Props {
   title?: string;
   description?: string;
   kind?: "dark" | "light";
+  children?: React.ReactNode | string;
 }
 
 const Base: React.FC<Props> = ({

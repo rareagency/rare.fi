@@ -6,7 +6,10 @@ import Base from "./Base";
 // TODO: Enable this when Subscribe to Rare actually does something.
 // import Floater from "../components/Floater";
 
-const Page: React.FC<{ title: string }> = ({ children, title }) => (
+const Page: React.FC<{
+  title: string;
+  children?: React.ReactNode | string;
+}> = ({ children, title }) => (
   <Base title={title}>
     <Header />
     {children}
