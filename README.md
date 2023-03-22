@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- nvm
+- node.js v18.x.x <=
+- nvm v9.x.x <=
 
 ## Dev
 
@@ -14,4 +15,5 @@ npm run dev
 
 ## Build
 
-`npm run build`
+- `npm run build`
+- `npm start`
