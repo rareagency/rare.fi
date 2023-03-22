@@ -43,17 +43,15 @@ const NavBar: React.FC<{ theme?: "dark" | "light" }> = ({
           userIsScrolled && !menuIsOpen ? "py-4" : "py-16 md:py-6"
         } transition-all duration-300 flex items-center justify-between col-start-2 col-end-8`}
       >
-        <Link href="/">
-          <a className="z-30">
-            <Logo
-              kind={
-                theme === "dark" || userIsScrolled || menuIsOpen
-                  ? "light"
-                  : "dark"
-              }
-              size={userIsScrolled ? "sm" : "md"}
-            />
-          </a>
+        <Link href="/" className="z-30">
+          <Logo
+            kind={
+              theme === "dark" || userIsScrolled || menuIsOpen
+                ? "light"
+                : "dark"
+            }
+            size={userIsScrolled ? "sm" : "md"}
+          />
         </Link>
 
         <section className="space-x-16 text-xl inline-flex lg:hidden">

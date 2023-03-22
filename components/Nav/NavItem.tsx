@@ -1,6 +1,5 @@
-import React from "react";
-import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
 import { c } from "../../utils/classnames";
 
 type Props = {
@@ -38,8 +37,8 @@ const NavItem = ({
 
   return (
     <>
-      <Link href={url}>
-        <a className={linkClasses}>{text}</a>
+      <Link href={url} className={linkClasses}>
+        {text}
       </Link>
 
       <style jsx>{`

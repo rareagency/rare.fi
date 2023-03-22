@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { c } from "../utils/classnames";
 import Button from "./Button";
 import JourneyCircle from "./JourneyCircle";
@@ -81,15 +80,13 @@ const ContactUs = () => {
 
       <div className="col-all flex items-center justify-center text-center">
         <Link href="/contact-us">
-          <a>
-            <Button
-              label="Book our first no-obligation chat"
-              className="mt-10"
-              kind="secondary-light"
-            >
-              Book our first no&#8209;obligation chat
-            </Button>
-          </a>
+          <Button
+            label="Book our first no-obligation chat"
+            className="mt-10"
+            kind="secondary-light"
+          >
+            Book our first no&#8209;obligation chat
+          </Button>
         </Link>
       </div>
     </section>
